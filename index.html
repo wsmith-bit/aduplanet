@@ -1,227 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Your complete guide to building an ADU in 2025. Learn about costs, permits, prefab options, and get a free estimate tailored to your city.">
-  <meta name="keywords" content="ADUs, accessory dwelling units, prefab ADUs, ADU costs, build an ADU, ADU builders, ADU regulations, ADU financing">
-  <meta name="author" content="ADUPlanet Editorial Team">
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
-  <meta name="revisit-after" content="7 days">
-  <link rel="canonical" href="https://www.aduplanet.com/">
-  <meta name="language" content="en">
-  <meta name="theme-color" content="#0E2E47">
-  <link rel="manifest" href="/manifest.json">
-
-  <meta property="og:locale" content="en_US">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Your Complete Guide to ADUs in 2025 | ADUPlanet">
-  <meta property="og:description" content="Explore prefab and custom ADU solutions, costs, zoning laws, financing options, and more.">
-  <meta property="og:url" content="https://www.aduplanet.com/">
-  <meta property="og:site_name" content="ADUPlanet">
-  <meta property="og:image" content="https://www.aduplanet.com/assets/hero-adu.jpg">
-  <meta property="og:image:alt" content="Modern ADU design in urban backyard">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ADUPlanet: Your 2025 Guide to Building an ADU">
-  <meta name="twitter:description" content="Get a cost estimate, learn zoning rules, and discover the best prefab ADU options under $150k.">
-  <meta name="twitter:image" content="https://www.aduplanet.com/assets/hero-adu.jpg">
-  <meta name="twitter:image:alt" content="Stylish accessory dwelling unit in backyard">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <!-- Meta Basics -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Your Complete Guide to ADUs in 2025 | ADUPlanet</title>
+  <meta name="description" content="Clear, human-friendly answers about Accessory Dwelling Units (ADUs) in 2025: costs, zoning, financing, and builders. Get a free ADU cost estimate in your city." />
+  <link rel="canonical" href="https://aduplanet.com/" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0E2E47" />
+  <meta name="language" content="en" />
 
+  <!-- Social (uses only assets/hero-adu.jpg) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your Complete Guide to ADUs in 2025 | ADUPlanet" />
+  <meta property="og:description" content="Everything you need to know about ADUs—costs, regulations, builders, and financing—plus a free estimate in your city." />
+  <meta property="og:url" content="https://aduplanet.com/" />
+  <meta property="og:image" content="assets/hero-adu.jpg" />
+  <meta property="og:image:alt" content="Modern backyard ADU at sunset" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Your Complete Guide to ADUs in 2025 | ADUPlanet" />
+  <meta name="twitter:description" content="Learn ADU costs, permits, financing options, and find vetted builders. Get a free estimate in your city." />
+  <meta name="twitter:image" content="assets/hero-adu.jpg" />
+
+  <!-- Performance Hints -->
+  <link rel="preload" as="image" href="assets/hero-adu.jpg" />
+
+  <!-- Inline Styles (modern, responsive, accessible) -->
   <style>
-    * { box-sizing: border-box; }
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #F6F8FA;
-      color: #333;
+    :root{
+      --bg:#F6F8FA; --ink:#0E2E47; --muted:#475569; --brand:#0E7AFE; --brand-ink:#fff;
+      --card:#ffffff; --line:#E2E8F0; --ok:#16a34a; --shadow:0 10px 30px rgba(2,8,23,.08);
+      --radius:16px; --radius-sm:12px; --space:clamp(16px,2vw,24px);
+      --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
-    header, footer {
-      background-color: #0E2E47;
-      color: #fff;
-      text-align: center;
-      padding: 3rem 1rem;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:#1f2937;font-family:var(--font);line-height:1.6}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1120px;margin:0 auto;padding:0 var(--space)}
+    header.site-header{background:var(--ink);color:#fff}
+    header .wrap{display:flex;align-items:center;justify-content:space-between;padding:18px 0;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand .wordmark{font-weight:800;letter-spacing:.3px}
+    nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+    nav a{color:#dbeafe;font-weight:600}
+    nav a:hover{color:#fff}
+
+    /* Hero */
+    .hero{position:relative;background:linear-gradient(180deg,#e6f0ff 0%, #f5f7fb 100%);overflow:hidden}
+    .hero .container{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:28px;padding:48px 0}
+    .hero-img{width:100%;height:100%;max-height:520px;object-fit:cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .hero h1{color:var(--ink);font-size:clamp(28px,4vw,42px);line-height:1.15;margin:0 0 10px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .lead-card{background:var(--card);padding:18px;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line)}
+    .lead-row{display:grid;grid-template-columns:1fr 1fr 1fr auto;gap:10px}
+    .lead-row input{padding:12px 14px;border:1px solid var(--line);border-radius:10px;font-size:16px;width:100%}
+    .cta{background:var(--brand);color:var(--brand-ink);border:none;border-radius:10px;padding:12px 16px;font-weight:700;cursor:pointer}
+    .cta:hover{filter:brightness(.96)}
+    .help{font-size:12px;color:#64748b;margin-top:8px}
+
+    /* TL;DR */
+    .tldr{padding:28px 0}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .tldr h2{margin:0 0 8px;color:var(--ink)}
+    .pill{display:inline-flex;gap:8px;align-items:center;background:#ecfeff;border:1px solid #bae6fd;color:#0369a1;padding:6px 10px;border-radius:999px;font-size:13px;font-weight:700;letter-spacing:.2px}
+
+    /* Pillars */
+    .pillars{padding:18px 0 4px}
+    .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .tile{background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);padding:18px;box-shadow:var(--shadow)}
+    .tile h3{margin:0 0 6px;color:var(--ink);font-size:18px}
+    .tile p{margin:0;color:#475569}
+
+    /* Featured */
+    .featured{padding:10px 0}
+    .feature-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .feature-media{width:100%;border-radius:var(--radius);box-shadow:var(--shadow);border:1px solid var(--line);object-fit:cover;max-height:360px}
+    .feature-card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .feature-card h3{margin:0 0 8px;color:var(--ink)}
+    .btn{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:10px 14px;font-weight:700}
+
+    /* Trust */
+    .trust{padding:18px 0}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 16px}
+    .stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px;text-align:center;box-shadow:var(--shadow)}
+    .stat b{display:block;color:var(--ink);font-size:22px}
+    .case{background:#f8fafc;border:1px solid var(--line);border-radius:var(--radius);padding:18px}
+
+    /* FAQ */
+    .faq{padding:18px 0}
+    .faq .qa{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin:10px 0}
+    .faq summary{cursor:pointer;font-weight:700;color:var(--ink);list-style:none}
+    .faq summary::-webkit-details-marker{display:none}
+    .faq p{margin:8px 0 0;color:#475569}
+
+    /* Footer */
+    footer{background:var(--ink);color:#cbd5e1;margin-top:28px}
+    footer .container{padding:26px 0}
+    footer nav a{color:#cbd5e1}
+    footer nav a:hover{color:#fff}
+
+    /* Responsive */
+    @media (max-width: 980px){
+      .hero .container{grid-template-columns:1fr}
+      .lead-row{grid-template-columns:1fr;gap:12px}
+      .grid{grid-template-columns:1fr 1fr}
+      .feature-wrap{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
     }
-    h1, h2, h3 {
-      margin-top: 0;
-      color: #0E2E47;
-    }
-    p, li {
-      line-height: 1.6;
-    }
-    section {
-      background: #fff;
-      margin: 2rem auto;
-      padding: 2rem;
-      max-width: 960px;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
-    }
-    a {
-      color: #0074E4;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .hero {
-      background: linear-gradient(120deg, #dbeafe 0%, #e0f2fe 100%);
-      text-align: center;
-      padding: 3rem 1rem;
-      border-radius: 0 0 20px 20px;
-    }
-    .hero input, .hero button {
-      padding: 1rem;
-      margin: 0.5rem;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      max-width: 300px;
-      width: 100%;
-      font-size: 1rem;
-    }
-    .hero button {
-      background: #0074E4;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s ease;
-    }
-    .hero button:hover {
-      background: #005bb5;
-    }
-    .faq h3 {
-      cursor: pointer;
-      background: #EFF6FF;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .faq .answer {
-      display: none;
-      padding: 0.75rem 1rem;
-      background: #F1F5F9;
-      border-radius: 8px;
-      margin-bottom: 1rem;
-    }
-    .faq.open .answer {
-      display: block;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0;
-    }
-    table th, table td {
-      border: 1px solid #E2E8F0;
-      padding: 0.75rem;
-      text-align: left;
-    }
-    footer a {
-      color: #cbd5e1;
+    @media (max-width: 560px){
+      .grid{grid-template-columns:1fr}
     }
   </style>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('.faq h3').forEach(el => {
-        el.addEventListener('click', () => {
-          el.parentElement.classList.toggle('open');
-        });
-      });
-    });
-  </script>
 </head>
 <body>
-  <header>
-    <h1>Your Complete Guide to ADUs in 2025</h1>
-    <p>Everything you need to know about Accessory Dwelling Units – from cost and zoning to prefab models and financing.</p>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container wrap">
+      <div class="brand">
+        <!-- Using only assets/hero-adu.jpg as requested (no new filenames) -->
+        <img src="assets/hero-adu.jpg" alt="ADUPlanet mark" style="width:40px;height:40px;border-radius:10px;object-fit:cover;border:1px solid #1f2937;box-shadow:var(--shadow)" loading="eager" />
+        <div class="wordmark">ADUPlanet</div>
+      </div>
+      <nav aria-label="Primary">
+        <ul>
+          <li><a href="costs.html">Costs</a></li>
+          <li><a href="regulations.html">Regulations</a></li>
+          <li><a href="builders.html">Builders</a></li>
+          <li><a href="financing.html">Financing</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
-  <section class="hero">
-    <h2>Get a Free ADU Cost Estimate</h2>
-    <input type="text" placeholder="Your Name">
-    <input type="email" placeholder="Your Email">
-    <input type="text" placeholder="ZIP Code">
-    <button>Get My Estimate</button>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <img class="hero-img" src="assets/hero-adu.jpg" alt="Modern backyard ADU exterior with warm lighting" width="1600" height="900" />
+      <div>
+        <h1>Your Complete Guide to ADUs in 2025</h1>
+        <p>Simple answers on costs, permits, prefab options, and financing—plus a free cost estimate tailored to your city.</p>
+        <form id="estimate-form" class="lead-card" action="/estimate" method="post" novalidate>
+          <div class="lead-row">
+            <input name="name" type="text" autocomplete="name" placeholder="Your Name" required aria-label="Your Name" />
+            <input name="email" type="email" autocomplete="email" placeholder="Your Email" required aria-label="Your Email" />
+            <input name="zip" type="text" inputmode="numeric" placeholder="ZIP Code" required aria-label="ZIP Code" />
+            <button class="cta" type="submit" aria-label="Get a free ADU cost estimate">Get Estimate</button>
+          </div>
+          <div class="help">We’ll email an estimate with local cost ranges and next steps. No spam. Ever.</div>
+          <div id="form-status" class="help" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
   </section>
-  <section>
-    <h2>TL;DR – What is an ADU?</h2>
-    <p>ADUs are compact, secondary homes on residential lots. They're great for rental income, aging family, or increasing home value.</p>
+
+  <!-- TL;DR (Speakable) -->
+  <section class="tldr container" id="tldr">
+    <div class="card">
+      <span class="pill" aria-hidden="true">TL;DR</span>
+      <h2>What is an ADU and why it matters</h2>
+      <p class="speakable">An ADU is a small, independent home on the same lot as a primary residence. In 2025, ADUs help families live closer, create rental income, and can increase property value—often with streamlined permitting.</p>
+    </div>
   </section>
-  <section>
-    <h2>Why Build an ADU in 2025?</h2>
-    <table>
-      <tr><th>📈 Stat</th><th>Insight</th></tr>
-      <tr><td>25%</td><td>Property value increase (CA average)</td></tr>
-      <tr><td>1.4M</td><td>Projected ADUs to be built in 2025</td></tr>
-      <tr><td>$1,850</td><td>Avg. rental income per month</td></tr>
-    </table>
+
+  <!-- Pillar Navigation -->
+  <section class="pillars container" aria-labelledby="pillars-title">
+    <h2 id="pillars-title">Explore key ADU topics</h2>
+    <div class="grid">
+      <article class="tile">
+        <h3><a href="costs.html">How much does an ADU cost in 2025?</a></h3>
+        <p>See typical budgets, price drivers, and ways to save on design and permitting.</p>
+      </article>
+      <article class="tile">
+        <h3><a href="regulations.html">ADU zoning & permits by state</a></h3>
+        <p>Understand setbacks, height limits, and owner-occupancy rules where you live.</p>
+      </article>
+      <article class="tile">
+        <h3><a href="builders.html">Find top ADU builders near you</a></h3>
+        <p>Compare vetted contractors and prefab providers with real timelines.</p>
+      </article>
+      <article class="tile">
+        <h3><a href="financing.html">How to pay for an ADU</a></h3>
+        <p>HELOCs, cash-out refis, construction loans, and local incentive programs.</p>
+      </article>
+    </div>
   </section>
-  <section>
-    <h2>How Much Does It Cost to Build an ADU?</h2>
-    <table>
-      <tr><th>Type</th><th>Estimated Range</th></tr>
-      <tr><td>Detached ADU</td><td>$180,000 – $300,000</td></tr>
-      <tr><td>Garage Conversion</td><td>$80,000 – $160,000</td></tr>
-      <tr><td>Prefab ADU</td><td>$100,000 – $200,000</td></tr>
-    </table>
-    <p><a href="#">Get a free estimate →</a></p>
+
+  <!-- Featured Resource -->
+  <section class="featured container" aria-labelledby="featured-title">
+    <div class="feature-wrap">
+      <img class="feature-media" src="assets/hero-adu.jpg" alt="Compact prefab ADU with clean modern lines" loading="lazy" />
+      <div class="feature-card">
+        <h2 id="featured-title">Featured Resource</h2>
+        <h3>Best Prefab ADUs Under $150k</h3>
+        <p>Fast, affordable, and stylish—see models homeowners love and how they pencil out.</p>
+        <a class="btn" href="builders.html">Explore prefab picks</a>
+      </div>
+    </div>
   </section>
-  <section>
-    <h2>ADU Zoning & Permits</h2>
-    <ul>
-      <li>Lot size and coverage limits</li>
-      <li>Height restrictions</li>
-      <li>Owner-occupancy requirements</li>
-      <li>Parking mandates</li>
-    </ul>
-    <p><a href="#">View state-specific zoning rules →</a></p>
+
+  <!-- Trust Signals -->
+  <section class="trust container" aria-labelledby="trust-title">
+    <h2 id="trust-title">Why ADUs matter in 2025</h2>
+    <div class="stats">
+      <div class="stat" role="figure" aria-label="Property value impact">
+        <b>Up to 25%</b>
+        <div>Potential property value increase in pro-ADU markets</div>
+      </div>
+      <div class="stat" role="figure" aria-label="Rental income">
+        <b>$1,500+/mo</b>
+        <div>Typical long-term rent depending on city and size</div>
+      </div>
+      <div class="stat" role="figure" aria-label="Build timeline">
+        <b>3–6 months</b>
+        <div>Common prefab installation timeline after permits</div>
+      </div>
+    </div>
+    <div class="case">
+      <h3>Mini case study</h3>
+      <p>After adding a 600 sq ft backyard unit, a San Diego homeowner reports faster equity growth and steady rental income that offsets most of the mortgage.</p>
+      <a class="btn" href="builders.html">Find vetted builders</a>
+    </div>
   </section>
-  <section>
-    <h2>Top ADU Builders Near You</h2>
-    <p>We’ve vetted the top builders across California, Texas, Oregon, and Washington.</p>
-    <p><a href="#">Find builders near you →</a></p>
+
+  <!-- FAQ -->
+  <section class="faq container" aria-labelledby="faq-title">
+    <h2 id="faq-title">Frequently Asked Questions</h2>
+
+    <details class="qa">
+      <summary>How much does it cost to build an ADU?</summary>
+      <p>Most projects fall between $100k and $300k depending on size, site work, labor rates, and finishes. Prefab can reduce total timeline.</p>
+    </details>
+
+    <details class="qa">
+      <summary>Do I need a permit to build an ADU?</summary>
+      <p>Yes. Rules vary by city and state. Start with setbacks, height, and utility connections; many places now have streamlined ADU approval.</p>
+    </details>
+
+    <details class="qa">
+      <summary>Can I rent out my ADU?</summary>
+      <p>Often yes, for long-term tenants. Short-term rentals may have extra restrictions; check local ordinances.</p>
+    </details>
+
+    <details class="qa">
+      <summary>Are prefab ADUs worth it?</summary>
+      <p>They can reduce construction time, site disruption, and change orders, especially for standard layouts.</p>
+    </details>
+
+    <details class="qa">
+      <summary>How do I pay for an ADU?</summary>
+      <p>Common options include HELOCs, cash-out refinancing, renovation or construction loans, and local grants where available.</p>
+    </details>
   </section>
-  <section>
-    <h2>ADU Financing Options</h2>
-    <ul>
-      <li>HELOC</li>
-      <li>Cash-out refinance</li>
-      <li>ADU construction loans</li>
-      <li>203(k) renovation loans</li>
-    </ul>
-    <p><a href="#">Explore ADU financing programs →</a></p>
-  </section>
-  <section>
-    <h2>Best Prefab ADUs Under $150k</h2>
-    <p>Faster, affordable, and modern. These prefab units are a smart way to build in 2025.</p>
-    <p><a href="#">See top-rated prefab models →</a></p>
-  </section>
-  <section class="faq">
-    <h2>Frequently Asked Questions</h2>
-    <div class="faq"><h3>What is an ADU?</h3><div class="answer"><p>An ADU is a small secondary home built on your lot.</p></div></div>
-    <div class="faq"><h3>Do I need a permit?</h3><div class="answer"><p>Yes — most cities require one.</p></div></div>
-    <div class="faq"><h3>Can I rent it out?</h3><div class="answer"><p>Yes — long-term or short-term in most cities.</p></div></div>
-    <div class="faq"><h3>How much does it cost?</h3><div class="answer"><p>Typical range is $100,000–$300,000 depending on build type and location.</p></div></div>
-    <div class="faq"><h3>Are prefab ADUs worth it?</h3><div class="answer"><p>Yes — they offer faster timelines and often lower costs.</p></div></div>
-  </section>
-  <section>
-    <h2>Case Study: The Smith Family (San Diego)</h2>
-    <ul>
-      <li>✅ 650 sq ft backyard ADU</li>
-      <li>💸 $2,000/month rental income</li>
-      <li>📈 28% increase in home value</li>
-    </ul>
-    <p><a href="#">Read the full story →</a></p>
-  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 ADUPlanet • <a href="#">Privacy Policy</a> • <a href="#">Contact</a></p>
-    <p><a href="#">Find ADU Builders Near You →</a></p>
+    <div class="container">
+      <nav aria-label="Footer">
+        <a href="about.html">About</a> •
+        <a href="privacy.html">Privacy</a> •
+        <a href="builders.html">Find ADU builders near you</a>
+      </nav>
+      <div style="margin-top:10px;font-size:13px;">© 2025 ADUPlanet</div>
+    </div>
   </footer>
+
+  <!-- Speakable + Schema JSON-LD (no extra image filenames used) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://aduplanet.com/#website",
+        "url": "https://aduplanet.com/",
+        "name": "ADUPlanet",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://aduplanet.com/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://aduplanet.com/#org",
+        "name": "ADUPlanet",
+        "url": "https://aduplanet.com/"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://aduplanet.com/#webpage",
+        "url": "https://aduplanet.com/",
+        "name": "Your Complete Guide to ADUs in 2025 | ADUPlanet",
+        "isPartOf": {"@id":"https://aduplanet.com/#website"},
+        "description": "Clear, human-friendly answers about ADUs in 2025—costs, permits, financing, builders—and a free cost estimate in your city.",
+        "breadcrumb": {"@id":"https://aduplanet.com/#breadcrumb"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://aduplanet.com/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://aduplanet.com/"},
+          {"@type":"ListItem","position":2,"name":"Costs","item":"https://aduplanet.com/costs.html"},
+          {"@type":"ListItem","position":3,"name":"Regulations","item":"https://aduplanet.com/regulations.html"},
+          {"@type":"ListItem","position":4,"name":"Builders","item":"https://aduplanet.com/builders.html"},
+          {"@type":"ListItem","position":5,"name":"Financing","item":"https://aduplanet.com/financing.html"}
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://aduplanet.com/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How much does it cost to build an ADU?",
+            "acceptedAnswer": {"@type":"Answer","text":"Most projects fall between $100k and $300k depending on size, site work, labor rates, and finishes."}
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a permit to build an ADU?",
+            "acceptedAnswer": {"@type":"Answer","text":"Yes. Rules vary by city and state; many places now have streamlined ADU approval."}
+          },
+          {
+            "@type": "Question",
+            "name": "Can I rent out my ADU?",
+            "acceptedAnswer": {"@type":"Answer","text":"Often yes for long-term rentals; short-term rules differ by locality."}
+          },
+          {
+            "@type": "Question",
+            "name": "Are prefab ADUs worth it?",
+            "acceptedAnswer": {"@type":"Answer","text":"Prefab can reduce time, disruption, and change orders for standard layouts."}
+          },
+          {
+            "@type": "Question",
+            "name": "How do I pay for an ADU?",
+            "acceptedAnswer": {"@type":"Answer","text":"HELOCs, cash-out refis, construction loans, and local incentives are common."}
+          }
+        ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "@id": "https://aduplanet.com/#speakable",
+        "cssSelector": [
+          "#tldr .speakable",
+          "#tldr h2"
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Minimal JS (form UX only; safe if /estimate isn’t live yet) -->
+  <script>
+    const form = document.getElementById('estimate-form');
+    const statusBox = document.getElementById('form-status');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      statusBox.textContent = "Submitting...";
+      try{
+        const data = Object.fromEntries(new FormData(form).entries());
+        // If you wire a Pages Function at /estimate, uncomment below:
+        // const res = await fetch('/estimate',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(data)});
+        // if(!res.ok) throw new Error(await res.text());
+        await new Promise(r=>setTimeout(r,400)); // demo UX
+        statusBox.textContent = "Thanks! We’ll email your estimate shortly.";
+        form.reset();
+      }catch(err){
+        statusBox.textContent = "Something went wrong. Please try again.";
+      }
+    });
+  </script>
 </body>
 </html>
