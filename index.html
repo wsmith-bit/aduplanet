@@ -10,8 +10,9 @@
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0E2E47" />
   <meta name="language" content="en" />
+  <meta name="revisit-after" content="7 days" />
 
-  <!-- Social (uses only assets/hero-adu.jpg) -->
+  <!-- Social (uses the single, existing asset: assets/hero-adu.jpg) -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Your Complete Guide to ADUs in 2025 | ADUPlanet" />
   <meta property="og:description" content="Everything you need to know about ADUs—costs, regulations, builders, and financing—plus a free estimate in your city." />
@@ -30,7 +31,7 @@
   <style>
     :root{
       --bg:#F6F8FA; --ink:#0E2E47; --muted:#475569; --brand:#0E7AFE; --brand-ink:#fff;
-      --card:#ffffff; --line:#E2E8F0; --ok:#16a34a; --shadow:0 10px 30px rgba(2,8,23,.08);
+      --card:#ffffff; --line:#E2E8F0; --shadow:0 10px 30px rgba(2,8,23,.08);
       --radius:16px; --radius-sm:12px; --space:clamp(16px,2vw,24px);
       --font: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
     }
@@ -100,6 +101,7 @@
     footer .container{padding:26px 0}
     footer nav a{color:#cbd5e1}
     footer nav a:hover{color:#fff}
+    .fresh-note{margin-top:8px;font-size:12px;color:#93c5fd}
 
     /* Responsive */
     @media (max-width: 980px){
@@ -264,10 +266,11 @@
         <a href="builders.html">Find ADU builders near you</a>
       </nav>
       <div style="margin-top:10px;font-size:13px;">© 2025 ADUPlanet</div>
+      <div class="fresh-note">Content reviewed for accuracy by the ADUPlanet editorial team. Last updated August 26, 2025.</div>
     </div>
   </footer>
 
-  <!-- Speakable + Schema JSON-LD (no extra image filenames used) -->
+  <!-- Speakable + Schema JSON-LD (keeps your single asset path) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -296,7 +299,8 @@
         "name": "Your Complete Guide to ADUs in 2025 | ADUPlanet",
         "isPartOf": {"@id":"https://aduplanet.com/#website"},
         "description": "Clear, human-friendly answers about ADUs in 2025—costs, permits, financing, builders—and a free cost estimate in your city.",
-        "breadcrumb": {"@id":"https://aduplanet.com/#breadcrumb"}
+        "breadcrumb": {"@id":"https://aduplanet.com/#breadcrumb"},
+        "dateModified": "2025-08-26"
       },
       {
         "@type": "BreadcrumbList",
