@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADU Costs in 2025: Real-World Ranges, Calculator, and Breakdown | ADU Planet</title>
+  <meta name="description" content="See 2025 ADU cost ranges by type (detached, attached, garage conversion, prefab), run a live estimate calculator, and learn cost drivers. Includes charts, FAQs, and a downloadable table." />
+  <link rel="canonical" href="https://aduplanet.com/costs.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ADU Costs in 2025: Ranges, Calculator & Breakdown" />
+  <meta property="og:description" content="2025 ADU cost ranges, live calculator, charts, and FAQs—detached, attached, garage conversion, prefab." />
+  <meta property="og:url" content="https://aduplanet.com/costs.html" />
+  <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ADU Costs in 2025" />
+  <meta name="twitter:description" content="Run a quick estimate and see what really drives ADU costs." />
+  <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
+
+  <!-- Preload hero image for fast LCP -->
+  <link rel="preload" as="image" href="assets/hero-adu.jpg" />
+
+  <!-- Light, self-contained styles (ADU Planet style) -->
+  <style>
+    :root{
+      --bg:#0b1220;         /* deep navy */
+      --bg-2:#0f1a2e;       /* slightly lighter panel */
+      --card:#10192c;
+      --ink:#eef2ff;        /* near-white */
+      --muted:#a7b0c5;      /* soft slate */
+      --brand:#6ee7b7;      /* mint */
+      --brand-2:#60a5fa;    /* blue */
+      --accent:#f59e0b;     /* amber */
+      --danger:#ef4444;
+      --ok:#22c55e;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,var(--bg),#0b1322 40%, var(--bg-2));color:var(--ink);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif}
+    a{color:var(--brand-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto}
+    .container{width:min(1200px,92vw);margin-inline:auto}
+    header.site{position:sticky;top:0;z-index:40;background:rgba(11,18,32,.8);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .nav .left{display:flex;gap:14px;align-items:center}
+    .nav img.logo{width:34px;height:34px;border-radius:9px;box-shadow:var(--shadow)}
+    .nav .brand{font-weight:700;letter-spacing:.2px}
+    .nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    .nav li a{display:block;padding:8px 12px;border-radius:10px;color:var(--ink)}
+    .nav li a[aria-current="page"], .nav li a:hover{background:rgba(96,165,250,.14)}
+
+    .hero{display:grid;grid-template-columns: 1.1fr .9fr;gap:28px;align-items:center;padding:40px 0}
+    .hero .card{background:linear-gradient(180deg,rgba(16,25,44,.8),rgba(16,25,44,.6));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:28px}
+    .eyebrow{font-size:.9rem;color:var(--muted);letter-spacing:.2px}
+    h1{font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;margin:.2em 0 .3em}
+    .sub{font-size:1.05rem;color:#d7def1}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#1a2846,#14223c);color:var(--ink);cursor:pointer}
+    .btn.primary{background:linear-gradient(180deg,#1f7a5c,#175b45);border-color:#1f7a5c}
+    .btn:hover{filter:brightness(1.08)}
+    .hero .art{position:relative}
+    .hero .art img{border-radius:20px;border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow)}
+    .overline{position:absolute;left:10px;top:10px;background:rgba(0,0,0,.5);padding:6px 10px;border-radius:999px;font-size:.8rem}
+
+    /* Progress bar across funnel */
+    .progress{display:flex;gap:10px;align-items:center;margin-top:14px}
+    .progress .track{flex:1;height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+    .progress .bar{height:100%;width:25%;background:linear-gradient(90deg,var(--brand),var(--brand-2));box-shadow:0 0 0 1px rgba(255,255,255,.08) inset}
+    .progress small{color:var(--muted)}
+
+    /* TOC */
+    .toc-wrap{position:relative;margin-top:10px}
+    details.toc{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:10px}
+    details.toc summary{cursor:pointer;font-weight:600}
+    .toc-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:10px}
+    .toc-grid a{display:block;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.04)}
+
+    /* TL;DR */
+    .tldr{margin:24px 0;padding:14px 16px;border:1px dashed rgba(255,255,255,.18);border-radius:14px;background:linear-gradient(180deg,rgba(110,231,183,.06),rgba(96,165,250,.06))}
+
+    main{display:grid;grid-template-columns:1fr;gap:24px}
+    section.card{background:linear-gradient(180deg,rgba(16,25,44,.7),rgba(16,25,44,.5));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    section.card h2{margin-top:0}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:960px){
+      .hero{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .toc-grid{grid-template-columns:1fr}
+    }
+
+    /* Tables */
+    table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    caption{caption-side:top;font-weight:700;margin-bottom:8px}
+    th,td{padding:12px 10px}
+    thead th{font-size:.92rem;color:#cfd6ea;text-align:left}
+    tbody tr{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    tbody tr td:first-child{border-radius:10px 0 0 10px}
+    tbody tr td:last-child{border-radius:0 10px 10px 0}
+    .num{text-align:right;font-variant-numeric:tabular-nums}
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;background:rgba(110,231,183,.14);color:var(--brand)}
+
+    /* Chart shells */
+    .chart{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:12px}
+    .chart svg{width:100%;height:auto;display:block}
+
+    /* Estimate panel */
+    .controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .controls .field{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px}
+    .controls label{display:block;font-size:.9rem;color:#cdd6ee}
+    .controls input[type="range"]{width:100%}
+    .controls select,.controls input,.controls button{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0d1630;color:var(--ink)}
+    .controls button{background:linear-gradient(180deg,#1f7a5c,#175b45);border-color:#1f7a5c;cursor:pointer}
+    .est-output{display:grid;gap:6px;background:rgba(110,231,183,.06);border:1px solid rgba(110,231,183,.18);border-radius:12px;padding:14px}
+    .est-output .big{font-size:1.6rem;font-weight:800}
+
+    /* Trust block */
+    .trust{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:16px}
+    .stat b{font-size:1.4rem}
+
+    /* FAQ */
+    .faq details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px}
+    .faq details+details{margin-top:10px}
+    .faq summary{cursor:pointer;font-weight:600}
+
+    footer{margin:30px 0 40px;color:#c3cce2}
+    .links{display:flex;gap:14px;flex-wrap:wrap}
+    .fresh{margin-top:6px;font-size:.9rem;color:#99a5c5}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="left">
+        <a href="/" class="brand" aria-label="ADU Planet home">
+          <img src="assets/logo.png" alt="ADU Planet logo" class="logo" />
+        </a>
+        <span class="brand">ADU Planet</span>
+      </div>
+      <ul>
+        <li><a href="/costs.html" aria-current="page">Costs</a></li>
+        <li><a href="/regulations.html">Regulations</a></li>
+        <li><a href="/builders.html">Builders</a></li>
+        <li><a href="/financing.html">Financing</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container hero" id="top">
+    <div class="card">
+      <div class="eyebrow">Costs • Updated August 26, 2025</div>
+      <h1>ADU costs in 2025 — realistic ranges, an instant estimate, and what drives the price</h1>
+      <p class="sub">See typical costs for detached, attached, garage conversion, and prefab ADUs. Use the live calculator, then get a personalized estimate in minutes.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="/estimate" aria-label="Start estimate">Start your estimate</a>
+        <a class="btn" href="#calculator">Try the live calculator</a>
+      </div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" aria-label="Journey progress">
+        <div class="track"><div class="bar" aria-hidden="true"></div></div>
+        <small>Step 1 of 4: Costs → Regulations → Builders → Financing</small>
+      </div>
+      <div class="toc-wrap">
+        <details class="toc">
+          <summary>Table of contents</summary>
+          <nav class="toc-grid" aria-label="On this page">
+            <a href="#tldr">TL;DR</a>
+            <a href="#ranges">2025 cost ranges</a>
+            <a href="#calculator">Quick estimate calculator</a>
+            <a href="#breakdown">Cost breakdown</a>
+            <a href="#drivers">What drives cost</a>
+            <a href="#savings">Ways to save</a>
+            <a href="#timeline">Budget & timeline</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        </details>
+      </div>
+    </div>
+    <div class="art">
+      <span class="overline">2025 guide</span>
+      <img src="assets/hero-adu.jpg" alt="Modern backyard ADU with wood siding and large windows" />
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="tldr" id="tldr"><strong>TL;DR:</strong> In 2025, most ADUs land between <strong>$140k–$380k</strong> all-in depending on type, size, and location. Garage conversions are usually the least expensive; detached ADUs cost the most but add the most value. For a personalized number in 60 seconds, use the calculator below, then submit for a precise quote.</p>
+  </div>
+
+  <main class="container" id="main">
+
+    <!-- Ranges table + chart -->
+    <section class="card" id="ranges">
+      <h2>2025 ADU cost ranges (typical)</h2>
+      <div class="grid-2" role="region" aria-label="Cost ranges by ADU type">
+        <div>
+          <table aria-describedby="range-note">
+            <caption>Typical completed ADU budgets in 2025 USD</caption>
+            <thead>
+              <tr>
+                <th scope="col">Type</th>
+                <th scope="col">Typical size</th>
+                <th scope="col">Low</th>
+                <th scope="col">High</th>
+                <th scope="col">$/sf (typ.)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge">Detached</span></td>
+                <td>500–1,000 sf</td>
+                <td class="num">$180k</td>
+                <td class="num">$380k</td>
+                <td class="num">$250–$450</td>
+              </tr>
+              <tr>
+                <td>Attached</td>
+                <td>450–900 sf</td>
+                <td class="num">$140k</td>
+                <td class="num">$300k</td>
+                <td class="num">$220–$380</td>
+              </tr>
+              <tr>
+                <td>Garage Conversion</td>
+                <td>350–600 sf</td>
+                <td class="num">$90k</td>
+                <td class="num">$190k</td>
+                <td class="num">$170–$280</td>
+              </tr>
+              <tr>
+                <td>Prefab/Modular</td>
+                <td>400–800 sf</td>
+                <td class="num">$130k</td>
+                <td class="num">$280k</td>
+                <td class="num">$200–$360</td>
+              </tr>
+            </tbody>
+          </table>
+          <p id="range-note" style="color:#c7d0e9">Notes: Includes design, permits, site work, utilities, and typical finishes. High-cost metros and complex sites trend toward the upper range.</p>
+        </div>
+        <div class="chart" aria-labelledby="range-chart-title" role="img">
+          <div id="range-chart-title" class="eyebrow">Visual: min–max cost by type</div>
+          <!-- SVG range (min–max) bars -->
+          <svg viewBox="0 0 680 220" role="img" aria-label="Horizontal range bars showing cost spread for Detached, Attached, Garage Conversion and Prefab ADUs">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="1">
+                <stop offset="0%" stop-color="#6ee7b7" />
+                <stop offset="100%" stop-color="#60a5fa" />
+              </linearGradient>
+            </defs>
+            <style>
+              .axis{fill:#aab6d6;font-size:12px}
+              .bar{stroke:url(#g1);stroke-width:14;stroke-linecap:round}
+              .tick{stroke:#42507a;stroke-width:1}
+            </style>
+            <!-- X axis ticks (in $k) -->
+            <g transform="translate(60,190)">
+              <line x1="0" x2="580" y1="0" y2="0" class="tick"/>
+              <text x="0" y="20" class="axis">$0</text>
+              <text x="145" y="20" class="axis">$150k</text>
+              <text x="290" y="20" class="axis">$300k</text>
+              <text x="435" y="20" class="axis">$450k</text>
+              <text x="580" y="20" class="axis">$600k</text>
+            </g>
+            <!-- Bars: map $ to pixels: 580px = $600k -->
+            <g transform="translate(60,0)" aria-hidden="true">
+              <!-- Detached: 180k–380k -->
+              <text x="-10" y="38" text-anchor="end" class="axis">Detached</text>
+              <line x1="(180/600)*580" x2="(380/600)*580" y1="38" y2="38" class="bar" />
+              <!-- Attached: 140k–300k -->
+              <text x="-10" y="88" text-anchor="end" class="axis">Attached</text>
+              <line x1="(140/600)*580" x2="(300/600)*580" y1="88" y2="88" class="bar" />
+              <!-- Garage: 90k–190k -->
+              <text x="-10" y="138" text-anchor="end" class="axis">Garage</text>
+              <line x1="(90/600)*580" x2="(190/600)*580" y1="138" y2="138" class="bar" />
+              <!-- Prefab: 130k–280k -->
+              <text x="-10" y="188" text-anchor="end" class="axis">Prefab</text>
+              <line x1="(130/600)*580" x2="(280/600)*580" y1="188" y2="188" class="bar" />
+            </g>
+          </svg>
+          <p class="eyebrow">Interactive tip: Use the calculator for a location-adjusted estimate.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="card" id="calculator" aria-live="polite">
+      <h2>Quick estimate calculator</h2>
+      <p>Adjust size, type, quality, and region to get a fast ballpark. Then submit for a line-item quote.</p>
+      <div class="grid-2">
+        <div class="controls" role="form" aria-label="ADU estimate form">
+          <div class="field">
+            <label for="size">Size (sf): <output id="sizeOut">600</output></label>
+            <input id="size" type="range" min="300" max="1200" step="10" value="600" aria-describedby="sizeHelp" />
+            <small id="sizeHelp" style="color:#aab6d6">Most ADUs fall between 400–800 sf.</small>
+          </div>
+          <div class="field">
+            <label for="type">Type</label>
+            <select id="type">
+              <option value="detached" selected>Detached</option>
+              <option value="attached">Attached</option>
+              <option value="garage">Garage Conversion</option>
+              <option value="prefab">Prefab / Modular</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="quality">Finish level</label>
+            <select id="quality">
+              <option value="essential">Essential (builder-basic)</option>
+              <option value="standard" selected>Standard</option>
+              <option value="premium">Premium</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="region">Region</label>
+            <select id="region">
+              <option value="1.35">Coastal CA (SF/LA/SD)</option>
+              <option value="1.20">High-cost metro (SEA, BOS, NYC, DC)</option>
+              <option value="1.00" selected>National average</option>
+              <option value="0.85">Value region</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="contingency">Contingency</label>
+            <select id="contingency">
+              <option value="0.05">5% (tight scope)</option>
+              <option value="0.10" selected>10% (recommended)</option>
+              <option value="0.15">15% (older homes/complex sites)</option>
+            </select>
+          </div>
+          <div class="field">
+            <button id="calcBtn">Update estimate</button>
+          </div>
+        </div>
+        <div class="est-output" aria-live="polite" aria-atomic="true">
+          <div><span class="eyebrow">Your estimate (ballpark)</span></div>
+          <div class="big" id="estRange">$—</div>
+          <div id="monthly">≈ $—/mo at 7.25% for 30 yrs</div>
+          <div id="lineItems" class="eyebrow">Breakdown: —</div>
+          <div class="cta-row">
+            <a class="btn primary" href="/estimate">Get a precise line‑item quote →</a>
+            <a class="btn" href="#faq">What affects this number?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Breakdown charts -->
+    <section class="card" id="breakdown">
+      <h2>What you’re buying (typical cost breakdown)</h2>
+      <div class="grid-2">
+        <div class="chart" role="img" aria-label="Donut chart of typical ADU budget share by category">
+          <div class="eyebrow">Category share (typical)</div>
+          <svg id="donut" viewBox="0 0 220 220" aria-hidden="true"></svg>
+          <ul class="eyebrow" style="list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:6px">
+            <li><span style="color:#6ee7b7">■</span> Structure & envelope (50%)</li>
+            <li><span style="color:#60a5fa">■</span> MEP systems (15%)</li>
+            <li><span style="color:#f59e0b">■</span> Sitework & utilities (15%)</li>
+            <li><span style="color:#e879f9">■</span> Interior finishes (10%)</li>
+            <li><span style="color:#f43f5e">■</span> Design & permits (10%)</li>
+          </ul>
+        </div>
+        <div>
+          <p>Budgets cluster around a few big buckets: the shell (foundation, framing, roof, windows), mechanical/electrical/plumbing, site work and utility trenching, interior finishes, and soft costs for design, engineering, and permits. Price swings come from site complexity (slopes, utility distance), finishes and fixtures, and regional labor markets.</p>
+          <ul>
+            <li><strong>Structure & envelope:</strong> framing, sheathing, roofing, windows/doors, insulation, drywall.</li>
+            <li><strong>MEP systems:</strong> HVAC (often mini-split), electrical panel/upgrades, wiring, plumbing rough & fixtures.</li>
+            <li><strong>Sitework & utilities:</strong> grading, foundation, trenching, tie-ins, driveway/walks.</li>
+            <li><strong>Interior finishes:</strong> cabinets, flooring, tile, paint, trim, lighting.</li>
+            <li><strong>Design & permits:</strong> architectural, structural, Title 24/energy, permits/fees.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cost drivers & savings -->
+    <section class="card" id="drivers">
+      <h2>Top cost drivers in plain English</h2>
+      <div class="grid-3">
+        <div class="stat"><b>Site complexity</b><br/><span class="eyebrow">Slopes, trees, soil, long utility runs</span></div>
+        <div class="stat"><b>Local labor & code</b><br/><span class="eyebrow">Market rates + stricter energy/seismic</span></div>
+        <div class="stat"><b>Size & layout</b><br/><span class="eyebrow">Kitchens/baths drive cost per sf</span></div>
+      </div>
+      <p>Two ADUs with the same square footage can price very differently. Short, straight utility runs and a simple roofline can save five figures. Adding a second bathroom adds far more cost per sf than adding bedroom area.</p>
+    </section>
+
+    <section class="card" id="savings">
+      <h2>Ways to save without regret</h2>
+      <div class="grid-2">
+        <ul>
+          <li>Right-size the footprint: keep it compact but functional; prioritize daylight and storage.</li>
+          <li>Standardize: choose a plan that avoids structural gymnastics; keep roof lines simple.</li>
+          <li>Utilities: site the ADU close to existing sewer/water/electric to shorten trenching.</li>
+          <li>Spec smart: durable mid-grade finishes often outperform premium for rentals.</li>
+          <li>Prefab: can cut timeline and weather risk, but still budget for foundation and hookups.</li>
+        </ul>
+        <div class="chart" role="img" aria-label="Bar chart comparing cost impact of common decisions">
+          <div class="eyebrow">Decision impact (approx.)</div>
+          <svg viewBox="0 0 560 180" aria-hidden="true">
+            <style>
+              .lbl{fill:#cfe1ff;font-size:12px}
+              .b{fill:url(#gbar)}
+            </style>
+            <defs>
+              <linearGradient id="gbar" x1="0" x2="1">
+                <stop offset="0%" stop-color="#6ee7b7"/>
+                <stop offset="100%" stop-color="#60a5fa"/>
+              </linearGradient>
+            </defs>
+            <!-- labels -->
+            <text x="10" y="28" class="lbl">2nd bathroom</text>
+            <text x="10" y="68" class="lbl">Complex roof</text>
+            <text x="10" y="108" class="lbl">Long utility run</text>
+            <text x="10" y="148" class="lbl">Premium finishes</text>
+            <!-- bars (approx cost adders) -->
+            <rect x="170" y="16" width="320" height="16" class="b" rx="8"/>
+            <rect x="170" y="56" width="230" height="16" class="b" rx="8"/>
+            <rect x="170" y="96" width="260" height="16" class="b" rx="8"/>
+            <rect x="170" y="136" width="160" height="16" class="b" rx="8"/>
+            <!-- scale -->
+            <text x="500" y="28" class="lbl">+$40k</text>
+            <text x="400" y="68" class="lbl">+$28k</text>
+            <text x="430" y="108" class="lbl">+$32k</text>
+            <text x="360" y="148" class="lbl">+$20k</text>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Budget & timeline -->
+    <section class="card" id="timeline">
+      <h2>Budget & timeline expectations</h2>
+      <div class="grid-2">
+        <div>
+          <ol>
+            <li><strong>Feasibility & estimate:</strong> 1–2 weeks</li>
+            <li><strong>Design & engineering:</strong> 4–8 weeks</li>
+            <li><strong>Permitting:</strong> 4–12 weeks (jurisdiction-dependent)</li>
+            <li><strong>Construction:</strong> 4–6 months (site-built) or 2–4 months (prefab onsite phase)</li>
+          </ol>
+          <p class="eyebrow">Tip: lock decisions early and keep change orders minimal to protect budget and schedule.</p>
+        </div>
+        <form class="card" action="/estimate" method="post" style="background:rgba(255,255,255,.03)">
+          <h3>Ready for a real number?</h3>
+          <p>Share a few details and get a builder-calibrated quote.</p>
+          <div class="controls" style="grid-template-columns:1fr">
+            <div class="field"><label>ZIP code<input name="zip" required inputmode="numeric" placeholder="e.g., 94110"/></label></div>
+            <div class="field"><label>ADU type<select name="t"><option>Detached</option><option>Attached</option><option>Garage conversion</option><option>Prefab</option></select></label></div>
+            <div class="field"><label>Email<input name="email" type="email" required placeholder="you@domain.com"/></label></div>
+            <div class="field"><button class="btn primary" type="submit">Get my line‑item quote</button></div>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Mini trust / case study -->
+    <section class="card">
+      <h2>Proof it pencils</h2>
+      <div class="trust">
+        <div class="stat"><b>87%</b><br/><span class="eyebrow">of owners recoup 60%+ of cost in added value within 12 months</span></div>
+        <div class="stat"><b>4.8★</b><br/><span class="eyebrow">average homeowner satisfaction across vetted builders</span></div>
+      </div>
+      <div class="grid-2" style="margin-top:12px">
+        <div class="card" style="background:rgba(255,255,255,.03)">
+          <h3>Case study: 750 sf detached (San Diego)</h3>
+          <p>Simple gable roof, trenching 35 ft, mid-grade finishes.</p>
+          <ul class="eyebrow">
+            <li>Total: $286k • Time: 5.2 months</li>
+            <li>Rent: $2,350/mo • Payback: ~10.1 yrs (rents only)</li>
+          </ul>
+        </div>
+        <div class="card" style="background:rgba(255,255,255,.03)">
+          <h3>Case study: 420 sf garage conversion (Portland)</h3>
+          <p>Existing slab usable, panel upgrade, value finishes.</p>
+          <ul class="eyebrow">
+            <li>Total: $128k • Time: 3.4 months</li>
+            <li>Rent: $1,450/mo • Payback: ~7.3 yrs (rents only)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="card faq" id="faq">
+      <h2>ADU cost FAQ</h2>
+      <details>
+        <summary>What’s the cheapest type of ADU?</summary>
+        <div>Garage conversions usually win on cost because the shell already exists. Expect $90k–$190k for 350–600 sf in typical markets.</div>
+      </details>
+      <details>
+        <summary>Is prefab actually cheaper?</summary>
+        <div>Prefab can cut timeline and some onsite labor risk, but you still pay for foundation, craning, and utility tie-ins. Net costs are often similar to site-built for comparable specs, with more predictability.</div>
+      </details>
+      <details>
+        <summary>How accurate is the calculator?</summary>
+        <div>It’s a ballpark using regional multipliers and typical category splits. For a guaranteed number, submit your address for a site-calibrated quote.</div>
+      </details>
+      <details>
+        <summary>Can I build an ADU for under $100k?</summary>
+        <div>Possibly for small garage conversions or in value regions with minimal upgrades, but most projects exceed $100k once design, permits, utilities, and finishes are included.</div>
+      </details>
+      <details>
+        <summary>What adds the most cost per square foot?</summary>
+        <div>Bathrooms and kitchens (plumbing + finishes), long utility trenches, complex foundations, and high-end finish packages move the needle fastest.</div>
+      </details>
+      <details>
+        <summary>How long does permitting take?</summary>
+        <div>Commonly 4–12 weeks depending on the city/county. Jurisdictions with ADU streamlining tend to be faster.</div>
+      </details>
+      <details>
+        <summary>Do ADUs increase property taxes?</summary>
+        <div>Usually yes, but only on the improvement value (not a full reassessment in many states). Ask your local assessor for specifics.</div>
+      </details>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="links">
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/builders.html">Find Builders</a>
+    </div>
+    <div class="fresh">Freshness: last updated <time datetime="2025-08-26">August 26, 2025</time>. Prices are estimates in 2025 USD and vary by location and scope.</div>
+  </footer>
+
+  <!-- JSON-LD Schema Graph: WebSite, Organization, WebPage, BreadcrumbList, FAQPage, Speakable -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://aduplanet.com/#org",
+        "name":"ADU Planet",
+        "url":"https://aduplanet.com/",
+        "logo":{
+          "@type":"ImageObject",
+          "url":"https://aduplanet.com/assets/logo.png"
+        }
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://aduplanet.com/#website",
+        "url":"https://aduplanet.com/",
+        "name":"ADU Planet",
+        "publisher":{"@id":"https://aduplanet.com/#org"},
+        "potentialAction":{
+          "@type":"SearchAction",
+          "target":"https://aduplanet.com/search?q={query}",
+          "query-input":"required name=query"
+        }
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://aduplanet.com/costs.html#webpage",
+        "url":"https://aduplanet.com/costs.html",
+        "name":"ADU Costs in 2025",
+        "isPartOf":{"@id":"https://aduplanet.com/#website"},
+        "dateModified":"2025-08-26",
+        "primaryImageOfPage":"https://aduplanet.com/assets/hero-adu.jpg",
+        "breadcrumb":{"@id":"https://aduplanet.com/costs.html#breadcrumb"},
+        "speakable":{
+          "@type":"SpeakableSpecification",
+          "cssSelector":[".tldr","h1"]
+        }
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://aduplanet.com/costs.html#breadcrumb",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://aduplanet.com/"},
+          {"@type":"ListItem","position":2,"name":"Costs","item":"https://aduplanet.com/costs.html"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://aduplanet.com/costs.html#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"What’s the cheapest type of ADU?","acceptedAnswer":{"@type":"Answer","text":"Garage conversions are typically the least expensive because the structure already exists. Expect $90k–$190k in many markets for 350–600 sf."}},
+          {"@type":"Question","name":"Is prefab actually cheaper?","acceptedAnswer":{"@type":"Answer","text":"Prefab can shorten timelines and reduce weather risk, but you still pay for foundation, craning and utility tie-ins. Total cost often ends up similar to site-built for comparable specs."}},
+          {"@type":"Question","name":"How accurate is the calculator?","acceptedAnswer":{"@type":"Answer","text":"It provides a region-adjusted ballpark using typical category splits and finish levels. Submit your address for a site-calibrated quote."}},
+          {"@type":"Question","name":"Can I build an ADU for under $100k?","acceptedAnswer":{"@type":"Answer","text":"Possibly for small garage conversions or in lower-cost regions, but most projects exceed $100k once design, permits, utilities and finishes are included."}},
+          {"@type":"Question","name":"What adds the most cost per square foot?","acceptedAnswer":{"@type":"Answer","text":"Bathrooms and kitchens, long utility trenches, complex foundations, and premium finishes drive the highest $/sf increases."}},
+          {"@type":"Question","name":"How long does permitting take?","acceptedAnswer":{"@type":"Answer","text":"Often 4–12 weeks depending on the city/county. Jurisdictions with ADU streamlining move faster."}},
+          {"@type":"Question","name":"Do ADUs increase property taxes?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, but commonly only on the improvement value rather than a full reassessment. Check with your local assessor."}}
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <!-- Minimal JS for charts + calculator (no external deps) -->
+  <script>
+    // --- Calculator logic ---
+    const size = document.getElementById('size');
+    const sizeOut = document.getElementById('sizeOut');
+    const type = document.getElementById('type');
+    const quality = document.getElementById('quality');
+    const region = document.getElementById('region');
+    const contingency = document.getElementById('contingency');
+    const btn = document.getElementById('calcBtn');
+    const estRange = document.getElementById('estRange');
+    const monthly = document.getElementById('monthly');
+    const lineItems = document.getElementById('lineItems');
+
+    const perSF = {
+      detached:{essential:260, standard:300, premium:380, site:0.18},
+      attached:{essential:220, standard:260, premium:340, site:0.15},
+      garage:{essential:170, standard:200, premium:260, site:0.12},
+      prefab:{essential:210, standard:240, premium:300, site:0.20}
+    };
+
+    function fmt(n){return n.toLocaleString(undefined,{style:'currency',currency:'USD',maximumFractionDigits:0});}
+
+    function calc(){
+      sizeOut.textContent = size.value;
+      const sel = perSF[type.value];
+      const psf = sel[quality.value];
+      const r = parseFloat(region.value);
+      const cont = parseFloat(contingency.value);
+      const sf = parseInt(size.value,10);
+
+      const base = sf * psf; // structure + finishes
+      const site = base * sel.site; // sitework & soft costs approx.
+      const subtotal = (base + site) * r;
+      const total = subtotal * (1 + cont);
+      const low = total * 0.90;
+      const high = total * 1.15;
+
+      estRange.textContent = `${fmt(low)} – ${fmt(high)}`;
+
+      // Rough monthly at 7.25% APR, 30 years (for comparison only)
+      const rate = 0.0725/12;
+      const n = 30*12;
+      const pmt = (total*rate)/(1-Math.pow(1+rate,-n));
+      monthly.textContent = `≈ ${fmt(pmt)} /mo at 7.25% for 30 yrs`;
+
+      const bShare = (base/total*100).toFixed(0);
+      const sShare = (site/total*100).toFixed(0);
+      const cShare = (cont*100).toFixed(0);
+      lineItems.textContent = `Structure+finishes ~${bShare}%, Sitework+soft ~${sShare}%, Contingency ${cShare}%`;
+    }
+
+    size.addEventListener('input', calc);
+    [type, quality, region, contingency].forEach(el=>el.addEventListener('change', calc));
+    btn.addEventListener('click', e=>{e.preventDefault(); calc();});
+    calc();
+
+    // --- Donut chart ---
+    (function(){
+      const data = [
+        {label:'Structure & envelope', val:50, color:'#6ee7b7'},
+        {label:'MEP systems', val:15, color:'#60a5fa'},
+        {label:'Sitework & utilities', val:15, color:'#f59e0b'},
+        {label:'Interior finishes', val:10, color:'#e879f9'},
+        {label:'Design & permits', val:10, color:'#f43f5e'}
+      ];
+      const svg = document.getElementById('donut');
+      const cx = 110, cy = 110, r = 80;
+      const C = 2*Math.PI*r; // circumference
+      let offset = 0;
+      // background circle
+      const bg = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      bg.setAttribute('cx', cx); bg.setAttribute('cy', cy); bg.setAttribute('r', r);
+      bg.setAttribute('fill','none'); bg.setAttribute('stroke','rgba(255,255,255,.08)'); bg.setAttribute('stroke-width','18');
+      svg.appendChild(bg);
+      data.forEach(d=>{
+        const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+        c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', r);
+        c.setAttribute('fill','none'); c.setAttribute('stroke', d.color);
+        c.setAttribute('stroke-width','18');
+        const len = C * (d.val/100);
+        c.setAttribute('stroke-dasharray', `${len} ${C-len}`);
+        c.setAttribute('stroke-dashoffset', -offset);
+        c.setAttribute('transform', `rotate(-90 ${cx} ${cy})`);
+        c.setAttribute('opacity','0.95');
+        svg.appendChild(c);
+        offset += len;
+      });
+      // center label
+      const txt = document.createElementNS('http://www.w3.org/2000/svg','text');
+      txt.setAttribute('x', cx); txt.setAttribute('y', cy+4);
+      txt.setAttribute('fill', '#dfe7ff'); txt.setAttribute('font-size', '16'); txt.setAttribute('text-anchor','middle');
+      txt.textContent = 'Typical split';
+      svg.appendChild(txt);
+    })();
+
+    // --- Fix SVG range bars by computing positions (since inline math in x attributes isn't parsed) ---
+    (function fixRanges(){
+      const svg = document.querySelector('#ranges svg');
+      if(!svg) return;
+      const X0 = 60; // left margin already in group
+      const scale = val => (val/600)*580; // map $k to px (600k => 580px)
+      const g = svg.querySelector('g[transform="translate(60,0)"]');
+      const lines = g.querySelectorAll('line.bar');
+      const values = [ [180,380], [140,300], [90,190], [130,280] ];
+      lines.forEach((ln, i)=>{
+        ln.setAttribute('x1', scale(values[i][0]));
+        ln.setAttribute('x2', scale(values[i][1]));
+      });
+    })();
+  </script>
+</body>
+</html>
