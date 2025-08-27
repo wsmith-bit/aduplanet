@@ -1,14 +1,38 @@
-<!-- /partials/header.html -->
-<div class="wrap nav" role="navigation" aria-label="Main">
-  <a href="/" aria-label="ADUPlanet Home">
+<!-- Shared site header partial with inline-safe spacing -->
+<div class="wrap nav" role="navigation" aria-label="Main" style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;">
+  <a href="/" aria-label="ADUPlanet Home" style="display:inline-flex;align-items:center;gap:10px;">
     <img src="/assets/logo.png" alt="ADUPlanet logo" style="height:32px;width:auto" />
   </a>
-  <!-- Inline styles ensure spacing without any CSS file -->
-  <nav aria-label="Primary" style="display:flex;gap:18px;align-items:center;">
-    <a href="/costs" style="display:inline-block;padding:8px 12px;">Costs</a>
-    <a href="/regulations" style="display:inline-block;padding:8px 12px;">Regulations</a>
-    <a href="/builders" style="display:inline-block;padding:8px 12px;">Builders</a>
-    <a href="/financing" style="display:inline-block;padding:8px 12px;">Financing</a>
-    <a href="/blog/" style="display:inline-block;padding:8px 12px;">Blog</a>
+  <!-- Inline styles ensure proper spacing even if no external CSS is loaded -->
+  <nav aria-label="Primary" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+    <a href="/costs" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Costs</a>
+    <a href="/regulations" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Regulations</a>
+    <a href="/builders" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Builders</a>
+    <a href="/financing" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Financing</a>
+    <a href="/blog/" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Blog</a>
   </nav>
 </div>
+<style>
+  /* Minimal highlight for the active page; middleware sets aria-current="page" */
+  header nav a[aria-current="page"]{background:rgba(255,255,255,0.06);outline:1px solid rgba(255,255,255,0.12)}
+</style>
+<script>
+(function(){
+  // GA4 nav click events (no-op if gtag missing)
+  function sendGA(evt, params){if(window.gtag){window.gtag('event',evt,params)}}
+  const root = document.currentScript && document.currentScript.previousElementSibling && document.currentScript.previousElementSibling.previousElementSibling;
+  const nav = (root && root.querySelector) ? root.querySelector('nav') : document.querySelector('header nav');
+  if(!nav) return;
+  nav.addEventListener('click', function(e){
+    const a = e.target && (e.target.closest ? e.target.closest('a') : null);
+    if(!a) return;
+    sendGA('nav_click', {
+      event_category: 'navigation',
+      event_label: (a.textContent||'').trim(),
+      link_text: (a.textContent||'').trim(),
+      link_href: a.getAttribute('href')||'',
+      location_path: location.pathname
+    });
+  }, { passive: true });
+})();
+</script>
