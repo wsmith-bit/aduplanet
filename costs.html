@@ -19,6 +19,16 @@
   <meta name="twitter:description" content="Run a quick estimate and see what really drives ADU costs." />
   <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
 
+  <meta property="og:image:alt" content="Modern backyard ADU with wood siding and large windows" />
+<meta name="twitter:image:alt" content="Modern backyard ADU with wood siding and large windows" />
+
+<!-- Optional: include case study images as additional OG images -->
+<meta property="og:image" content="https://aduplanet.com/assets/case-detached.jpg" />
+<meta property="og:image:alt" content="San Diego detached ADU case study, 750 sf" />
+<meta property="og:image" content="https://aduplanet.com/assets/case-garage.jpg" />
+<meta property="og:image:alt" content="Portland garage conversion ADU case study, 420 sf" />
+
+
   <!-- Preload hero image for fast LCP -->
   <link rel="preload" as="image" href="assets/hero-adu.jpg" />
 
@@ -457,32 +467,40 @@
       </div>
     </section>
 
-    <!-- Mini trust / case study -->
-    <section class="card">
-      <h2>Proof it pencils</h2>
-      <div class="trust">
-        <div class="stat"><b>87%</b><br/><span class="eyebrow">of owners recoup 60%+ of cost in added value within 12 months</span></div>
-        <div class="stat"><b>4.8★</b><br/><span class="eyebrow">average homeowner satisfaction across vetted builders</span></div>
-      </div>
-      <div class="grid-2" style="margin-top:12px">
-        <div class="card" style="background:rgba(255,255,255,.03)">
-          <h3>Case study: 750 sf detached (San Diego)</h3>
-          <p>Simple gable roof, trenching 35 ft, mid-grade finishes.</p>
-          <ul class="eyebrow">
-            <li>Total: $286k • Time: 5.2 months</li>
-            <li>Rent: $2,350/mo • Payback: ~10.1 yrs (rents only)</li>
-          </ul>
-        </div>
-        <div class="card" style="background:rgba(255,255,255,.03)">
-          <h3>Case study: 420 sf garage conversion (Portland)</h3>
-          <p>Existing slab usable, panel upgrade, value finishes.</p>
-          <ul class="eyebrow">
-            <li>Total: $128k • Time: 3.4 months</li>
-            <li>Rent: $1,450/mo • Payback: ~7.3 yrs (rents only)</li>
-          </ul>
-        </div>
-      </div>
-    </section>
+  <!-- Mini trust / case study -->
+<section class="card">
+<h2>Proof it pencils</h2>
+<div class="trust">
+<div class="stat"><b>87%</b><br/><span class="eyebrow">of owners recoup 60%+ of cost in added value within 12 months</span></div>
+<div class="stat"><b>4.8★</b><br/><span class="eyebrow">average homeowner satisfaction across vetted builders</span></div>
+</div>
+<div class="grid-2" style="margin-top:12px">
+<div class="card" style="background:rgba(255,255,255,.03)">
+ <figure style="margin:0 0 10px 0">
+  <img src="assets/case-detached.jpg" alt="Detached ADU case study in San Diego with gable roof and patio" style="border-radius:12px;display:block;width:100%" />
+  <figcaption class="eyebrow" style="margin-top:6px;color:#b7c4e6">San Diego detached ADU — 750 sf, gable roof, mid-grade finishes.</figcaption>
+</figure>
+<h3>Case study: 750 sf detached (San Diego)</h3>
+<p>Simple gable roof, trenching 35 ft, mid-grade finishes.</p>
+<ul class="eyebrow">
+<li>Total: $286k • Time: 5.2 months</li>
+<li>Rent: $2,350/mo • Payback: ~10.1 yrs (rents only)</li>
+</ul>
+</div>
+<div class="card" style="background:rgba(255,255,255,.03)">
+<figure style="margin:0 0 10px 0">
+  <img src="assets/case-garage.jpg" alt="Garage conversion ADU case study in Portland with updated facade and window" style="border-radius:12px;display:block;width:100%" />
+  <figcaption class="eyebrow" style="margin-top:6px;color:#b7c4e6">Portland garage conversion — 420 sf, existing slab reused, value finishes.</figcaption>
+</figure>
+<h3>Case study: 420 sf garage conversion (Portland)</h3>
+<p>Existing slab usable, panel upgrade, value finishes.</p>
+<ul class="eyebrow">
+<li>Total: $128k • Time: 3.4 months</li>
+<li>Rent: $1,450/mo • Payback: ~7.3 yrs (rents only)</li>
+</ul>
+</div>
+</div>
+</section>
 
     <!-- FAQ -->
     <section class="card faq" id="faq">
@@ -530,69 +548,150 @@
 
   <!-- JSON-LD Schema Graph: WebSite, Organization, WebPage, BreadcrumbList, FAQPage, Speakable -->
   <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {
-        "@type":"Organization",
-        "@id":"https://aduplanet.com/#org",
-        "name":"ADU Planet",
-        "url":"https://aduplanet.com/",
-        "logo":{
-          "@type":"ImageObject",
-          "url":"https://aduplanet.com/assets/ADUPlanet%20logo.jpg"
-        }
-      },
-      {
-        "@type":"WebSite",
-        "@id":"https://aduplanet.com/#website",
-        "url":"https://aduplanet.com/",
-        "name":"ADU Planet",
-        "publisher":{"@id":"https://aduplanet.com/#org"},
-        "potentialAction":{
-          "@type":"SearchAction",
-          "target":"https://aduplanet.com/search?q={query}",
-          "query-input":"required name=query"
-        }
-      },
-      {
-        "@type":"WebPage",
-        "@id":"https://aduplanet.com/costs.html#webpage",
-        "url":"https://aduplanet.com/costs.html",
-        "name":"ADU Costs in 2025",
-        "isPartOf":{"@id":"https://aduplanet.com/#website"},
-        "dateModified":"2025-08-26",
-        "primaryImageOfPage":"https://aduplanet.com/assets/hero-adu.jpg",
-        "breadcrumb":{"@id":"https://aduplanet.com/costs.html#breadcrumb"},
-        "speakable":{
-          "@type":"SpeakableSpecification",
-          "cssSelector":[".tldr","h1"]
-        }
-      },
-      {
-        "@type":"BreadcrumbList",
-        "@id":"https://aduplanet.com/costs.html#breadcrumb",
-        "itemListElement":[
-          {"@type":"ListItem","position":1,"name":"Home","item":"https://aduplanet.com/"},
-          {"@type":"ListItem","position":2,"name":"Costs","item":"https://aduplanet.com/costs.html"}
-        ]
-      },
-      {
-        "@type":"FAQPage",
-        "@id":"https://aduplanet.com/costs.html#faq",
-        "mainEntity":[
-          {"@type":"Question","name":"What’s the cheapest type of ADU?","acceptedAnswer":{"@type":"Answer","text":"Garage conversions are typically the least expensive because the structure already exists. Expect $90k–$190k in many markets for 350–600 sf."}},
-          {"@type":"Question","name":"Is prefab actually cheaper?","acceptedAnswer":{"@type":"Answer","text":"Prefab can shorten timelines and reduce weather risk, but you still pay for foundation, craning and utility tie-ins. Total cost often ends up similar to site-built for comparable specs."}},
-          {"@type":"Question","name":"How accurate is the calculator?","acceptedAnswer":{"@type":"Answer","text":"It provides a region-adjusted ballpark using typical category splits and finish levels. Submit your address for a site-calibrated quote."}},
-          {"@type":"Question","name":"Can I build an ADU for under $100k?","acceptedAnswer":{"@type":"Answer","text":"Possibly for small garage conversions or in lower-cost regions, but most projects exceed $100k once design, permits, utilities and finishes are included."}},
-          {"@type":"Question","name":"What adds the most cost per square foot?","acceptedAnswer":{"@type":"Answer","text":"Bathrooms and kitchens, long utility trenches, complex foundations, and premium finishes drive the highest $/sf increases."}},
-          {"@type":"Question","name":"How long does permitting take?","acceptedAnswer":{"@type":"Answer","text":"Often 4–12 weeks depending on the city/county. Jurisdictions with ADU streamlining move faster."}},
-          {"@type":"Question","name":"Do ADUs increase property taxes?","acceptedAnswer":{"@type":"Answer","text":"Usually yes, but commonly only on the improvement value rather than a full reassessment. Check with your local assessor."}}
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aduplanet.com/#org",
+      "name": "ADU Planet",
+      "url": "https://aduplanet.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aduplanet.com/assets/logo.png"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aduplanet.com/#website",
+      "url": "https://aduplanet.com/",
+      "name": "ADU Planet",
+      "publisher": { "@id": "https://aduplanet.com/#org" },
+      "inLanguage": "en",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://aduplanet.com/search?q={query}",
+        "query-input": "required name=query"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aduplanet.com/costs.html#webpage",
+      "url": "https://aduplanet.com/costs.html",
+      "name": "ADU Costs in 2025",
+      "isPartOf": { "@id": "https://aduplanet.com/#website" },
+      "inLanguage": "en",
+      "dateModified": "2025-08-26",
+      "primaryImageOfPage": "https://aduplanet.com/assets/hero-adu.jpg",
+      "breadcrumb": { "@id": "https://aduplanet.com/costs.html#breadcrumb" },
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".tldr","h1"]
+      },
+      "hasPart": [
+        { "@id": "https://aduplanet.com/costs.html#img-detached" },
+        { "@id": "https://aduplanet.com/costs.html#img-garage" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://aduplanet.com/costs.html#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://aduplanet.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Costs",
+          "item": "https://aduplanet.com/costs.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://aduplanet.com/costs.html#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What’s the cheapest type of ADU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Garage conversions are typically the least expensive because the structure already exists. Expect $90k–$190k in many markets for 350–600 sf."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is prefab actually cheaper?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Prefab can shorten timelines and reduce weather risk, but you still pay for foundation, craning and utility tie-ins. Total cost often ends up similar to site-built for comparable specs."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How accurate is the calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It provides a region-adjusted ballpark using typical category splits and finish levels. Submit your address for a site-calibrated quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I build an ADU for under $100k?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Possibly for small garage conversions or in lower-cost regions, but most projects exceed $100k once design, permits, utilities and finishes are included."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What adds the most cost per square foot?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Bathrooms and kitchens, long utility trenches, complex foundations, and premium finishes drive the highest $/sf increases."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does permitting take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often 4–12 weeks depending on the city/county. Jurisdictions with ADU streamlining move faster."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do ADUs increase property taxes?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Usually yes, but commonly only on the improvement value rather than a full reassessment. Check with your local assessor."
+          }
+        }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aduplanet.com/costs.html#img-detached",
+      "name": "San Diego detached ADU (750 sf)",
+      "caption": "San Diego detached ADU — 750 sf, gable roof, mid-grade finishes.",
+      "contentUrl": "https://aduplanet.com/assets/case-detached.jpg",
+      "representativeOfPage": true
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aduplanet.com/costs.html#img-garage",
+      "name": "Portland garage conversion ADU (420 sf)",
+      "caption": "Portland garage conversion — 420 sf, existing slab reused, value finishes.",
+      "contentUrl": "https://aduplanet.com/assets/case-garage.jpg",
+      "representativeOfPage": true
+    }
+  ]
+}
+</script>
 
   <!-- Minimal JS for charts + calculator (no external deps) -->
   <script>
