@@ -1,9 +1,24 @@
 <!-- Shared site footer partial for Cloudflare Pages injection via /functions/_middleware.ts -->
-<footer class="wrap" role="contentinfo">
-  <nav class="footer-links" aria-label="Footer">
-    <a href="/about">About</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/builders">Find Builders</a>
-  </nav>
-  <p>Freshness: Updated <time datetime="2025-08-27">August 27, 2025</time>. Explore the funnel: <a href="/costs">Costs</a> → <a href="/regulations">Regulations</a> → <a href="/builders">Builders</a> → <a href="/financing">Financing</a>.</p>
-</footer>
+<nav class="footer-links" aria-label="Footer">
+  <a href="/about">About</a>
+  <a href="/privacy">Privacy</a>
+  <a href="/builders">Find Builders</a>
+</nav>
+<p>Freshness: Updated <time datetime="2025-08-27" data-global-freshness>August 27, 2025</time>. Explore the funnel: <a href="/costs">Costs</a> → <a href="/regulations">Regulations</a> → <a href="/builders">Builders</a> → <a href="/financing">Financing</a>.</p>
+<script>
+(function(){
+  function sendGA(evt, params){ if (window.gtag) { window.gtag('event', evt, params); } }
+  const footer = document.currentScript && document.currentScript.parentElement;
+  if (!footer) return;
+  footer.addEventListener('click', function(e){
+    const a = e.target && (e.target.closest ? e.target.closest('a') : null);
+    if (!a) return;
+    sendGA('footer_click', {
+      event_category: 'navigation',
+      event_label: (a.textContent || '').trim(),
+      link_href: a.getAttribute('href') || '',
+      location_path: location.pathname
+    });
+  }, { passive: true });
+})();
+</script>
