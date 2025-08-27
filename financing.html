@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ADU Financing in 2025: HELOC vs Cash‑Out vs Construction vs FHA 203k | ADU Planet</title>
+  <meta name="description" content="Compare ADU financing options: HELOC, cash‑out refinance, construction loans, and FHA 203k. Includes rate/fee comparison table, payoff examples, calculator, and FAQs." />
+  <link rel="canonical" href="https://aduplanet.com/financing.html" />
+  <meta name="robots" content="index,follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="ADU Financing: Compare Options & Payments" />
+  <meta property="og:description" content="See pros/cons for HELOC, cash‑out, construction loans, and FHA 203k—plus a simple monthly payment calculator." />
+  <meta property="og:url" content="https://aduplanet.com/financing.html" />
+  <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
+  <meta property="og:image:alt" content="Modern backyard ADU with wood siding and large windows" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ADU Financing: Compare Options & Payments" />
+  <meta name="twitter:description" content="Quick comparison of ADU financing in 2025 with a payment calculator and FAQs." />
+  <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
+  <meta name="twitter:image:alt" content="Modern backyard ADU with wood siding and large windows" />
+
+  <link rel="preload" as="image" href="assets/hero-adu.jpg" />
+
+  <style>
+    :root{--bg:#0b1220;--panel:#10192c;--ink:#eef2ff;--muted:#a7b0c5;--brand:#6ee7b7;--brand-2:#60a5fa;--accent:#f59e0b;--radius:18px;--shadow:0 10px 30px rgba(0,0,0,.35)}
+    *{box-sizing:border-box}
+    html,body{margin:0;background:linear-gradient(180deg,var(--bg),#0b1322 40%, #0f1a2e);color:var(--ink);font:16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Inter, Ubuntu, Cantarell, Noto Sans, sans-serif}
+    a{color:var(--brand-2);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;height:auto}
+    .container{width:min(1180px,92vw);margin-inline:auto}
+    header.site{position:sticky;top:0;z-index:40;background:rgba(11,18,32,.8);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .nav .left{display:flex;gap:12px;align-items:center}
+    .nav img.logo{width:34px;height:34px;border-radius:9px;box-shadow:var(--shadow)}
+    .nav .brand{font-weight:700;letter-spacing:.2px}
+    .nav ul{display:flex;gap:18px;list-style:none;padding:0;margin:0}
+    .nav li a{display:block;padding:8px 12px;border-radius:10px;color:var(--ink)}
+    .nav li a[aria-current="page"], .nav li a:hover{background:rgba(96,165,250,.14)}
+
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:40px 0}
+    .hero .card{background:linear-gradient(180deg,rgba(16,25,44,.8),rgba(16,25,44,.6));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:26px}
+    h1{font-size:clamp(1.8rem,3.3vw,2.6rem);line-height:1.2;margin:.2em 0 .3em}
+    .sub{font-size:1.05rem;color:#d7def1}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,.1);background:linear-gradient(180deg,#1a2846,#14223c);color:var(--ink);cursor:pointer}
+    .btn.primary{background:linear-gradient(180deg,#1f7a5c,#175b45);border-color:#1f7a5c}
+
+    .progress{display:flex;gap:10px;align-items:center;margin-top:14px}
+    .progress .track{flex:1;height:10px;background:rgba(255,255,255,.08);border-radius:999px;overflow:hidden}
+    .progress .bar{height:100%;width:100%;background:linear-gradient(90deg,var(--brand),var(--brand-2))}
+    .progress small{color:var(--muted)}
+
+    details.toc{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:12px}
+    .toc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:10px}
+    .toc-grid a{display:block;padding:8px 10px;border-radius:10px;background:rgba(255,255,255,.04)}
+
+    section.card{background:linear-gradient(180deg,rgba(16,25,44,.7),rgba(16,25,44,.5));border:1px solid rgba(255,255,255,.08);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;margin:0 auto 20px}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:1000px){.hero{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.toc-grid{grid-template-columns:1fr 1fr}}
+
+    table{width:100%;border-collapse:separate;border-spacing:0 8px}
+    th,td{padding:12px 10px}
+    thead th{font-size:.92rem;color:#cfd6ea;text-align:left}
+    tbody tr{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08)}
+    tbody tr td:first-child{border-radius:10px 0 0 10px}
+    tbody tr td:last-child{border-radius:0 10px 10px 0}
+    .num{text-align:right;font-variant-numeric:tabular-nums}
+
+    .controls{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .controls .field{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px}
+    .controls label{display:block;font-size:.9rem;color:#cdd6ee}
+    .controls input,.controls select,.controls button{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,.12);background:#0d1630;color:var(--ink)}
+    .controls button{background:linear-gradient(180deg,#1f7a5c,#175b45);border-color:#1f7a5c;cursor:pointer}
+    .est-output{display:grid;gap:6px;background:rgba(110,231,183,.06);border:1px solid rgba(110,231,183,.18);border-radius:12px;padding:14px}
+    .est-output .big{font-size:1.6rem;font-weight:800}
+
+    .faq details{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:10px}
+    .faq details+details{margin-top:10px}
+  </style>
+</head>
+<body>
+  <header class="site">
+    <div class="container nav" role="navigation" aria-label="Primary">
+      <div class="left">
+        <a href="/" class="brand" aria-label="ADU Planet home">
+          <img src="assets/logo.png" alt="ADU Planet logo" class="logo" />
+        </a>
+        <span class="brand">ADU Planet</span>
+      </div>
+      <ul>
+        <li><a href="/costs.html">Costs</a></li>
+        <li><a href="/regulations.html">Regulations</a></li>
+        <li><a href="/builders.html">Builders</a></li>
+        <li><a href="/financing.html" aria-current="page">Financing</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="container hero" id="top">
+    <div class="card">
+      <div class="eyebrow">Financing • Updated August 27, 2025</div>
+      <h1>ADU financing in 2025 — compare your options and estimate payments</h1>
+      <p class="sub">Pick the right funding path: HELOC, cash‑out refinance, construction loan, or FHA 203k. Then see your estimated monthly payment.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#calculator">Estimate payment</a>
+        <a class="btn" href="#compare">Compare options</a>
+      </div>
+      <div class="progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100" aria-label="Journey progress">
+        <div class="track"><div class="bar" aria-hidden="true" style="width:100%"></div></div>
+        <small>Step 4 of 4: Costs → Regulations → Builders → <b>Financing</b></small>
+      </div>
+      <details class="toc">
+        <summary>Table of contents</summary>
+        <nav class="toc-grid" aria-label="On this page">
+          <a href="#tldr">TL;DR</a>
+          <a href="#compare">Compare options</a>
+          <a href="#calculator">Payment calculator</a>
+          <a href="#proscons">Pros & cons</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      </details>
+    </div>
+    <div class="art">
+      <img src="assets/hero-adu.jpg" alt="Backyard ADU with evening lighting" style="border-radius:20px;border:1px solid rgba(255,255,255,.1);box-shadow:var(--shadow)" />
+    </div>
+  </div>
+
+  <div class="container">
+    <p class="tldr" id="tldr"><strong>TL;DR:</strong> If you have strong equity and want flexibility, a <strong>HELOC</strong> is the simplest. If mortgage rates are favorable or you need a large lump sum, consider a <strong>cash‑out refi</strong>. For ground‑up builds with staged draws, use a <strong>construction loan</strong>. If you need a rehab‑focused option with lower down, look at <strong>FHA 203k</strong>.</p>
+  </div>
+
+  <main class="container" id="main">
+
+    <section class="card" id="compare">
+      <h2>ADU financing options at a glance</h2>
+      <div class="grid-2">
+        <div>
+          <table>
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Typical use</th>
+                <th>Disbursement</th>
+                <th>Rate type</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><b>HELOC</b></td><td>Flexible draw for construction payments</td><td>Line of credit</td><td>Usually variable</td><td>Interest‑only during draw; quick to set up</td></tr>
+              <tr><td><b>Cash‑out refinance</b></td><td>Large lump sum</td><td>At closing</td><td>Fixed</td><td>Replaces existing mortgage; watch overall rate</td></tr>
+              <tr><td><b>Construction loan</b></td><td>Ground‑up with inspections</td><td>Draw schedule</td><td>Variable → fixed (rolls to mortgage)</td><td>Bank oversight can reduce risk; more paperwork</td></tr>
+              <tr><td><b>FHA 203k</b></td><td>Purchase + rehab or major renovation</td><td>Escrowed draws</td><td>Fixed</td><td>Lower down, requires FHA consultant and limits</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="chart" role="img" aria-label="Bar chart of speed to fund and documentation burden">
+          <div class="eyebrow">Speed vs paperwork (approx.)</div>
+          <svg viewBox="0 0 560 180" aria-hidden="true">
+            <style>.lbl{fill:#cfe1ff;font-size:12px}.p{fill:#6ee7b7}.c{fill:#60a5fa}</style>
+            <text x="10" y="28" class="lbl">HELOC</text>
+            <rect x="120" y="16" width="320" height="16" class="p" rx="8"/>
+            <text x="10" y="68" class="lbl">Cash‑out</text>
+            <rect x="120" y="56" width="240" height="16" class="p" rx="8"/>
+            <text x="10" y="108" class="lbl">Construction</text>
+            <rect x="120" y="96" width="160" height="16" class="c" rx="8"/>
+            <text x="10" y="148" class="lbl">FHA 203k</text>
+            <rect x="120" y="136" width="140" height="16" class="c" rx="8"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="card" id="calculator" aria-live="polite">
+      <h2>Monthly payment calculator</h2>
+      <div class="grid-2">
+        <div class="controls" role="form" aria-label="Financing calculator">
+          <div class="field"><label>Loan amount (USD) <input id="amt" type="number" value="250000" min="10000" step="1000" /></label></div>
+          <div class="field"><label>APR (%) <input id="apr" type="number" value="7.25" step="0.01" /></label></div>
+          <div class="field"><label>Term (years) <select id="term"><option>10</option><option>15</option><option selected>30</option></select></label></div>
+          <div class="field"><label>Interest‑only period (months) <input id="io" type="number" value="0" min="0" step="1" /></label></div>
+          <div class="field" style="grid-column:1/-1"><button id="calcBtn" class="btn primary">Update payment</button></div>
+        </div>
+        <div class="est-output" aria-live="polite" aria-atomic="true">
+          <div><span class="eyebrow">Estimated payment</span></div>
+          <div class="big" id="pmt">$—/mo</div>
+          <div id="ioNote" class="eyebrow">—</div>
+          <div id="totalInt" class="eyebrow">—</div>
+        </div>
+      </div>
+      <p class="eyebrow">This calculator is informational only and not a credit offer. Actual payments depend on lender terms and your profile.</p>
+    </section>
+
+    <section class="card" id="proscons">
+      <h2>Pros & cons by product</h2>
+      <div class="grid-2">
+        <div>
+          <h3>HELOC</h3>
+          <ul>
+            <li><b>Pros:</b> fast setup, draw as needed, pay interest on what you use.</li>
+            <li><b>Cons:</b> variable rates can rise; some have draw fees.</li>
+          </ul>
+          <h3>Cash‑out refinance</h3>
+          <ul>
+            <li><b>Pros:</b> fixed rate, one payment; large lump sum.</li>
+            <li><b>Cons:</b> replaces your current mortgage; closing costs; less flexible.</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Construction loan</h3>
+          <ul>
+            <li><b>Pros:</b> staged draws align with build; inspections reduce risk.</li>
+            <li><b>Cons:</b> more documentation; often interest‑only during build; may reset at conversion.</li>
+          </ul>
+          <h3>FHA 203k</h3>
+          <ul>
+            <li><b>Pros:</b> lower down; can bundle purchase + rehab.</li>
+            <li><b>Cons:</b> FHA limits, mortgage insurance, consultant oversight.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="card faq" id="faq">
+      <h2>Financing FAQ</h2>
+      <details><summary>Can I use a HELOC to pay contractors directly?</summary><p>Yes—most HELOCs allow direct draws to your checking account so you can pay deposits and progress invoices.</p></details>
+      <details><summary>Will a construction loan cover permits and design?</summary><p>Often yes, if included in the budget; lenders may require invoices and proof of payment at each draw.</p></details>
+      <details><summary>What credit score do I need?</summary><p>Varies by lender and product; higher scores usually qualify for better rates and LTVs.</p></details>
+      <details><summary>Can rental income from the ADU count toward qualification?</summary><p>Some lenders will consider projected rent with restrictions; ask about ADU rental add‑backs or DSCR options.</p></details>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div class="links">
+      <a href="/about.html">About</a>
+      <a href="/privacy.html">Privacy</a>
+      <a href="/builders.html">Find Builders</a>
+    </div>
+    <div class="fresh">Freshness: last updated <time datetime="2025-08-27">August 27, 2025</time>.</div>
+  </footer>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {"@type":"Organization","@id":"https://aduplanet.com/#org","name":"ADU Planet","url":"https://aduplanet.com/","logo":{"@type":"ImageObject","url":"https://aduplanet.com/assets/logo.png"}},
+      {"@type":"WebSite","@id":"https://aduplanet.com/#website","url":"https://aduplanet.com/","name":"ADU Planet","publisher":{"@id":"https://aduplanet.com/#org"},"potentialAction":{"@type":"SearchAction","target":"https://aduplanet.com/search?q={query}","query-input":"required name=query"}},
+      {"@type":"WebPage","@id":"https://aduplanet.com/financing.html#webpage","url":"https://aduplanet.com/financing.html","name":"ADU Financing in 2025","isPartOf":{"@id":"https://aduplanet.com/#website"},"dateModified":"2025-08-27","primaryImageOfPage":"https://aduplanet.com/assets/hero-adu.jpg","breadcrumb":{"@id":"https://aduplanet.com/financing.html#breadcrumb"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr","h1"]}},
+      {"@type":"BreadcrumbList","@id":"https://aduplanet.com/financing.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aduplanet.com/"},{"@type":"ListItem","position":2,"name":"Financing","item":"https://aduplanet.com/financing.html"}]},
+      {"@type":"FAQPage","@id":"https://aduplanet.com/financing.html#faq","mainEntity":[
+        {"@type":"Question","name":"Can I use a HELOC to pay contractors directly?","acceptedAnswer":{"@type":"Answer","text":"Yes—most HELOCs allow direct draws to your checking account so you can pay deposits and progress invoices."}},
+        {"@type":"Question","name":"Will a construction loan cover permits and design?","acceptedAnswer":{"@type":"Answer","text":"Often yes, if included in the budget; lenders may require invoices and proof of payment at each draw."}},
+        {"@type":"Question","name":"What credit score do I need?","acceptedAnswer":{"@type":"Answer","text":"Varies by lender and product; higher scores usually qualify for better rates and LTVs."}},
+        {"@type":"Question","name":"Can rental income from the ADU count toward qualification?","acceptedAnswer":{"@type":"Answer","text":"Some lenders will consider projected rent with restrictions; ask about ADU rental add‑backs or DSCR options."}}
+      ]}
+    ]
+  }
+  </script>
+
+  <script>
+    const $ = id=>document.getElementById(id);
+    function fmt(n){return n.toLocaleString(undefined,{style:'currency',currency:'USD',maximumFractionDigits:0});}
+    function calc(){
+      const P = parseFloat($("amt").value||0);
+      const apr = parseFloat($("apr").value||0)/100; const r = apr/12;
+      const years = parseInt($("term").value,10); const n = years*12;
+      const io = parseInt($("io").value,10)||0;
+      // amortized payment after IO period
+      const base = (P*r)/(1-Math.pow(1+r,-(n-io)));
+      // during IO period
+      const ioPay = P*r;
+      $("pmt").textContent = io>0 ? `${fmt(ioPay)} /mo (IO ${io} mo), then ${fmt(base)} /mo` : `${fmt(base)} /mo`;
+      const totalInterest = ioPay*io + base*(n-io) - P;
+      $("ioNote").textContent = io>0 ? `Interest‑only for first ${io} months.` : `Fully amortizing from month 1.`;
+      $("totalInt").textContent = `Total interest over ${years} years (approx.): ${fmt(totalInterest)}`;
+    }
+    ["amt","apr","term","io"].forEach(id=>$(id).addEventListener('input',calc));
+    $("calcBtn").addEventListener('click',e=>{e.preventDefault();calc();});
+    calc();
+  </script>
+</body>
+</html>
