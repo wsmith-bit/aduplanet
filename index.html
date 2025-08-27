@@ -74,6 +74,42 @@
     .tile h3{margin:0 0 6px;color:var(--ink);font-size:18px}
     .tile p{margin:0;color:#475569}
 
+    .pillars-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 1000px) {
+  .pillars-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 640px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+}
+
+.tile {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 18px;
+  transition: transform .15s ease, background .15s ease;
+}
+
+.tile-link { 
+  color: inherit; 
+  text-decoration: none; 
+  display: block; 
+}
+
+.tile:hover { 
+  transform: translateY(-2px); 
+  background: rgba(255,255,255,.06); 
+}
+
+.tile h3 { margin: .2em 0 .2em 0; font-size: 1.15rem; }
+.tile p { margin: 0; color: #a7b0c5; font-size: .95rem; }
+
+    
     /* Featured */
     .featured{padding:10px 0}
     .feature-wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
@@ -167,28 +203,45 @@
     </div>
   </section>
 
-  <!-- Pillar Navigation -->
-  <section class="pillars container" aria-labelledby="pillars-title">
-    <h2 id="pillars-title">Explore key ADU topics</h2>
-    <div class="grid">
-      <article class="tile">
-        <h3><a href="costs.html">How much does an ADU cost in 2025?</a></h3>
-        <p>See typical budgets, price drivers, and ways to save on design and permitting.</p>
-      </article>
-      <article class="tile">
-        <h3><a href="regulations.html">ADU zoning & permits by state</a></h3>
-        <p>Understand setbacks, height limits, and owner-occupancy rules where you live.</p>
-      </article>
-      <article class="tile">
-        <h3><a href="builders.html">Find top ADU builders near you</a></h3>
-        <p>Compare vetted contractors and prefab providers with real timelines.</p>
-      </article>
-      <article class="tile">
-        <h3><a href="financing.html">How to pay for an ADU</a></h3>
-        <p>HELOCs, cash-out refis, construction loans, and local incentive programs.</p>
-      </article>
-    </div>
-  </section>
+ <!-- Pillar Navigation -->
+<section class="container pillars" aria-labelledby="pillars-title">
+  <h2 id="pillars-title">Explore key ADU topics</h2>
+
+  <div class="pillars-grid">
+    <!-- Costs -->
+    <article class="tile">
+      <a class="tile-link" href="/costs.html">
+        <h3>ADU Costs</h3>
+        <p>Real-world ranges, live calculator, and what drives the price.</p>
+      </a>
+    </article>
+
+    <!-- Regulations -->
+    <article class="tile">
+      <a class="tile-link" href="/regulations.html">
+        <h3>Regulations</h3>
+        <p>State-by-state rules: size, height, setbacks, parking, owner-occupancy.</p>
+      </a>
+    </article>
+
+    <!-- Builders -->
+    <article class="tile">
+      <a class="tile-link" href="/builders.html">
+        <h3>Find ADU Builders</h3>
+        <p>Prefab vs custom, timelines, and request 3 quotes in minutes.</p>
+      </a>
+    </article>
+
+    <!-- Financing -->
+    <article class="tile">
+      <a class="tile-link" href="/financing.html">
+        <h3>Financing</h3>
+        <p>HELOC, cash-out, construction loans, FHA 203k + payment calculator.</p>
+      </a>
+    </article>
+  </div>
+</section>
+
 
   <!-- Featured Resource -->
   <section class="featured container" aria-labelledby="featured-title">
