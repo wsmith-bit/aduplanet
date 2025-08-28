@@ -88,6 +88,8 @@
     @media (prefers-color-scheme: dark){
       .contrast-guard{background:#f8fafc!important;color:#0b1220!important}
     }
+    /* Headings must remain dark/no highlight backgrounds */
+    .contrast-guard h1, .contrast-guard h2, .contrast-guard h3{color:var(--ink)!important;background:transparent!important}
       /* Header/Footer partials: force light background and dark text */
     .contrast-guard header, .contrast-guard footer{background:#ffffff!important;color:var(--ink)!important}
     .contrast-guard header a, .contrast-guard footer a{color:var(--ink)!important}
