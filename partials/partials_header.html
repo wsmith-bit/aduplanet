@@ -1,7 +1,8 @@
-<!-- Shared site header partial with inline-safe spacing -->
+<!-- Shared site header partial with inline-safe spacing and larger logo -->
 <div class="wrap nav" role="navigation" aria-label="Main" style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;">
   <a href="/" aria-label="ADUPlanet Home" style="display:inline-flex;align-items:center;gap:10px;">
-    <img src="/assets/logo.png" alt="ADUPlanet logo" style="height:32px;width:auto" />
+    <!-- Responsive logo: 30px on small screens up to 42px on large screens -->
+    <img src="/assets/logo.png" alt="ADUPlanet logo" style="height:clamp(30px,4.2vw,42px);width:auto" />
   </a>
   <!-- Inline styles ensure proper spacing even if no external CSS is loaded -->
   <nav aria-label="Primary" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
