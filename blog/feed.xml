@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ADU Planet — Blog</title>
+    <link>https://aduplanet.com/blog/</link>
+    <atom:link href="https://aduplanet.com/blog/feed.xml" rel="self" type="application/rss+xml"/>
+    <description>Fresh, verified ADU guidance — laws, costs, builders, financing. Structured for AI answer engines and search.</description>
+    <language>en-US</language>
+    <lastBuildDate>Thu, 28 Aug 2025 12:00:00 -0400</lastBuildDate>
+    <ttl>360</ttl>
+
+    <!-- ITEM 1 -->
+    <item>
+      <title>California ADU Laws (2025): What Changed &amp; What You Can Build</title>
+      <link>https://aduplanet.com/blog/california-adu-laws-2025.html</link>
+      <guid isPermaLink="true">https://aduplanet.com/blog/california-adu-laws-2025.html</guid>
+      <pubDate>Thu, 28 Aug 2025 09:00:00 -0400</pubDate>
+      <description>Summary of 2025 statewide ADU rules: size minimums (800/850/1000 sf), 16–20 ft height bands near transit, parking waivers, owner‑occupancy, impact fees, and permit timelines.</description>
+    </item>
+
+    <!-- ITEM 2 -->
+    <item>
+      <title>Detached ADU Cost (2025): Realistic Ranges &amp; Cost Drivers</title>
+      <link>https://aduplanet.com/blog/detached-adu-cost-2025.html</link>
+      <guid isPermaLink="true">https://aduplanet.com/blog/detached-adu-cost-2025.html</guid>
+      <pubDate>Thu, 28 Aug 2025 09:10:00 -0400</pubDate>
+      <description>Current 2025 cost ranges by size and finish level, with a simple breakdown: build &amp; finishes, site &amp; utilities, permits &amp; fees, contingency. Includes a payback outline.</description>
+    </item>
+
+    <!-- ITEM 3 -->
+    <item>
+      <title>ADU Financing Options (2025): HELOC vs. Cash‑Out vs. Construction Loan</title>
+      <link>https://aduplanet.com/blog/adu-financing-options-2025.html</link>
+      <guid isPermaLink="true">https://aduplanet.com/blog/adu-financing-options-2025.html</guid>
+      <pubDate>Thu, 28 Aug 2025 09:20:00 -0400</pubDate>
+      <description>Compare popular financing paths, pro/cons, and rough payment math — including interest‑only periods and when to consider FHA 203k or HomeStyle.</description>
+    </item>
+
+  </channel>
+</rss>
