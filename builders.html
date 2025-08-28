@@ -1,8 +1,9 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light" style="background:#f3f4f6!important;">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light" />
   <title>Find the Best ADU Builder Near You (2025) | ADUPlanet</title>
   <meta name="description" content="Compare prefab vs custom ADU builders, explore builder types, and request 2–3 vetted quotes. Timeline, checklist, and RFQ form included." />
   <link rel="canonical" href="https://aduplanet.com/builders" />
@@ -113,9 +114,13 @@
       /* Force LIGHT scheme regardless of user dark mode for this page */
       body.theme-light{background:var(--bg)!important;color:var(--ink)!important}
     }
+      /* FINAL OVERRIDES — win against any injected dark theme */
+    :root{color-scheme:light!important}
+    html,body,html body,body.theme-light,html[data-theme="light"] body{background:var(--bg)!important;color:var(--ink)!important}
+    html.dark,html.dark body{background:var(--bg)!important;color:var(--ink)!important}
   </style>
 </head>
-<body class="theme-light">
+<body class="theme-light" style="background:#f3f4f6!important;">
   <!-- Hosts for edge-injected partials (header/footer) -->
   <header></header>
 
