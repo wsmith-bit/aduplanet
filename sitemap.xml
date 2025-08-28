@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Core Pillar Pages -->
+  <url>
+    <loc>https://aduplanet.com/</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <image:image>
+      <image:loc>https://aduplanet.com/assets/hero-adu.jpg</image:loc>
+      <image:caption>Modern backyard ADU with drought‑tolerant landscaping</image:caption>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aduplanet.com/costs.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://aduplanet.com/assets/hero-adu.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://aduplanet.com/regulations.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://aduplanet.com/builders.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://aduplanet.com/financing.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <!-- Regulations — State + City Playbooks -->
+  <url>
+    <loc>https://aduplanet.com/regulations/california.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://aduplanet.com/regulations/los-angeles.html</loc>
+    <lastmod>2025-08-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+
+  <!-- Blog Hub (canonical route is /blog/) -->
+  <url>
+    <loc>https://aduplanet.com/blog/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <!-- Trust/Utility Pages -->
+  <url>
+    <loc>https://aduplanet.com/about.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://aduplanet.com/privacy.html</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.20</priority>
+  </url>
+
+</urlset>
