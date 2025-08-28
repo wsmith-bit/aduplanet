@@ -69,9 +69,28 @@
     footer .fresh{font-size:14px}
     .pillars{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
     .pillars a{display:block;background:#fff;border:1px solid #e5e7eb;border-radius:14px;padding:14px;text-decoration:none;color:inherit}
+    /* === Contrast Guard (page-scoped overrides) === */
+    .contrast-guard{background:var(--bg)!important;color:var(--ink)!important;color-scheme:light}
+    .contrast-guard .wrap{filter:none!important;opacity:1!important}
+    .contrast-guard .wrap *{color:var(--ink)!important;opacity:1!important;text-shadow:none!important}
+    .contrast-guard a{color:var(--ink)!important}
+    /* Ensure light cards/tables even if global dark theme loads later */
+    .contrast-guard .card,
+    .contrast-guard .tldr,
+    .contrast-guard .timeline .step,
+    .contrast-guard .faq details,
+    .contrast-guard table th,
+    .contrast-guard table td,
+    .contrast-guard .stat,
+    .contrast-guard .pillars a{background:#ffffff!important;border-color:#e5e7eb!important}
+    .contrast-guard .btn.primary{color:#fff!important}
+    .contrast-guard .muted{opacity:.75!important}
+    @media (prefers-color-scheme: dark){
+      .contrast-guard{background:#f8fafc!important;color:#0b1220!important}
+    }
   </style>
 </head>
-<body>
+<body class="contrast-guard">
   <!-- Hosts for edge-injected partials (header/footer) -->
   <header></header>
 
