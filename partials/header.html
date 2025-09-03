@@ -5,13 +5,22 @@
     <img src="/assets/logo.png" alt="ADUPlanet logo" style="height:clamp(30px,4.2vw,42px);width:auto" />
   </a>
   <!-- Inline styles ensure proper spacing even if no external CSS is loaded -->
-  <nav aria-label="Primary" style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
-    <a href="/costs" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Costs</a>
-    <a href="/regulations" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Regulations</a>
-    <a href="/builders" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Builders</a>
-    <a href="/financing" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Financing</a>
-    <a href="/blog/" style="display:inline-block;padding:8px 12px;border-radius:10px;text-decoration:none;color:inherit;">Blog</a>
-  </nav>
+<nav class="nav" aria-label="Primary">
+  <a href="/" class="logo">
+    <img src="/assets/logo.png" alt="ADUPlanet" />
+  </a>
+
+  <!-- Core nav (unchanged order) -->
+  <a href="/costs">Costs</a>
+  <a href="/regulations">Regulations</a>
+  <a href="/builders">Builders</a>
+  <a href="/financing">Financing</a>
+  <a href="/blog/">Blog</a>
+
+  <!-- New: direct link to your video guide -->
+  <a href="/guides/adu-video-guide.html" data-cta="video">Video Guide</a>
+</nav>
+
 </div>
 <style>
   /* Minimal highlight for the active page; middleware sets aria-current="page" */
