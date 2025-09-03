@@ -1,12 +1,21 @@
 <!-- Shared site footer partial for Cloudflare Pages injection via /functions/_middleware.ts -->
-<div class="wrap">
-  <nav class="footer-links" aria-label="Footer">
-    <a href="/about">About</a>
-    <a href="/privacy">Privacy</a>
-    <a href="/builders">Find Builders</a>
-  </nav>
-  <p>Freshness: Updated <time datetime="2025-08-27" data-global-freshness>August 27, 2025</time>. Explore the funnel: <a href="/costs">Costs</a> → <a href="/regulations">Regulations</a> → <a href="/builders">Builders</a> → <a href="/financing">Financing</a>.</p>
-</div>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-links" aria-label="Footer">
+      <!-- Required trust links -->
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="/builders">Find Builders</a>
+
+      <!-- New: lightweight resources slot -->
+      <span aria-hidden="true">|</span>
+      <a href="/guides/adu-video-guide.html">ADU Video Guide</a>
+    </div>
+
+    <p class="freshness">
+      Updated <time data-global-freshness datetime="2025-09-03">September 3, 2025</time>.
+    </p>
+  </div>
 <script>
 (function(){
   function sendGA(evt, params){ if (window.gtag) { window.gtag('event', evt, params); } }
