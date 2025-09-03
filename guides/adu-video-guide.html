@@ -1,15 +1,14 @@
 <!doctype html>
 <html lang="en" data-theme="light">
 <head>
-  <!-- Upload your MP4 to /assets/adu-guide.mp4 (lowercase, no spaces) -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
   <title>ADU Video Guide (2025): A Homeowner’s Primer | ADUPlanet</title>
   <meta name="description" content="Watch our concise ADU video guide: what an ADU is, cost drivers, permitting steps, and financing paths—plus key moments and a printable transcript." />
   <link rel="canonical" href="https://aduplanet.com/guides/adu-video-guide.html" />
   <meta name="robots" content="index,follow" />
   <meta name="color-scheme" content="light" />
-  <link rel="preload" as="image" href="/assets/hero-adu.jpg" imagesrcset="/assets/hero-adu.jpg" />
+  <link rel="preload" as="image" href="/assets/hero-adu.jpg" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="video.other" />
@@ -26,43 +25,66 @@
   <meta name="twitter:image:alt" content="Backyard ADU with modern siding and native landscaping" />
 
   <style>
-    /* === ADUPlanet LIGHT Theme (High-Contrast) — per Knowledge File === */
+    /* --- Layout hardening to prevent side-scrolling --- */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin:0; padding:0; width:100%; max-width:100%; overflow-x:hidden; }
+    img, video, svg { max-width:100%; height:auto; display:block; }
+    a { color:#1d4ed8; text-decoration:none }
+
+    /* --- Theme --- */
     :root{
       --ink:#0b1220; --ink-2:#111827; --link:#1d4ed8;
       --bg:#f3f4f6; --surface:#ffffff; --line:#e5e7eb; --line-2:#cbd5e1;
       --mint:#6ee7b7; --blue:#2563eb; --amber:#f59e0b;
     }
-    html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto;background:#f3f4f6}
-    a{color:var(--link);text-decoration:none}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    .hero{display:grid;grid-template-columns:1.2fr 1fr;gap:24px;align-items:center}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto;background:var(--bg);color:var(--ink);line-height:1.5}
+
+    /* --- Container --- */
+    .wrap{width:100%; max-width:1100px; margin-inline:auto; padding:clamp(16px,3vw,24px)}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
-    .hero .card{padding:28px}
-    h1{color:var(--ink-2);font-size:clamp(28px,3.5vw,40px);margin:0 0 8px}
-    .sub{color:#374151;margin:0 0 18px}
-    .cta{display:flex;gap:12px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:12px 16px;border-radius:12px;font-weight:600;border:1px solid var(--line-2);background:#fff}
+
+    /* --- Hero --- */
+    .hero{display:grid; grid-template-columns:1fr; gap:16px; align-items:start}
+    .hero .card{padding:clamp(18px,2.5vw,28px)}
+    h1{color:var(--ink-2);font-size:clamp(26px,4.2vw,40px);margin:0 0 6px}
+    .sub{color:#374151;margin:0 0 14px}
+    .cta{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:12px;font-weight:600;border:1px solid var(--line-2);background:#fff;white-space:nowrap}
     .btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
-    .progress{margin-top:16px}
+
+    @media (min-width: 860px){
+      .hero{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:24px}
+    }
+
+    /* --- Progress bar --- */
+    .progress{margin-top:12px}
     .progress .bar{height:10px;border-radius:999px;background:#e5e7eb;overflow:hidden}
     .progress .fill{height:100%;width:25%;background:linear-gradient(90deg,var(--mint),var(--blue))}
-    .progress .labels{display:flex;gap:10px;flex-wrap:wrap;margin-top:8px;font-size:14px;color:#374151}
+    .progress .labels{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px;font-size:14px;color:#374151}
     .pill{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:#fff;border:1px solid var(--line)}
-    .tldr{margin:18px 0;padding:14px 16px;border-left:4px solid var(--blue);background:#fff}
-    .vidwrap{background:#000;border-radius:18px;overflow:hidden}
-    video{width:100%;height:auto;display:block}
-    .moments{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:16px}
-    .moments .card{padding:16px}
+
+    /* --- TL;DR --- */
+    .tldr{margin:16px 0;padding:14px 16px;border-left:4px solid var(--blue);background:#fff;border-radius:10px}
+
+    /* --- Video --- */
+    .vidwrap{background:#000;border-radius:18px;overflow:hidden; aspect-ratio:16/9}
+    .vidwrap > video{width:100%;height:100%}
+
+    /* --- Grids --- */
+    .moments{display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px}
+    .moments .card{padding:14px}
     .moments button{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:pointer}
-    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
-    figure{margin:0}
-    figcaption{font-size:14px;color:#4b5563;margin-top:8px}
+    .grid-2{display:grid; grid-template-columns:1fr; gap:16px; margin-top:20px}
+    @media (min-width: 860px){
+      .moments{grid-template-columns:1fr 1fr; gap:16px}
+      .grid-2{grid-template-columns:1fr 1fr; gap:24px}
+    }
+
     details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
     summary{cursor:pointer;font-weight:600}
     .faq{display:grid;gap:10px}
-    .fresh{color:#6b7280;font-size:14px;margin-top:20px}
-    /* Small screens */
-    @media (max-width:900px){.hero{grid-template-columns:1fr}.moments{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}}
+    figcaption{font-size:14px;color:#4b5563;margin-top:8px}
+    .fresh{color:#6b7280;font-size:14px;margin-top:16px}
   </style>
 </head>
 <body>
@@ -91,7 +113,7 @@
           </div>
         </div>
 
-        <details style="margin-top:16px">
+        <details style="margin-top:14px">
           <summary>What’s inside</summary>
           <ul>
             <li>ADU definitions & types</li>
@@ -109,7 +131,7 @@
       <img class="card" src="/assets/hero-adu.jpg" alt="Modern backyard ADU exterior at golden hour" />
     </section>
 
-    <section id="video" class="wrap" style="padding-left:0;padding-right:0;margin-top:24px">
+    <section id="video" style="margin-top:20px">
       <div class="vidwrap">
         <video id="adu-video" controls preload="metadata" poster="/assets/hero-adu.jpg"
                aria-label="A Homeowner’s Guide to ADUs video">
@@ -143,8 +165,8 @@
       </div>
     </section>
 
-    <section class="grid-2" style="margin-top:28px">
-      <div class="card" style="padding:18px">
+    <section class="grid-2">
+      <div class="card" style="padding:16px">
         <h2 style="margin:0 0 8px">Mini case studies</h2>
         <figure>
           <img src="/assets/case-detached.jpg" alt="Detached ADU example in San Diego" />
@@ -156,7 +178,7 @@
         </figure>
       </div>
 
-      <div class="card" style="padding:18px">
+      <div class="card" style="padding:16px">
         <h2 style="margin:0 0 8px">What to do next</h2>
         <ol style="margin:0 0 12px 18px">
           <li>Check your <a href="/regulations">local ADU rules</a>.</li>
@@ -168,7 +190,7 @@
       </div>
     </section>
 
-    <section style="margin-top:28px">
+    <section style="margin-top:20px">
       <h2>FAQ</h2>
       <div class="faq">
         <details><summary>What’s the ideal video format for the site?</summary><p>H.264 (MP4) at 1080p works well across browsers. Keep bitrate modest for fast loads; provide captions and a transcript for accessibility. <!-- {{verify locally}} --></p></details>
@@ -193,7 +215,7 @@
     })();
   </script>
 
-  <!-- Unified JSON-LD @graph with Speakable + FAQ + VideoObject -->
+  <!-- Unified JSON-LD @graph -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
