@@ -1,37 +1,36 @@
-<!-- Shared site header partial with inline-safe spacing and larger logo -->
-<div class="wrap nav" role="navigation" aria-label="Main" style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;">
+<!-- Shared site header partial — single logo, no duplicates -->
+<nav class="wrap nav" aria-label="Primary" role="navigation"
+     style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;">
+  <!-- Logo (only once) -->
   <a href="/" aria-label="ADUPlanet Home" style="display:inline-flex;align-items:center;gap:10px;">
-    <!-- Responsive logo: 30px on small screens up to 42px on large screens -->
-    <img src="/assets/logo.png" alt="ADUPlanet logo" style="height:clamp(30px,4.2vw,42px);width:auto" />
-  </a>
-  <!-- Inline styles ensure proper spacing even if no external CSS is loaded -->
-<nav class="nav" aria-label="Primary">
-  <a href="/" class="logo">
-    <img src="/assets/logo.png" alt="ADUPlanet" />
+    <img src="/assets/logo.png" alt="ADUPlanet logo"
+         style="height:clamp(30px,4.2vw,42px);width:auto;display:block" />
   </a>
 
-  <!-- Core nav (unchanged order) -->
-  <a href="/costs">Costs</a>
-  <a href="/regulations">Regulations</a>
-  <a href="/builders">Builders</a>
-  <a href="/financing">Financing</a>
-  <a href="/blog/">Blog</a>
-
-  <!-- New: direct link to your video guide -->
-  <a href="/guides/adu-video-guide.html" data-cta="video">Video Guide</a>
+  <!-- Primary links -->
+  <div class="links" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+    <a href="/costs">Costs</a>
+    <a href="/regulations">Regulations</a>
+    <a href="/builders">Builders</a>
+    <a href="/financing">Financing</a>
+    <a href="/blog/">Blog</a>
+    <a href="/guides/adu-video-guide.html" data-cta="video">Video Guide</a>
+  </div>
 </nav>
 
-</div>
 <style>
   /* Minimal highlight for the active page; middleware sets aria-current="page" */
-  header nav a[aria-current="page"]{background:rgba(255,255,255,0.06);outline:1px solid rgba(255,255,255,0.12)}
+  header nav a[aria-current="page"]{
+    background:rgba(255,255,255,0.06);
+    outline:1px solid rgba(255,255,255,0.12)
+  }
 </style>
+
 <script>
 (function(){
   // GA4 nav click events (no-op if gtag missing)
-  function sendGA(evt, params){if(window.gtag){window.gtag('event',evt,params)}}
-  const root = document.currentScript && document.currentScript.previousElementSibling && document.currentScript.previousElementSibling.previousElementSibling;
-  const nav = (root && root.querySelector) ? root.querySelector('nav') : document.querySelector('header nav');
+  function sendGA(evt, params){ if(window.gtag){ window.gtag('event', evt, params); } }
+  const nav = document.querySelector('header nav[aria-label="Primary"]') || document.querySelector('nav[aria-label="Primary"]');
   if(!nav) return;
   nav.addEventListener('click', function(e){
     const a = e.target && (e.target.closest ? e.target.closest('a') : null);
