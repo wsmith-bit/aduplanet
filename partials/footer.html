@@ -1,25 +1,27 @@
-<!-- Shared site footer partial for Cloudflare Pages injection via /functions/_middleware.ts -->
-<footer class="site-footer">
+<!-- Shared site footer partial for Cloudflare Pages injection -->
+<footer class="site-footer" role="contentinfo">
   <div class="wrap">
-    <div class="footer-links" aria-label="Footer">
+    <nav class="footer-links" aria-label="Footer">
       <!-- Required trust links -->
       <a href="/about">About</a>
       <a href="/privacy">Privacy</a>
       <a href="/builders">Find Builders</a>
 
-      <!-- New: lightweight resources slot -->
+      <!-- Lightweight resources slot -->
       <span aria-hidden="true">|</span>
       <a href="/guides/adu-video-guide.html">ADU Video Guide</a>
-    </div>
+    </nav>
 
     <p class="freshness">
       Updated <time data-global-freshness datetime="2025-09-03">September 3, 2025</time>.
     </p>
   </div>
+</footer>
+
 <script>
 (function(){
   function sendGA(evt, params){ if (window.gtag) { window.gtag('event', evt, params); } }
-  const footer = document.currentScript && document.currentScript.parentElement;
+  const footer = document.querySelector('footer.site-footer');
   if (!footer) return;
   footer.addEventListener('click', function(e){
     const a = e.target && (e.target.closest ? e.target.closest('a') : null);
