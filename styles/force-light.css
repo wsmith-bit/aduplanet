@@ -1,0 +1,47 @@
+/* /styles/force-light.css — Force Light + AA (last-wins) */
+
+/* Tokens (force light) */
+:root{
+  --bg:#fff !important; --surface:#fff !important;
+  --ink:#0b0f19 !important; --ink-2:#0b0f19 !important; --muted:#1f2937 !important;
+  --link:#1e40af !important; --link-visited:#6b21a8 !important; --focus-ring:#1e40af !important;
+  --line:#cbd5e1 !important; --line-2:#94a3b8 !important;
+}
+
+/* Base */
+html,body{ background:#fff !important; color:#0b0f19 !important; }
+h1,h2,h3,h4,strong{ color:#0b0f19 !important; }
+p,li,dd,dt,summary,.sub,.fresh,figcaption{ color:#0b0f19 !important; }
+a{ color:#1e40af !important; text-underline-offset:2px; }
+a:visited{ color:#6b21a8 !important; }
+:focus-visible{ outline:3px solid #1e40af !important; outline-offset:2px !important; }
+
+/* Header / nav — fix unreadable blue-on-blue */
+header{ background:#fff !important; color:#0b0f19 !important; border-bottom:1px solid #cbd5e1 !important; }
+header .links a, header nav a, header a{ color:#0b0f19 !important; text-decoration:none; }
+header .links a:hover, header nav a:hover{ text-decoration:underline; }
+header nav a[aria-current="page"]{ background:#f8fafc !important; outline:1px solid #cbd5e1 !important; }
+/* Nuke any leftover tinted backgrounds in header children */
+header [class*="bg-"], header [style*="background"]{ background:transparent !important; background-image:none !important; }
+
+/* Core components */
+.card{ background:#fff !important; border:1px solid #cbd5e1 !important; box-shadow:0 1px 2px rgba(0,0,0,.04) !important; }
+.pill{ background:#fff !important; border:1px solid #94a3b8 !important; color:#0b0f19 !important; }
+.btn{ background:#fff !important; color:#0b0f19 !important; border:1px solid #94a3b8 !important; }
+.btn.primary{ background:#1e40af !important; border-color:#1e40af !important; color:#fff !important; }
+input,select,textarea{ color:#0b0f19 !important; background:#fff !important; border:1px solid #94a3b8 !important; }
+
+/* Kill leftover dark bands (e.g., Browse by state) */
+.section-dark, .band, .panel, .callout, .feature-band,
+.state-browse, .state-nav, .state-list, .state-cards,
+[aria-label*="Browse by state"], [aria-label*="state"], [class*="state-"]{
+  background:#fff !important; color:#0b0f19 !important;
+  border:1px solid #cbd5e1 !important; box-shadow:none !important;
+}
+.state-browse a, .state-nav a, .state-list a, .state-cards a{ color:#1e40af !important; }
+.state-browse .pill, .state-nav .pill, .state-list .pill, .state-cards .pill{
+  background:#fff !important; color:#0b0f19 !important; border:1px solid #94a3b8 !important;
+}
+
+/* Keep actual video letterbox dark */
+.vidwrap{ background:#000 !important; }
