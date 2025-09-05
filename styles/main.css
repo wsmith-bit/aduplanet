@@ -150,3 +150,13 @@ input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2
 /* Guardrail: small text never microscopic */
 small,.fresh,figcaption{font-size:clamp(14px,0.9rem,16px)}
 
+/* Contrast Rescue — dark sections */
+[data-surface="dark"], .surface-dark { color:#fff !important; }
+[data-surface="dark"] :where(h1,h2,h3,h4,strong), .surface-dark :where(h1,h2,h3,h4,strong){ color:#fff !important; }
+[data-surface="dark"] :where(p,li,figcaption,.sub,.fresh),
+.surface-dark :where(p,li,figcaption,.sub,.fresh){ color:rgba(255,255,255,.92) !important; }
+[data-surface="dark"] a, .surface-dark a{ color:#bfdbfe !important; }
+[data-surface="dark"] a:visited, .surface-dark a:visited{ color:#d6bcfa !important; }
+[data-surface="dark"] .pill, .surface-dark .pill{ border-color:rgba(255,255,255,.55) !important; color:#fff !important; }
+
+
