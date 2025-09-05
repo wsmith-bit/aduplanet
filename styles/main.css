@@ -13,3 +13,63 @@ header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(1
 .footer-links{display:flex;gap:14px;flex-wrap:wrap}
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted)}
 a{color:var(--mint)}
+/* === ADUPlanet Contrast Upgrade — 2025-09-05 === */
+/* WCAG AA target: 4.5:1 (normal text), 3:1 (large/bold) */
+
+:root{
+  /* Text & surfaces */
+  --bg:#ffffff;
+  --surface:#ffffff;
+  --ink:#0b0f19;   /* body text (≈15:1 on white) */
+  --ink-2:#0b0f19; /* headings */
+  --muted:#1f2937; /* secondary text (≈8.6:1 on white) */
+
+  /* Links & outlines (AA+ on white) */
+  --link:#1e40af;          /* blue-800 */
+  --link-visited:#6b21a8;  /* purple-800 */
+  --focus-ring:#1e40af;
+
+  /* Lines */
+  --line:#cbd5e1;  /* slate-300 */
+  --line-2:#94a3b8;/* slate-400 */
+}
+
+/* Text reset (wins over low-contrast grays) */
+html,body{background:var(--bg);color:var(--ink)}
+h1,h2,h3,h4{color:var(--ink-2);font-weight:700}
+p,li,dd,dt,summary,.sub,.fresh,figcaption{color:var(--ink)}
+.sub,.fresh,figcaption{color:var(--muted)}
+
+/* Links */
+a{color:var(--link);text-underline-offset:2px}
+a:hover{text-decoration:underline}
+a:visited{color:var(--link-visited)}
+
+/* Buttons */
+.btn{color:var(--ink-2);background:#fff;border-color:var(--line-2)}
+.btn.primary{background:#1e40af;border-color:#1e40af;color:#fff} /* >4.5:1 on blue-800 */
+.btn:disabled{opacity:.9} /* keep contrast; avoid ghosted gray */
+
+/* Pills / chips */
+.pill{color:var(--ink);background:#fff;border-color:var(--line-2)}
+
+/* Form fields & placeholders */
+input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2)}
+::placeholder{color:#334155;opacity:1} /* readable placeholder */
+
+/* Focus visibility */
+:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
+
+/* Users who request more contrast */
+@media (prefers-contrast: more){
+  :root{
+    --link:#1e3a8a;         /* blue-900 */
+    --link-visited:#581c87; /* purple-900 */
+    --line:#94a3b8;
+    --line-2:#64748b;
+  }
+  .card,.pill,.btn{border-width:2px}
+}
+
+/* Guardrail: small text never microscopic */
+small,.fresh,figcaption{font-size:clamp(14px,0.9rem,16px)}
