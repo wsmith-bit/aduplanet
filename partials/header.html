@@ -1,14 +1,12 @@
-<!-- Shared site header partial — single logo, no duplicates -->
-<nav class="wrap nav" aria-label="Primary" role="navigation"
-     style="display:flex;align-items:center;justify-content:space-between;padding:16px 0;gap:16px;">
-  <!-- Logo (only once) -->
-  <a href="/" aria-label="ADUPlanet Home" style="display:inline-flex;align-items:center;gap:10px;">
-    <img src="/assets/logo.png" alt="ADUPlanet logo"
-         style="height:clamp(30px,4.2vw,42px);width:auto;display:block" />
+<!-- Shared site header partial — LIGHT, scoped, AA contrast -->
+<nav class="wrap nav" aria-label="Primary" role="navigation">
+  <!-- Logo -->
+  <a class="brand" href="/" aria-label="ADUPlanet Home">
+    <img src="/assets/logo.png" alt="ADUPlanet logo" width="120" height="32" />
   </a>
 
   <!-- Primary links -->
-  <div class="links" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+  <div class="links">
     <a href="/costs">Costs</a>
     <a href="/regulations">Regulations</a>
     <a href="/builders">Builders</a>
@@ -19,26 +17,58 @@
 </nav>
 
 <style>
-  /* Minimal highlight for the active page; middleware sets aria-current="page" */
-  header nav a[aria-current="page"]{
-    background:rgba(255,255,255,0.06);
-    outline:1px solid rgba(255,255,255,0.12)
-  }
+/* Scoped to the injected <header> only — no global overrides */
+header{
+  background: rgba(255,255,255,.92);
+  color: var(--ink, #0b0f19);
+  border-bottom: 1px solid var(--line, #cbd5e1);
+  backdrop-filter: saturate(1.2) blur(8px);
+}
+
+/* Layout */
+header .nav{
+  display:flex; align-items:center; justify-content:space-between;
+  gap:16px; padding:16px 0;
+}
+header .brand{ display:inline-flex; align-items:center; gap:10px; }
+header .brand img{ height:clamp(30px,4.2vw,42px); width:auto; display:block; }
+header .links{ display:flex; gap:16px; flex-wrap:wrap; align-items:center; }
+
+/* Links — light, AA */
+header .links a{
+  color: var(--ink, #0b0f19);
+  text-decoration:none;
+  padding:10px 12px;
+  border-radius:12px;
+}
+header .links a:hover{ text-decoration:underline; }
+
+/* Active page highlight; middleware sets aria-current="page" */
+header nav a[aria-current="page"]{
+  background:#f8fafc;
+  outline:1px solid var(--line, #cbd5e1);
+}
+
+/* Prefer stronger focus when users request higher contrast */
+@media (prefers-contrast: more){
+  header nav a[aria-current="page"]{ outline-width:2px; }
+}
 </style>
 
 <script>
+/* GA4 nav click events (no-op if gtag missing) — scoped to header */
 (function(){
-  // GA4 nav click events (no-op if gtag missing)
   function sendGA(evt, params){ if(window.gtag){ window.gtag('event', evt, params); } }
-  const nav = document.querySelector('header nav[aria-label="Primary"]') || document.querySelector('nav[aria-label="Primary"]');
+  const nav = document.querySelector('header nav[aria-label="Primary"]');
   if(!nav) return;
   nav.addEventListener('click', function(e){
     const a = e.target && (e.target.closest ? e.target.closest('a') : null);
     if(!a) return;
+    const label = (a.textContent||'').trim();
     sendGA('nav_click', {
       event_category: 'navigation',
-      event_label: (a.textContent||'').trim(),
-      link_text: (a.textContent||'').trim(),
+      event_label: label,
+      link_text: label,
       link_href: a.getAttribute('href')||'',
       location_path: location.pathname
     });
