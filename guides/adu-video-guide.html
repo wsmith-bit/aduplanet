@@ -6,7 +6,7 @@
   <title>ADU Video Guide (2025) — Homeowner’s Primer | ADUPlanet</title>
   <meta name="description" content="Watch a concise ADU video guide: what an ADU is, cost drivers, permitting steps, and financing paths—plus key moments and a printable transcript." />
   <link rel="canonical" href="https://aduplanet.com/guides/adu-video-guide.html" />
-  <meta name="robots" content="index,follow" />
+  <meta name="robots" content="index,follow,max-video-preview:large" />
   <meta name="color-scheme" content="light" />
   <link rel="preload" as="image" href="/assets/hero-adu.jpg" imagesrcset="/assets/hero-adu.jpg 1200w" />
   <link rel="preconnect" href="https://aduplanet.com" crossorigin>
@@ -23,6 +23,7 @@
   <meta property="og:video:type" content="video/mp4" />
   <meta property="og:video:width" content="1920" />
   <meta property="og:video:height" content="1080" />
+  <meta property="og:video:duration" content="499" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ADU Video Guide (2025) — Homeowner’s Primer" />
   <meta name="twitter:description" content="A quick-start homeowner’s guide to ADUs—costs, rules, builders, and financing." />
@@ -131,21 +132,17 @@
         <p class="tldr" id="tldr">Watch this short guide to learn ADU basics—cost ranges, the permitting path, and how to choose a builder—plus the major financing options and what affects monthly payments.</p>
       </div>
 
-      <img class="card" src="/assets/hero-adu.jpg" alt="Modern backyard ADU exterior at golden hour" loading="lazy" decoding="async" width="1200" height="800" />
-    </section>
-
-    <section id="video" style="margin-top:20px" aria-labelledby="video-title">
-      <h2 id="video-title" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Video guide</h2>
-      <div class="vidwrap" role="region" aria-label="ADU video player">
+      <div class="card vidwrap" id="video" role="region" aria-label="ADU video player (primary)">
         <video id="adu-video" controls preload="metadata" poster="/assets/hero-adu.jpg" playsinline
                aria-label="A Homeowner’s Guide to ADUs video">
           <source src="/assets/adu-guide.mp4" type="video/mp4" />
           <track kind="captions" srclang="en" label="English" src="/assets/adu-guide.en.vtt" default />
-          <!-- {{verify locally}} Provide a real .vtt captions file for accessibility -->
           Your browser does not support the video tag.
         </video>
       </div>
+    </section>
 
+    <section id="video-resources" style="margin-top:20px" aria-label="Key moments and downloads">
       <div class="moments" role="region" aria-label="Key moments">
         <div class="card">
           <strong>Key moments</strong>
@@ -161,9 +158,10 @@
           <strong>Download & transcript</strong>
           <p style="margin:8px 0 12px">Prefer to read? Grab the transcript or watch with captions.</p>
           <ul style="margin:0 0 8px 18px">
-            <li><a href="/assets/adu-guide-transcript.pdf">Transcript (PDF)</a> <!-- {{verify locally}} --></li>
-            <li><a href="/assets/adu-guide.en.vtt">English captions (.vtt)</a> <!-- {{verify locally}} --></li>
+            <li><a href="/assets/adu-guide-transcript.pdf">Transcript (PDF)</a></li>
+            <li><a href="/assets/adu-guide.en.vtt">English captions (.vtt)</a></li>
             <li><a href="/assets/adu-guide.mp4" download>Download video (MP4)</a></li>
+            <li><a href="https://www.youtube.com/watch?v=Sq_bKmX-F74" rel="noopener" target="_blank">Watch on YouTube</a></li>
           </ul>
           <noscript><p>JavaScript is required for timestamp deep-links. You can still <a href="/assets/adu-guide-transcript.pdf">read the transcript</a>.</p></noscript>
         </div>
@@ -192,7 +190,7 @@
           <li>Run the <a href="/financing">monthly payment calculator</a>.</li>
           <li>Send an <a href="/estimate">RFQ</a> with your ZIP and budget.</li>
         </ol>
-        <p class="fresh">Updated <time datetime="2025-09-03">September 3, 2025</time>.</p>
+        <p class="fresh">Updated <time datetime="2025-09-05">September 5, 2025</time>.</p>
       </div>
     </section>
 
@@ -271,7 +269,7 @@
         "url":"https://aduplanet.com/guides/adu-video-guide.html",
         "name":"ADU Video Guide (2025) — Homeowner’s Primer",
         "isPartOf":{"@id":"https://aduplanet.com/#website"},
-        "dateModified":"2025-09-03",
+        "dateModified":"2025-09-05",
         "inLanguage":"en",
         "breadcrumb":{"@id":"https://aduplanet.com/guides/adu-video-guide.html#breadcrumb"},
         "primaryImageOfPage":{"@id":"https://aduplanet.com/guides/adu-video-guide.html#img-hero"},
@@ -303,12 +301,9 @@
         ]
       },
       {
-        "@type":"VideoObject",
-        "@id":"https://aduplanet.com/guides/adu-video-guide.html#videoobject",
-        "name":"A Homeowner’s Guide to ADUs",
-        "description":"Quick-start video explaining ADU types, cost drivers, permitting steps, builder choices, and financing paths.",
-        "thumbnailUrl":"https://aduplanet.com/assets/hero-adu.jpg",
-        "uploadDate":"2025-09-03",
+        $1
+        "sameAs":"https://www.youtube.com/watch?v=Sq_bKmX-F74",
+        "duration":"PT8M19S",
         "inLanguage":"en",
         "isAccessibleForFree": true,
         "contentUrl":"https://aduplanet.com/assets/adu-guide.mp4",
