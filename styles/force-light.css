@@ -45,3 +45,59 @@ input,select,textarea{ color:#0b0f19 !important; background:#fff !important; bor
 
 /* Keep actual video letterbox dark */
 .vidwrap{ background:#000 !important; }
+
+/* ==== Regulations page clean-up (route-scoped) ==== */
+body.page-regulations header{
+  background:#fff !important; color:#0b0f19 !important; border-bottom:1px solid #cbd5e1 !important;
+}
+body.page-regulations header .links a,
+body.page-regulations header nav a,
+body.page-regulations header a{ color:#0b0f19 !important; }
+body.page-regulations header nav a[aria-current="page"]{
+  background:#f8fafc !important; outline:1px solid #cbd5e1 !important;
+}
+
+/* TL;DR band on Regulations */
+body.page-regulations .tldr{
+  background:#fff !important;
+  color:#0b0f19 !important;
+  border-left:4px solid #1e40af !important;
+}
+
+/* Progress bar stays readable */
+body.page-regulations .progress .bar{ background:#e5e7eb !important; }
+body.page-regulations .progress .fill{
+  background:linear-gradient(90deg,#6ee7b7,#2563eb) !important;
+}
+
+/* “Browse by state” block and similar dark bands */
+body.page-regulations [aria-label*="Browse by state"],
+body.page-regulations .state-browse,
+body.page-regulations .state-nav,
+body.page-regulations .state-list,
+body.page-regulations .state-cards,
+body.page-regulations .band,
+body.page-regulations .panel{
+  background:#fff !important;
+  color:#0b0f19 !important;
+  border:1px solid #cbd5e1 !important;
+  box-shadow:none !important;
+}
+
+/* Links and pills inside those blocks */
+body.page-regulations .state-browse a,
+body.page-regulations .state-nav a,
+body.page-regulations .state-list a,
+body.page-regulations .state-cards a{ color:#1e40af !important; }
+body.page-regulations .pill{
+  background:#fff !important; color:#0b0f19 !important; border:1px solid #94a3b8 !important;
+}
+
+/* Neutralize any inline dark/gradient background remnants specific to this page */
+body.page-regulations [style*="background:linear-gradient"],
+body.page-regulations [style*="background: radial-gradient"],
+body.page-regulations [style*="background-color: rgb"],
+body.page-regulations [style*="background-color:#"],
+body.page-regulations [style^="background:#0"]{
+  background-color:#fff !important; background-image:none !important;
+}
