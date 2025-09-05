@@ -3,58 +3,58 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
-  <title>ADU Video Guide (2025): A Homeowner’s Primer | ADUPlanet</title>
-  <meta name="description" content="Watch our concise ADU video guide: what an ADU is, cost drivers, permitting steps, and financing paths—plus key moments and a printable transcript." />
+  <title>ADU Video Guide (2025) — Homeowner’s Primer | ADUPlanet</title>
+  <meta name="description" content="Watch a concise ADU video guide: what an ADU is, cost drivers, permitting steps, and financing paths—plus key moments and a printable transcript." />
   <link rel="canonical" href="https://aduplanet.com/guides/adu-video-guide.html" />
   <meta name="robots" content="index,follow" />
   <meta name="color-scheme" content="light" />
-  <link rel="preload" as="image" href="/assets/hero-adu.jpg" />
+  <link rel="preload" as="image" href="/assets/hero-adu.jpg" imagesrcset="/assets/hero-adu.jpg 1200w" />
+  <link rel="preconnect" href="https://aduplanet.com" crossorigin>
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="video.other" />
   <meta property="og:site_name" content="ADUPlanet" />
-  <meta property="og:title" content="ADU Video Guide (2025): A Homeowner’s Primer" />
+  <meta property="og:title" content="ADU Video Guide (2025) — Homeowner’s Primer" />
   <meta property="og:description" content="A quick-start homeowner’s guide to ADUs—costs, rules, builders, and financing." />
   <meta property="og:url" content="https://aduplanet.com/guides/adu-video-guide.html" />
   <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
   <meta property="og:image:alt" content="Backyard ADU with modern siding and native landscaping" />
+  <meta property="og:video" content="https://aduplanet.com/assets/adu-guide.mp4" />
+  <meta property="og:video:type" content="video/mp4" />
+  <meta property="og:video:width" content="1920" />
+  <meta property="og:video:height" content="1080" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ADU Video Guide (2025): A Homeowner’s Primer" />
+  <meta name="twitter:title" content="ADU Video Guide (2025) — Homeowner’s Primer" />
   <meta name="twitter:description" content="A quick-start homeowner’s guide to ADUs—costs, rules, builders, and financing." />
   <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
   <meta name="twitter:image:alt" content="Backyard ADU with modern siding and native landscaping" />
 
   <style>
-    /* --- Layout hardening to prevent side-scrolling --- */
-    *, *::before, *::after { box-sizing: border-box; }
-    html, body { margin:0; padding:0; width:100%; max-width:100%; overflow-x:hidden; }
-    img, video, svg { max-width:100%; height:auto; display:block; }
-    a { color:#1d4ed8; text-decoration:none }
-
-    /* --- Theme --- */
+    /* --- Base / layout --- */
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0;width:100%;max-width:100%;overflow-x:hidden}
+    img,video,svg{max-width:100%;height:auto;display:block}
+    a{color:#1d4ed8;text-decoration:none}
     :root{
       --ink:#0b1220; --ink-2:#111827; --link:#1d4ed8;
       --bg:#f3f4f6; --surface:#ffffff; --line:#e5e7eb; --line-2:#cbd5e1;
       --mint:#6ee7b7; --blue:#2563eb; --amber:#f59e0b;
     }
-    body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto;background:var(--bg);color:var(--ink);line-height:1.5}
+    body{font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto;background:var(--bg);color:var(--ink);line-height:1.55}
 
-    /* --- Container --- */
-    .wrap{width:100%; max-width:1100px; margin-inline:auto; padding:clamp(16px,3vw,24px)}
+    /* --- Containers --- */
+    .wrap{max-width:1100px;margin-inline:auto;padding:clamp(16px,3vw,24px)}
     .card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
 
     /* --- Hero --- */
-    .hero{display:grid; grid-template-columns:1fr; gap:16px; align-items:start}
+    .hero{display:grid;grid-template-columns:1fr;gap:16px;align-items:start}
     .hero .card{padding:clamp(18px,2.5vw,28px)}
     h1{color:var(--ink-2);font-size:clamp(26px,4.2vw,40px);margin:0 0 6px}
     .sub{color:#374151;margin:0 0 14px}
     .cta{display:flex;gap:10px;flex-wrap:wrap}
     .btn{display:inline-block;padding:10px 14px;border-radius:12px;font-weight:600;border:1px solid var(--line-2);background:#fff;white-space:nowrap}
     .btn.primary{background:var(--blue);border-color:var(--blue);color:#fff}
-
-    @media (min-width: 860px){
-      .hero{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr); gap:24px}
-    }
+    @media (min-width:860px){.hero{grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px}}
 
     /* --- Progress bar --- */
     .progress{margin-top:12px}
@@ -67,24 +67,27 @@
     .tldr{margin:16px 0;padding:14px 16px;border-left:4px solid var(--blue);background:#fff;border-radius:10px}
 
     /* --- Video --- */
-    .vidwrap{background:#000;border-radius:18px;overflow:hidden; aspect-ratio:16/9}
-    .vidwrap > video{width:100%;height:100%}
+    .vidwrap{background:#000;border-radius:18px;overflow:hidden;aspect-ratio:16/9}
+    .vidwrap>video{width:100%;height:100%}
 
     /* --- Grids --- */
-    .moments{display:grid; grid-template-columns:1fr; gap:12px; margin-top:12px}
+    .moments{display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px}
     .moments .card{padding:14px}
     .moments button{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff;cursor:pointer}
-    .grid-2{display:grid; grid-template-columns:1fr; gap:16px; margin-top:20px}
-    @media (min-width: 860px){
-      .moments{grid-template-columns:1fr 1fr; gap:16px}
-      .grid-2{grid-template-columns:1fr 1fr; gap:24px}
-    }
+    .grid-2{display:grid;grid-template-columns:1fr;gap:16px;margin-top:20px}
+    @media (min-width:860px){.moments{grid-template-columns:1fr 1fr;gap:16px}.grid-2{grid-template-columns:1fr 1fr;gap:24px}}
 
     details{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px}
     summary{cursor:pointer;font-weight:600}
     .faq{display:grid;gap:10px}
     figcaption{font-size:14px;color:#4b5563;margin-top:8px}
     .fresh{color:#6b7280;font-size:14px;margin-top:16px}
+
+    /* --- Print niceties --- */
+    @media print{
+      .cta,.progress,.moments button{display:none!important}
+      .card{box-shadow:none;border-color:#ddd}
+    }
   </style>
 </head>
 <body>
@@ -92,18 +95,18 @@
   <header></header>
 
   <main class="wrap">
-    <section class="hero">
+    <section class="hero" aria-labelledby="page-title">
       <div class="card">
-        <h1>A Homeowner’s Guide to ADUs (Video)</h1>
+        <h1 id="page-title">A Homeowner’s Guide to ADUs (Video)</h1>
         <p class="sub">What an ADU is, how much they cost, the rules that matter, and how to pick a builder—explained in minutes.</p>
-        <div class="cta">
+        <div class="cta" aria-label="Primary actions">
           <a class="btn primary" href="#video">Watch the Guide</a>
           <a class="btn" href="/estimate">Get an Estimate</a>
           <a class="btn" href="/costs">Explore Costs</a>
         </div>
 
         <!-- Funnel progress bar: Costs → Regulations → Builders → Financing -->
-        <div class="progress" role="progressbar" aria-label="ADU journey" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+        <div class="progress" role="progressbar" aria-label="ADU journey" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25" aria-valuetext="Step 1 of 4: Costs">
           <div class="bar" aria-hidden="true"><div class="fill"></div></div>
           <div class="labels" aria-hidden="true">
             <span class="pill">1/4 Costs</span>
@@ -128,12 +131,13 @@
         <p class="tldr" id="tldr">Watch this short guide to learn ADU basics—cost ranges, the permitting path, and how to choose a builder—plus the major financing options and what affects monthly payments.</p>
       </div>
 
-      <img class="card" src="/assets/hero-adu.jpg" alt="Modern backyard ADU exterior at golden hour" />
+      <img class="card" src="/assets/hero-adu.jpg" alt="Modern backyard ADU exterior at golden hour" loading="lazy" decoding="async" width="1200" height="800" />
     </section>
 
-    <section id="video" style="margin-top:20px">
-      <div class="vidwrap">
-        <video id="adu-video" controls preload="metadata" poster="/assets/hero-adu.jpg"
+    <section id="video" style="margin-top:20px" aria-labelledby="video-title">
+      <h2 id="video-title" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden">Video guide</h2>
+      <div class="vidwrap" role="region" aria-label="ADU video player">
+        <video id="adu-video" controls preload="metadata" poster="/assets/hero-adu.jpg" playsinline
                aria-label="A Homeowner’s Guide to ADUs video">
           <source src="/assets/adu-guide.mp4" type="video/mp4" />
           <track kind="captions" srclang="en" label="English" src="/assets/adu-guide.en.vtt" default />
@@ -142,15 +146,15 @@
         </video>
       </div>
 
-      <div class="moments">
+      <div class="moments" role="region" aria-label="Key moments">
         <div class="card">
           <strong>Key moments</strong>
-          <div style="display:grid;gap:8px;margin-top:8px">
-            <button data-seek="15">What counts as an ADU (00:15)</button>
-            <button data-seek="60">Cost drivers & ranges (01:00)</button>
-            <button data-seek="135">Permitting steps (02:15)</button>
-            <button data-seek="210">Prefab vs custom (03:30)</button>
-            <button data-seek="270">Financing options (04:30)</button>
+          <div style="display:grid;gap:8px;margin-top:8px" role="list">
+            <button role="listitem" data-seek="15" aria-controls="adu-video">What counts as an ADU (00:15)</button>
+            <button role="listitem" data-seek="60" aria-controls="adu-video">Cost drivers & ranges (01:00)</button>
+            <button role="listitem" data-seek="135" aria-controls="adu-video">Permitting steps (02:15)</button>
+            <button role="listitem" data-seek="210" aria-controls="adu-video">Prefab vs custom (03:30)</button>
+            <button role="listitem" data-seek="270" aria-controls="adu-video">Financing options (04:30)</button>
           </div>
         </div>
         <div class="card">
@@ -161,20 +165,22 @@
             <li><a href="/assets/adu-guide.en.vtt">English captions (.vtt)</a> <!-- {{verify locally}} --></li>
             <li><a href="/assets/adu-guide.mp4" download>Download video (MP4)</a></li>
           </ul>
+          <noscript><p>JavaScript is required for timestamp deep-links. You can still <a href="/assets/adu-guide-transcript.pdf">read the transcript</a>.</p></noscript>
         </div>
       </div>
     </section>
 
-    <section class="grid-2">
+    <section class="grid-2" aria-label="Case studies and next steps">
       <div class="card" style="padding:16px">
         <h2 style="margin:0 0 8px">Mini case studies</h2>
         <figure>
-          <img src="/assets/case-detached.jpg" alt="Detached ADU example in San Diego" />
-          <figcaption>Detached ADU in San Diego — highlights cost drivers like site utilities and finish level.</figcaption>
+          <!-- Reuse hero image to comply with asset guardrail -->
+          <img src="/assets/hero-adu.jpg" alt="Detached ADU example" loading="lazy" decoding="async" width="1200" height="800" />
+          <figcaption>Detached ADU — highlights cost drivers like site utilities and finish level.</figcaption>
         </figure>
         <figure style="margin-top:12px">
-          <img src="/assets/case-garage.jpg" alt="Garage conversion ADU in Portland" />
-          <figcaption>Garage conversion in Portland — emphasizes permitting and structural scope.</figcaption>
+          <img src="/assets/hero-adu.jpg" alt="Garage conversion ADU" loading="lazy" decoding="async" width="1200" height="800" />
+          <figcaption>Garage conversion — emphasizes permitting and structural scope.</figcaption>
         </figure>
       </div>
 
@@ -193,12 +199,19 @@
     <section style="margin-top:20px">
       <h2>FAQ</h2>
       <div class="faq">
-        <details><summary>What’s the ideal video format for the site?</summary><p>H.264 (MP4) at 1080p works well across browsers. Keep bitrate modest for fast loads; provide captions and a transcript for accessibility. <!-- {{verify locally}} --></p></details>
-        <details><summary>Will this auto-play on mobile?</summary><p>Auto-play is intentionally disabled; users control playback. This improves accessibility and user trust.</p></details>
-        <details><summary>Can I jump to sections?</summary><p>Yes—use the “Key moments” buttons to seek to specific timestamps.</p></details>
-        <details><summary>Is there a printable version?</summary><p>Yes, use the transcript PDF above. <!-- {{verify locally}} --></p></details>
-        <details><summary>How does this tie into the ADU journey?</summary><p>The video tees up Costs, then Regulations, then choosing Builders, and finally Financing—mirroring our site’s funnel.</p></details>
-        <details><summary>Can I embed this elsewhere?</summary><p>Yes, but keep the canonical page on ADUPlanet and link back here.</p></details>
+        <details><summary>What qualifies as an ADU?</summary><p>An accessory dwelling unit is a secondary home on a residential lot. Common types include detached backyard cottages, attached additions, garage conversions, and prefab/modular units placed on a new foundation.</p></details>
+
+        <details><summary>How much does an ADU typically cost?</summary><p>Costs vary by location and scope. Major drivers are size (sq ft), site work and utilities, structural upgrades, and finish level. Detached builds usually cost more than garage conversions. See current ranges on our <a href="/costs">Costs</a> page.</p></details>
+
+        <details><summary>How long do permitting and construction take?</summary><p>Design and permitting commonly span a few months, then construction ranges from a few months for conversions to longer for ground-up builds. Timelines depend on your city’s review speed and the complexity of the site and design.</p></details>
+
+        <details><summary>Where can an ADU go on my lot?</summary><p>Placement is controlled by setbacks, maximum height, lot coverage, and utilities access. Rules are city- and state-specific, so check your local summary on <a href="/regulations">Regulations</a> before you finalize layout.</p></details>
+
+        <details><summary>Prefab or custom — which should I choose?</summary><p>Prefab can speed schedules and reduce on-site disruption, but offers less design flexibility and may have transport/set craning limits. Custom lets you tailor layout and finishes and navigate tricky sites, with more design and build time. Our <a href="/builders">Builders</a> guide compares options.</p></details>
+
+        <details><summary>Can I rent my ADU?</summary><p>Long‑term rentals are widely allowed; many jurisdictions restrict short‑term rentals under 30 days. Always confirm local rules and any owner‑occupancy requirements on the <a href="/regulations">Regulations</a> page and your city’s planning portal.</p></details>
+
+        <details><summary>How do people finance an ADU?</summary><p>Common paths include HELOCs, cash‑out refinance, construction loans, and (in some cases) renovation loans. Compare pros/cons and monthly payment examples on <a href="/financing">Financing</a>.</p></details>
       </div>
     </section>
   </main>
@@ -206,12 +219,22 @@
   <footer></footer>
 
   <script>
-    // Timestamp seeking for Key moments
+    // Timestamp seeking for Key moments + ?t= support
     (function(){
-      const v=document.getElementById('adu-video');
+      const v = document.getElementById('adu-video');
+
+      // Click-to-seek buttons
       document.querySelectorAll('[data-seek]').forEach(btn=>{
-        btn.addEventListener('click',()=>{ v.currentTime=+btn.dataset.seek; v.play(); });
+        btn.addEventListener('click',()=>{ v.currentTime = +btn.dataset.seek; v.play(); });
       });
+
+      // URL param deep link (?t=SECONDS)
+      const p = new URLSearchParams(location.search);
+      const t = parseFloat(p.get('t'));
+      if(!Number.isNaN(t) && t >= 0){
+        if (v.readyState >= 1) { v.currentTime = t; }
+        else { v.addEventListener('loadedmetadata', ()=>{ v.currentTime = t; }); }
+      }
     })();
   </script>
 
@@ -236,18 +259,26 @@
         "potentialAction":{"@type":"SearchAction","target":"https://aduplanet.com/search?q={q}","query-input":"required name=q"}
       },
       {
+        "@type":"ImageObject",
+        "@id":"https://aduplanet.com/guides/adu-video-guide.html#img-hero",
+        "name":"ADU hero",
+        "caption":"Modern backyard ADU exterior",
+        "contentUrl":"https://aduplanet.com/assets/hero-adu.jpg"
+      },
+      {
         "@type":"WebPage",
         "@id":"https://aduplanet.com/guides/adu-video-guide.html#webpage",
         "url":"https://aduplanet.com/guides/adu-video-guide.html",
-        "name":"ADU Video Guide (2025): A Homeowner’s Primer",
+        "name":"ADU Video Guide (2025) — Homeowner’s Primer",
         "isPartOf":{"@id":"https://aduplanet.com/#website"},
         "dateModified":"2025-09-03",
+        "inLanguage":"en",
         "breadcrumb":{"@id":"https://aduplanet.com/guides/adu-video-guide.html#breadcrumb"},
+        "primaryImageOfPage":{"@id":"https://aduplanet.com/guides/adu-video-guide.html#img-hero"},
         "speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr","h1"]},
         "hasPart":[
           {"@id":"https://aduplanet.com/guides/adu-video-guide.html#videoobject"},
-          {"@id":"https://aduplanet.com/#img-case-detached"},
-          {"@id":"https://aduplanet.com/#img-case-garage"}
+          {"@id":"https://aduplanet.com/guides/adu-video-guide.html#img-hero"}
         ]
       },
       {
@@ -262,12 +293,13 @@
       {
         "@type":"FAQPage",
         "mainEntity":[
-          {"@type":"Question","name":"What’s the ideal video format for the site?","acceptedAnswer":{"@type":"Answer","text":"H.264 (MP4) at 1080p works well across browsers. Keep bitrate modest for fast loads; provide captions and a transcript for accessibility."}},
-          {"@type":"Question","name":"Will this auto-play on mobile?","acceptedAnswer":{"@type":"Answer","text":"Auto-play is disabled; users control playback. This improves accessibility and user trust."}},
-          {"@type":"Question","name":"Can I jump to sections?","acceptedAnswer":{"@type":"Answer","text":"Yes—use the “Key moments” buttons to seek to specific timestamps."}},
-          {"@type":"Question","name":"Is there a printable version?","acceptedAnswer":{"@type":"Answer","text":"Yes, use the transcript PDF above."}},
-          {"@type":"Question","name":"How does this tie into the ADU journey?","acceptedAnswer":{"@type":"Answer","text":"The video tees up Costs, then Regulations, then choosing Builders, and finally Financing—mirroring our site’s funnel."}},
-          {"@type":"Question","name":"Can I embed this elsewhere?","acceptedAnswer":{"@type":"Answer","text":"Yes, but keep the canonical page on ADUPlanet and link back here."}}
+          {"@type":"Question","name":"What qualifies as an ADU?","acceptedAnswer":{"@type":"Answer","text":"An accessory dwelling unit is a secondary home on a residential lot. Common types include detached backyard cottages, attached additions, garage conversions, and prefab/modular units placed on a new foundation."}},
+          {"@type":"Question","name":"How much does an ADU typically cost?","acceptedAnswer":{"@type":"Answer","text":"Costs vary by location and scope. Major drivers are size, site work and utilities, structural upgrades, and finish level. Detached builds usually cost more than garage conversions. See our Costs page for current ranges."}},
+          {"@type":"Question","name":"How long do permitting and construction take?","acceptedAnswer":{"@type":"Answer","text":"Design and permitting commonly span a few months, then construction ranges from a few months for conversions to longer for ground-up builds. Timelines depend on local review speed and project complexity."}},
+          {"@type":"Question","name":"Where can an ADU go on my lot?","acceptedAnswer":{"@type":"Answer","text":"Placement is controlled by setbacks, maximum height, lot coverage, and utilities access. Rules are city- and state-specific; verify on the Regulations page before finalizing layout."}},
+          {"@type":"Question","name":"Prefab or custom — which should I choose?","acceptedAnswer":{"@type":"Answer","text":"Prefab can speed schedules and reduce on-site disruption but offers less design flexibility and may have transport limits. Custom fits tricky sites and preferences but takes longer. See Builders for a comparison."}},
+          {"@type":"Question","name":"Can I rent my ADU?","acceptedAnswer":{"@type":"Answer","text":"Long-term rentals are widely allowed; many jurisdictions restrict short-term rentals under 30 days. Confirm local rules and any owner-occupancy requirements on the Regulations page and your city portal."}},
+          {"@type":"Question","name":"How do people finance an ADU?","acceptedAnswer":{"@type":"Answer","text":"Popular options include HELOCs, cash-out refinance, construction loans, and some renovation loans. Review pros/cons and monthly payment examples on the Financing page."}}
         ]
       },
       {
@@ -277,22 +309,49 @@
         "description":"Quick-start video explaining ADU types, cost drivers, permitting steps, builder choices, and financing paths.",
         "thumbnailUrl":"https://aduplanet.com/assets/hero-adu.jpg",
         "uploadDate":"2025-09-03",
+        "inLanguage":"en",
+        "isAccessibleForFree": true,
         "contentUrl":"https://aduplanet.com/assets/adu-guide.mp4",
-        "embedUrl":"https://aduplanet.com/guides/adu-video-guide.html#video"
-      },
-      {
-        "@type":"ImageObject",
-        "@id":"https://aduplanet.com/#img-case-detached",
-        "name":"Detached ADU — San Diego",
-        "caption":"Detached ADU case study highlighting cost drivers like utilities and finish level.",
-        "contentUrl":"https://aduplanet.com/assets/case-detached.jpg"
-      },
-      {
-        "@type":"ImageObject",
-        "@id":"https://aduplanet.com/#img-case-garage",
-        "name":"Garage Conversion — Portland",
-        "caption":"Garage conversion case study emphasizing permitting and structural scope.",
-        "contentUrl":"https://aduplanet.com/assets/case-garage.jpg"
+        "embedUrl":"https://aduplanet.com/guides/adu-video-guide.html#video",
+        "url":"https://aduplanet.com/guides/adu-video-guide.html#video",
+        "publisher":{"@id":"https://aduplanet.com/#org"},
+        "potentialAction":{
+          "@type":"SeekToAction",
+          "target":"https://aduplanet.com/guides/adu-video-guide.html?t={seek_to_second_number}#video",
+          "startOffset-input":"required name=seek_to_second_number"
+        },
+        "hasPart":[
+          {
+            "@type":"Clip",
+            "name":"What counts as an ADU",
+            "startOffset":15,
+            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=15#video"
+          },
+          {
+            "@type":"Clip",
+            "name":"Cost drivers & ranges",
+            "startOffset":60,
+            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=60#video"
+          },
+          {
+            "@type":"Clip",
+            "name":"Permitting steps",
+            "startOffset":135,
+            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=135#video"
+          },
+          {
+            "@type":"Clip",
+            "name":"Prefab vs custom",
+            "startOffset":210,
+            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=210#video"
+          },
+          {
+            "@type":"Clip",
+            "name":"Financing options",
+            "startOffset":270,
+            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=270#video"
+          }
+        ]
       }
     ]
   }
