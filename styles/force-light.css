@@ -101,3 +101,43 @@ body.page-regulations [style*="background-color:#"],
 body.page-regulations [style^="background:#0"]{
   background-color:#fff !important; background-image:none !important;
 }
+
+/* ==== Regulations page clean-up (route-scoped) ==== */
+body.page-regulations .tldr{
+  background:#fff !important; color:#0b0f19 !important;
+  border-left:4px solid #1e40af !important;
+}
+
+/* FAQ accordion (details/summary) */
+body.page-regulations details,
+body.page-regulations summary{
+  background:#fff !important; color:#0b0f19 !important;
+  border:1px solid #cbd5e1 !important; box-shadow:none !important;
+}
+body.page-regulations details{ border-radius:12px !important; padding:0 !important; }
+body.page-regulations summary{
+  display:flex; align-items:center; gap:.5rem;
+  padding:12px 14px !important; border-radius:10px !important;
+  font-weight:600 !important; cursor:pointer;
+}
+body.page-regulations details[open] summary{ background:#f8fafc !important; }
+
+/* “Browse by state” band (and similar dark panels) */
+body.page-regulations .state-browse,
+body.page-regulations [aria-label*="Browse by state"],
+body.page-regulations .band, body.page-regulations .panel{
+  background:#fff !important; color:#0b0f19 !important;
+  border:1px solid #cbd5e1 !important; box-shadow:none !important;
+}
+/* Links & pills inside that band */
+body.page-regulations .state-browse a{ color:#1e40af !important; }
+body.page-regulations .state-browse .pill{
+  background:#fff !important; color:#0b0f19 !important; border:1px solid #94a3b8 !important;
+}
+
+/* Nuke any leftover dark/gradient backgrounds on the page */
+body.page-regulations [style*="background:linear-gradient"],
+body.page-regulations [style*="background-color: rgb"],
+body.page-regulations [style*="background-color:#"]{
+  background-color:#fff !important; background-image:none !important;
+}
