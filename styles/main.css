@@ -73,3 +73,80 @@ input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2
 
 /* Guardrail: small text never microscopic */
 small,.fresh,figcaption{font-size:clamp(14px,0.9rem,16px)}
+
+/* === ADUPlanet Contrast Baseline — 2025-09-05 === */
+/* Targets WCAG AA: 4.5:1 for normal text, 3:1 for large/bold */
+
+:root{
+  --bg:#ffffff;
+  --surface:#ffffff;
+  --ink:#0b0f19;    /* ≈15:1 on white */
+  --ink-2:#0b0f19;  /* headings */
+  --muted:#1f2937;  /* ≈8.6:1 on white */
+
+  --link:#1e40af;          /* blue-800 */
+  --link-visited:#6b21a8;  /* purple-800 */
+  --focus-ring:#1e40af;
+
+  --line:#cbd5e1;   /* slate-300 */
+  --line-2:#94a3b8; /* slate-400 */
+}
+
+/* Text reset */
+html,body{background:var(--bg);color:var(--ink)}
+h1,h2,h3,h4{color:var(--ink-2);font-weight:700}
+p,li,dd,dt,summary,.sub,.fresh,figcaption{color:var(--ink)}
+.sub,.fresh,figcaption{color:var(--muted)}
+
+/* Links */
+a{color:var(--link);text-underline-offset:2px}
+a:hover{text-decoration:underline}
+a:visited{color:var(--link-visited)}
+
+/* Buttons */
+.btn{color:var(--ink-2);background:#fff;border-color:var(--line-2)}
+.btn.primary{background:#1e40af;border-color:#1e40af;color:#fff} /* AA */
+
+/* Pills / chips / cards */
+.pill{color:var(--ink);background:#fff;border-color:var(--line-2)}
+.card{background:var(--surface);border-color:var(--line)}
+
+/* Form fields & placeholders */
+input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2)}
+::placeholder{color:#334155;opacity:1}
+
+/* Focus visibility */
+:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
+
+/* Dark surface helpers — apply to any dark section/hero */
+.surface-dark, [data-surface="dark"]{
+  color:#fff;
+}
+.surface-dark :where(h1,h2,h3,h4,strong){color:#fff}
+.surface-dark :where(p,li,figcaption,.sub,.fresh){color:rgba(255,255,255,.92)}
+.surface-dark a{color:#bfdbfe}
+.surface-dark a:visited{color:#d6bcfa}
+.surface-dark .pill{background:transparent;border-color:rgba(255,255,255,.5);color:#fff}
+.surface-dark .btn{background:#fff;color:#0b0f19;border-color:#fff}
+.surface-dark .btn.primary{background:#fff;color:#0b0f19;border-color:#fff}
+
+/* Text-on-image utility (use on hero wrappers with background photos) */
+.text-on-image{position:relative;isolation:isolate}
+.text-on-image::before{
+  content:"";position:absolute;inset:0;z-index:0;
+  background:linear-gradient(180deg,rgba(0,0,0,.55),rgba(0,0,0,.35));
+}
+.text-on-image > *{position:relative;z-index:1}
+
+/* Respect users who want more contrast */
+@media (prefers-contrast: more){
+  :root{
+    --link:#1e3a8a; --link-visited:#581c87;
+    --line:#94a3b8; --line-2:#64748b;
+  }
+  .card,.pill,.btn{border-width:2px}
+}
+
+/* Guardrail: small text never microscopic */
+small,.fresh,figcaption{font-size:clamp(14px,0.9rem,16px)}
+
