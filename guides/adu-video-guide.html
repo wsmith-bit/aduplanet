@@ -172,7 +172,6 @@
       <div class="card" style="padding:16px">
         <h2 style="margin:0 0 8px">Mini case studies</h2>
         <figure>
-          <!-- Reuse hero image to comply with asset guardrail -->
           <img src="/assets/hero-adu.jpg" alt="Detached ADU example" loading="lazy" decoding="async" width="1200" height="800" />
           <figcaption>Detached ADU — highlights cost drivers like site utilities and finish level.</figcaption>
         </figure>
@@ -198,18 +197,12 @@
       <h2>FAQ</h2>
       <div class="faq">
         <details><summary>What qualifies as an ADU?</summary><p>An accessory dwelling unit is a secondary home on a residential lot. Common types include detached backyard cottages, attached additions, garage conversions, and prefab/modular units placed on a new foundation.</p></details>
-
         <details><summary>How much does an ADU typically cost?</summary><p>Costs vary by location and scope. Major drivers are size (sq ft), site work and utilities, structural upgrades, and finish level. Detached builds usually cost more than garage conversions. See current ranges on our <a href="/costs">Costs</a> page.</p></details>
-
         <details><summary>How long do permitting and construction take?</summary><p>Design and permitting commonly span a few months, then construction ranges from a few months for conversions to longer for ground-up builds. Timelines depend on your city’s review speed and the complexity of the site and design.</p></details>
-
         <details><summary>Where can an ADU go on my lot?</summary><p>Placement is controlled by setbacks, maximum height, lot coverage, and utilities access. Rules are city- and state-specific, so check your local summary on <a href="/regulations">Regulations</a> before you finalize layout.</p></details>
-
         <details><summary>Prefab or custom — which should I choose?</summary><p>Prefab can speed schedules and reduce on-site disruption, but offers less design flexibility and may have transport/set craning limits. Custom lets you tailor layout and finishes and navigate tricky sites, with more design and build time. Our <a href="/builders">Builders</a> guide compares options.</p></details>
-
-        <details><summary>Can I rent my ADU?</summary><p>Long‑term rentals are widely allowed; many jurisdictions restrict short‑term rentals under 30 days. Always confirm local rules and any owner‑occupancy requirements on the <a href="/regulations">Regulations</a> page and your city’s planning portal.</p></details>
-
-        <details><summary>How do people finance an ADU?</summary><p>Common paths include HELOCs, cash‑out refinance, construction loans, and (in some cases) renovation loans. Compare pros/cons and monthly payment examples on <a href="/financing">Financing</a>.</p></details>
+        <details><summary>Can I rent my ADU?</summary><p>Long-term rentals are widely allowed; many jurisdictions restrict short-term rentals under 30 days. Always confirm local rules and any owner-occupancy requirements on the <a href="/regulations">Regulations</a> page and your city’s planning portal.</p></details>
+        <details><summary>How do people finance an ADU?</summary><p>Common paths include HELOCs, cash-out refinance, construction loans, and (in some cases) renovation loans. Compare pros/cons and monthly payment examples on <a href="/financing">Financing</a>.</p></details>
       </div>
     </section>
   </main>
@@ -301,51 +294,33 @@
         ]
       },
       {
-        $1
-        "sameAs":"https://www.youtube.com/watch?v=Sq_bKmX-F74",
+        "@type":"VideoObject",
+        "@id":"https://aduplanet.com/guides/adu-video-guide.html#videoobject",
+        "name":"A Homeowner’s Guide to ADUs",
+        "description":"Quick-start video explaining ADU types, cost drivers, permitting steps, builder choices, and financing paths.",
+        "thumbnailUrl":"https://aduplanet.com/assets/hero-adu.jpg",
+        "uploadDate":"2025-09-03",
         "duration":"PT8M19S",
         "inLanguage":"en",
         "isAccessibleForFree": true,
+        "sameAs":"https://www.youtube.com/watch?v=Sq_bKmX-F74",
         "contentUrl":"https://aduplanet.com/assets/adu-guide.mp4",
         "embedUrl":"https://aduplanet.com/guides/adu-video-guide.html#video",
         "url":"https://aduplanet.com/guides/adu-video-guide.html#video",
         "publisher":{"@id":"https://aduplanet.com/#org"},
+        "caption":"https://aduplanet.com/assets/adu-guide.en.vtt",
+        "transcript":"https://aduplanet.com/assets/adu-guide-transcript.pdf",
         "potentialAction":{
           "@type":"SeekToAction",
           "target":"https://aduplanet.com/guides/adu-video-guide.html?t={seek_to_second_number}#video",
           "startOffset-input":"required name=seek_to_second_number"
         },
         "hasPart":[
-          {
-            "@type":"Clip",
-            "name":"What counts as an ADU",
-            "startOffset":15,
-            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=15#video"
-          },
-          {
-            "@type":"Clip",
-            "name":"Cost drivers & ranges",
-            "startOffset":60,
-            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=60#video"
-          },
-          {
-            "@type":"Clip",
-            "name":"Permitting steps",
-            "startOffset":135,
-            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=135#video"
-          },
-          {
-            "@type":"Clip",
-            "name":"Prefab vs custom",
-            "startOffset":210,
-            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=210#video"
-          },
-          {
-            "@type":"Clip",
-            "name":"Financing options",
-            "startOffset":270,
-            "url":"https://aduplanet.com/guides/adu-video-guide.html?t=270#video"
-          }
+          {"@type":"Clip","name":"What counts as an ADU","startOffset":15,"url":"https://aduplanet.com/guides/adu-video-guide.html?t=15#video"},
+          {"@type":"Clip","name":"Cost drivers & ranges","startOffset":60,"url":"https://aduplanet.com/guides/adu-video-guide.html?t=60#video"},
+          {"@type":"Clip","name":"Permitting steps","startOffset":135,"url":"https://aduplanet.com/guides/adu-video-guide.html?t=135#video"},
+          {"@type":"Clip","name":"Prefab vs custom","startOffset":210,"url":"https://aduplanet.com/guides/adu-video-guide.html?t=210#video"},
+          {"@type":"Clip","name":"Financing options","startOffset":270,"url":"https://aduplanet.com/guides/adu-video-guide.html?t=270#video"}
         ]
       }
     ]
