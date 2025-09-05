@@ -1,127 +1,69 @@
-body { font-family: Arial, sans-serif; background-color: #f8f9fa; color: #333; }
-:root{
-  --bg:#0b1220;--mint:#6ee7b7;--blue:#60a5fa;--yellow:#f59e0b;--card:rgba(255,255,255,0.06);--text:#e6eefc;--muted:#a8b3cf;--line:rgba(255,255,255,0.12)
-}
-html,body{background:var(--bg);color:var(--text)}
+/* ====== Layout & Shell ====== */
+body { font-family: Arial, sans-serif; }
 .wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(11,18,32,0.95),rgba(11,18,32,0.75));backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;gap:20px;padding:16px 0}
 .nav img{height:32px;width:auto}
-.nav a{padding:10px 12px;border-radius:12px;color:var(--text);text-decoration:none}
+.nav a{padding:10px 12px;border-radius:12px;color:inherit;text-decoration:none}
 .nav a:hover{text-decoration:underline}
 .nav a[aria-current="page"]{background:var(--card);outline:1px solid var(--line)}
 .footer-links{display:flex;gap:14px;flex-wrap:wrap}
 footer{border-top:1px solid var(--line);padding:28px 0 40px;color:var(--muted)}
-a{color:var(--mint)}
-/* === ADUPlanet Contrast Upgrade — 2025-09-05 === */
-/* WCAG AA target: 4.5:1 (normal text), 3:1 (large/bold) */
 
+/* ====== Theming — Light default, Dark via [data-theme="dark"] ====== */
+/* Light (default) — WCAG AA on white */
 :root{
-  /* Text & surfaces */
   --bg:#ffffff;
   --surface:#ffffff;
-  --ink:#0b0f19;   /* body text (≈15:1 on white) */
-  --ink-2:#0b0f19; /* headings */
-  --muted:#1f2937; /* secondary text (≈8.6:1 on white) */
-
-  /* Links & outlines (AA+ on white) */
-  --link:#1e40af;          /* blue-800 */
-  --link-visited:#6b21a8;  /* purple-800 */
+  --ink:#0b0f19;        /* body text */
+  --ink-2:#0b0f19;      /* headings */
+  --muted:#1f2937;      /* secondary */
+  --link:#1e40af;       /* blue-800 */
+  --link-visited:#6b21a8;/* purple-800 */
   --focus-ring:#1e40af;
-
-  /* Lines */
-  --line:#cbd5e1;  /* slate-300 */
-  --line-2:#94a3b8;/* slate-400 */
+  --line:#cbd5e1;       /* slate-300 */
+  --line-2:#94a3b8;     /* slate-400 */
+  --card:#ffffff;       /* light card bg */
 }
 
-/* Text reset (wins over low-contrast grays) */
 html,body{background:var(--bg);color:var(--ink)}
 h1,h2,h3,h4{color:var(--ink-2);font-weight:700}
 p,li,dd,dt,summary,.sub,.fresh,figcaption{color:var(--ink)}
 .sub,.fresh,figcaption{color:var(--muted)}
-
-/* Links */
 a{color:var(--link);text-underline-offset:2px}
 a:hover{text-decoration:underline}
 a:visited{color:var(--link-visited)}
 
-/* Buttons */
-.btn{color:var(--ink-2);background:#fff;border-color:var(--line-2)}
-.btn.primary{background:#1e40af;border-color:#1e40af;color:#fff} /* >4.5:1 on blue-800 */
-.btn:disabled{opacity:.9} /* keep contrast; avoid ghosted gray */
-
-/* Pills / chips */
-.pill{color:var(--ink);background:#fff;border-color:var(--line-2)}
-
-/* Form fields & placeholders */
-input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2)}
-::placeholder{color:#334155;opacity:1} /* readable placeholder */
-
-/* Focus visibility */
+.btn{color:var(--ink-2);background:#fff;border:1px solid var(--line-2);border-radius:12px;padding:10px 14px;font-weight:600}
+.btn.primary{background:#1e40af;border-color:#1e40af;color:#fff} /* AA */
+.pill{color:var(--ink);background:#fff;border:1px solid var(--line-2)}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:18px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+input,select,textarea{color:var(--ink);background:#fff;border:1px solid var(--line-2)}
+::placeholder{color:#334155;opacity:1}
 :focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
-
-/* Users who request more contrast */
-@media (prefers-contrast: more){
-  :root{
-    --link:#1e3a8a;         /* blue-900 */
-    --link-visited:#581c87; /* purple-900 */
-    --line:#94a3b8;
-    --line-2:#64748b;
-  }
-  .card,.pill,.btn{border-width:2px}
-}
-
-/* Guardrail: small text never microscopic */
 small,.fresh,figcaption{font-size:clamp(14px,0.9rem,16px)}
 
-/* === ADUPlanet Contrast Baseline — 2025-09-05 === */
-/* Targets WCAG AA: 4.5:1 for normal text, 3:1 for large/bold */
-
-:root{
-  --bg:#ffffff;
-  --surface:#ffffff;
-  --ink:#0b0f19;    /* ≈15:1 on white */
-  --ink-2:#0b0f19;  /* headings */
-  --muted:#1f2937;  /* ≈8.6:1 on white */
-
-  --link:#1e40af;          /* blue-800 */
-  --link-visited:#6b21a8;  /* purple-800 */
-  --focus-ring:#1e40af;
-
-  --line:#cbd5e1;   /* slate-300 */
-  --line-2:#94a3b8; /* slate-400 */
+/* Dark theme — opt-in per page by setting <html data-theme="dark"> */
+html[data-theme="dark"]{
+  --bg:#0b1220;
+  --surface:#0f172a;             /* slate-900 */
+  --ink:rgba(255,255,255,.92);
+  --ink-2:#ffffff;
+  --muted:#cbd5e1;
+  --link:#93c5fd;                /* sky-300 */
+  --link-visited:#d6bcfa;        /* purple-300 */
+  --focus-ring:#93c5fd;
+  --line:rgba(255,255,255,0.18);
+  --line-2:rgba(255,255,255,0.28);
+  --card:rgba(255,255,255,0.06);
 }
 
-/* Text reset */
-html,body{background:var(--bg);color:var(--ink)}
-h1,h2,h3,h4{color:var(--ink-2);font-weight:700}
-p,li,dd,dt,summary,.sub,.fresh,figcaption{color:var(--ink)}
-.sub,.fresh,figcaption{color:var(--muted)}
+/* Make header readable in both themes */
+header{color:var(--ink-2)}
+header .nav a{color:inherit}
 
-/* Links */
-a{color:var(--link);text-underline-offset:2px}
-a:hover{text-decoration:underline}
-a:visited{color:var(--link-visited)}
-
-/* Buttons */
-.btn{color:var(--ink-2);background:#fff;border-color:var(--line-2)}
-.btn.primary{background:#1e40af;border-color:#1e40af;color:#fff} /* AA */
-
-/* Pills / chips / cards */
-.pill{color:var(--ink);background:#fff;border-color:var(--line-2)}
-.card{background:var(--surface);border-color:var(--line)}
-
-/* Form fields & placeholders */
-input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2)}
-::placeholder{color:#334155;opacity:1}
-
-/* Focus visibility */
-:focus-visible{outline:3px solid var(--focus-ring);outline-offset:2px}
-
-/* Dark surface helpers — apply to any dark section/hero */
-.surface-dark, [data-surface="dark"]{
-  color:#fff;
-}
+/* ====== Utilities for dark sections on a light page ====== */
+.surface-dark, [data-surface="dark"]{ color:#fff; background:inherit }
 .surface-dark :where(h1,h2,h3,h4,strong){color:#fff}
 .surface-dark :where(p,li,figcaption,.sub,.fresh){color:rgba(255,255,255,.92)}
 .surface-dark a{color:#bfdbfe}
@@ -130,7 +72,7 @@ input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2
 .surface-dark .btn{background:#fff;color:#0b0f19;border-color:#fff}
 .surface-dark .btn.primary{background:#fff;color:#0b0f19;border-color:#fff}
 
-/* Text-on-image utility (use on hero wrappers with background photos) */
+/* Text on image helper */
 .text-on-image{position:relative;isolation:isolate}
 .text-on-image::before{
   content:"";position:absolute;inset:0;z-index:0;
@@ -138,7 +80,7 @@ input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2
 }
 .text-on-image > *{position:relative;z-index:1}
 
-/* Respect users who want more contrast */
+/* Increased contrast for users who ask for it */
 @media (prefers-contrast: more){
   :root{
     --link:#1e3a8a; --link-visited:#581c87;
@@ -146,17 +88,3 @@ input,select,textarea{color:var(--ink);background:#fff;border-color:var(--line-2
   }
   .card,.pill,.btn{border-width:2px}
 }
-
-/* Guardrail: small text never microscopic */
-small,.fresh,figcaption{font-size:clamp(14px,0.9rem,16px)}
-
-/* Contrast Rescue — dark sections */
-[data-surface="dark"], .surface-dark { color:#fff !important; }
-[data-surface="dark"] :where(h1,h2,h3,h4,strong), .surface-dark :where(h1,h2,h3,h4,strong){ color:#fff !important; }
-[data-surface="dark"] :where(p,li,figcaption,.sub,.fresh),
-.surface-dark :where(p,li,figcaption,.sub,.fresh){ color:rgba(255,255,255,.92) !important; }
-[data-surface="dark"] a, .surface-dark a{ color:#bfdbfe !important; }
-[data-surface="dark"] a:visited, .surface-dark a:visited{ color:#d6bcfa !important; }
-[data-surface="dark"] .pill, .surface-dark .pill{ border-color:rgba(255,255,255,.55) !important; color:#fff !important; }
-
-
