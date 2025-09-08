@@ -168,3 +168,23 @@ export const onRequest: PagesFunction = async (context) => {
     statusText: rewritten.statusText
   });
 };
+export const onRequest: PagesFunction = async (ctx) => {
+  const res = await ctx.next();
+  const ct = res.headers.get("content-type") || "";
+  if (!ct.includes("text/html")) return res;
+
+  const body = await res.text();
+  const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(body));
+  const hex = Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
+
+  const out = new Response(body, res);
+  // Weak ETag is fine; if you prefer strong, drop the W/
+  out.headers.set("ETag", `W/"${hex.slice(0,16)}"`);
+  // Use commit time if available; falls back to now
+  const lm = (ctx.env as any)?.CF_PAGES_COMMIT_TIME || Date.now();
+  out.headers.set("Last-Modified", new Date(lm).toUTCString());
+  // Keep revalidation cheap/fast
+  out.headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+
+  return out;
+};
