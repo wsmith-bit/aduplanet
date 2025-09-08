@@ -1,4 +1,4 @@
-// /functions/_middleware.ts — v7 (Force Light + Freshness + Schema dates)
+// /functions/_middleware.ts — v8 (single export; Light + Freshness + Schema dates + ETag)
 // - Injects header/footer from ASSETS (fallbacks preserved)
 // - Ensures /styles/main.css is loaded; also appends /styles/force-light.css (last-wins)
 // - Adds body classes: force-light + route slug (e.g., page-home, page-financing)
@@ -6,30 +6,33 @@
 // - Appends <meta property="og:updated_time"> with ISO timestamp
 // - Rewrites "dateModified" inside JSON-LD blocks to today's YYYY-MM-DD
 // - Sets x-aduplanet-injected: 1 for easy debugging
+// - Adds weak ETag + Last-Modified for HTML to help revalidation
 
 export const onRequest: PagesFunction = async (context) => {
-  const { env, next } = context;
-  const url = new URL(context.request.url);
+  const { env, next, request } = context;
+  const url = new URL(request.url);
 
+  // Let static asset routing / other functions run first
   const originRes = await next();
   const ctype = originRes.headers.get("content-type") || "";
   if (!ctype.includes("text/html")) return originRes;
 
+  // --- helpers for ASSETS binding ---
   async function getAsset(path: string): Promise<string | null> {
     try {
-      const r = await (env as any).ASSETS.fetch(new Request(`https://assets${path}`));
+      const r = await (env as any).ASSETS?.fetch?.(new Request(`https://assets${path}`));
       if (r && r.ok) return await r.text();
     } catch {}
     return null;
   }
   async function assetExists(path: string): Promise<boolean> {
     try {
-      const r = await (env as any).ASSETS.fetch(new Request(`https://assets${path}`));
+      const r = await (env as any).ASSETS?.fetch?.(new Request(`https://assets${path}`));
       return !!(r && r.ok);
     } catch { return false; }
   }
 
-  // Load partials (scoped, light)
+  // --- load partials (fallbacks if missing) ---
   let headerHTML = await getAsset("/partials/header.html");
   let footerHTML = await getAsset("/partials/footer.html");
 
@@ -82,28 +85,29 @@ export const onRequest: PagesFunction = async (context) => {
     </style>`;
   }
 
-  // Stylesheets
+  // --- stylesheets ---
   const cssHref =
     (await assetExists("/styles/main.css")) ? "/styles/main.css" :
     (await assetExists("/styles/main")) ? "/styles/main" : null;
 
   const forceCssHref = (await assetExists("/styles/force-light.css")) ? "/styles/force-light.css" : null;
 
-  // Route helpers
+  // --- route slug for body classes ---
   const pathname = url.pathname.replace(/\/$/, "");
   const pathForSlug = pathname || "/";
   const slug =
     pathForSlug === "/" ? "home" :
     pathForSlug.replace(/^\//, "").replace(/[^\w-]/g, "-") || "home";
 
-  // Timestamps
+  // --- timestamps ---
   const now = new Date();
-  const isoFull = now.toISOString();         // e.g., 2025-09-05T12:34:56.789Z
-  const isoDate = isoFull.slice(0, 10);      // e.g., 2025-09-05
+  const isoFull = now.toISOString();
+  const isoDate = isoFull.slice(0, 10);
   const human = now.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
 
-  const rewritten = new HTMLRewriter()
-    // <head>: ensure CSS order (main first, then force-light), add OG updated time
+  // --- HTML rewrite pipeline ---
+  const rewrittenRes = new HTMLRewriter()
+    // head: CSS + og:updated_time
     .on("head", {
       element(el) {
         if (cssHref) {
@@ -120,7 +124,7 @@ export const onRequest: PagesFunction = async (context) => {
         el.append(`<meta property="og:updated_time" content="${isoFull}">`, { html: true });
       }
     })
-    // <body>: add force-light + route slug classes and data-route attr
+    // body: classes & data-route
     .on("body", {
       element(el) {
         const cls = (el.getAttribute("class") || "").trim();
@@ -129,62 +133,64 @@ export const onRequest: PagesFunction = async (context) => {
         el.setAttribute("data-route", slug);
       }
     })
-    // Inject header/footer HTML
+    // inject header/footer
     .on("header", { element(el) { el.setInnerContent(headerHTML!, { html: true }); } })
     .on("footer", { element(el) { el.setInnerContent(footerHTML!, { html: true }); } })
-    // Mark active nav link
+    // mark active nav item
     .on("header nav a", {
       element(el) {
-        const href = el.getAttribute("href") || "";
-        const normalize = (s: string) => s.replace(/\/$/, "");
-        if (normalize(href) === pathname || (pathname === "" && normalize(href) === "")) {
+        const href = (el.getAttribute("href") || "").replace(/\/$/, "");
+        const cur  = pathname;
+        if (href === cur || (href === "" && cur === "")) {
           el.setAttribute("aria-current", "page");
         }
       }
     })
-    // Update visible freshness stamps
+    // freshness stamps
     .on('time[data-global-freshness]', {
       element(el) {
         el.setAttribute("datetime", isoDate);
         el.setInnerContent(human);
       }
     })
-    // Patch JSON-LD dateModified → today's date (YYYY-MM-DD)
+    // JSON-LD dateModified patch
     .on('script[type="application/ld+json"]', {
       text(t) {
         const src = t.text;
-        // Replace ANY "dateModified":"..." with today's date (keeps rest of JSON intact)
         const patched = src.replace(/"dateModified"\s*:\s*"[0-9T:\-+.Z]+"/g, `"dateModified":"${isoDate}"`);
         if (patched !== src) t.replace(patched);
       }
     })
     .transform(originRes);
 
-  const headers = new Headers(rewritten.headers);
+  // We need the final body to add ETag/Last-Modified, so read it now:
+  const finalBody = await rewrittenRes.text();
+
+  // Build the final response with preserved headers + our additions
+  const headers = new Headers(rewrittenRes.headers);
   headers.set("x-aduplanet-injected", "1");
-  return new Response(rewritten.body, {
-    headers,
-    status: rewritten.status,
-    statusText: rewritten.statusText
+
+  // Weak ETag for HTML
+  const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(finalBody));
+  const hex = Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, "0")).join("");
+  headers.set("ETag", `W/"${hex.slice(0, 16)}"`);
+
+  // Use commit time if available; fallback to now
+  const lm = (env as any)?.CF_PAGES_COMMIT_TIME || Date.now();
+  headers.set("Last-Modified", new Date(lm).toUTCString());
+
+  // Revalidation-friendly cache
+  headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+  if (!headers.has("referrer-policy")) {
+    headers.set("referrer-policy", "strict-origin-when-cross-origin");
+  }
+
+  // Ensure we keep text/html content-type
+  if (!headers.has("content-type")) headers.set("content-type", "text/html; charset=utf-8");
+
+  return new Response(finalBody, {
+    status: rewrittenRes.status,
+    statusText: rewrittenRes.statusText,
+    headers
   });
-};
-export const onRequest: PagesFunction = async (ctx) => {
-  const res = await ctx.next();
-  const ct = res.headers.get("content-type") || "";
-  if (!ct.includes("text/html")) return res;
-
-  const body = await res.text();
-  const hash = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(body));
-  const hex = Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, "0")).join("");
-
-  const out = new Response(body, res);
-  // Weak ETag is fine; if you prefer strong, drop the W/
-  out.headers.set("ETag", `W/"${hex.slice(0,16)}"`);
-  // Use commit time if available; falls back to now
-  const lm = (ctx.env as any)?.CF_PAGES_COMMIT_TIME || Date.now();
-  out.headers.set("Last-Modified", new Date(lm).toUTCString());
-  // Keep revalidation cheap/fast
-  out.headers.set("Cache-Control", "public, max-age=0, must-revalidate");
-
-  return out;
 };
