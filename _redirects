@@ -1,0 +1,12 @@
+# Canonical host (pick apex)
+www.aduplanet.com/*          https://aduplanet.com/:splat     301!
+http://aduplanet.com/*       https://aduplanet.com/:splat     301!
+http://www.aduplanet.com/*   https://aduplanet.com/:splat     301!
+
+# Pretty URLs (HTML → extensionless)
+# /index.html → /
+/index.html                  /                               301!
+# Any section index → trailing slash directory
+/*/index.html                /:splat/                        301!
+# Any other HTML page → extensionless path
+/*.html                      /:splat                         301!
