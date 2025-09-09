@@ -180,7 +180,8 @@ export const onRequest: PagesFunction = async (context) => {
   headers.set("Last-Modified", new Date(lm).toUTCString());
 
   // Revalidation-friendly cache
-  headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+  headers.set("Cache-Control", "public, max-age=0, must-revalidate, no-transform");
+
   if (!headers.has("referrer-policy")) {
     headers.set("referrer-policy", "strict-origin-when-cross-origin");
   }
