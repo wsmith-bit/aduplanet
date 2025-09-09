@@ -12,7 +12,7 @@ const fs = require('fs').promises;
 const path = require('path');
 const ROOT = process.cwd();
 const SITE = 'https://aduplanet.com';
-const EXCLUDE = new Set(['assets', 'functions', 'node_modules', '.git']);
+const EXCLUDE = new Set(['assets', 'functions', 'node_modules', '.git', 'partials']);
 
 async function walk(dir){const out=[];const entries=await fs.readdir(dir,{withFileTypes:true});
   for(const e of entries){ if(EXCLUDE.has(e.name)) continue;
