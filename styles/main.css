@@ -145,10 +145,14 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 .updates h2{margin:0 0 8px}
 .updates ul{margin:0;padding-left:18px}
 
-/* === State Card System ==================================================== */
+/* === State Card Consistency & Contrast ================================== */
 :root{
   --ink:#0b1221; --muted:#4b5563; --edge:#e5e7eb; --brand:#2563eb; --bg:#fff;
-  --chip:#eef2ff; --chip-border:#dbe1fe; --shadow:0 8px 30px rgba(2,8,20,.06);
+  --chip:#f4f7ff;          /* lighter for contrast */
+  --chip-border:#c7d2fe;   /* soft indigo border */
+  --min:#2563eb;           /* "min" bar color (blue) */
+  --max:#16a34a;           /* "max" bar color (green) */
+  --shadow:0 8px 30px rgba(2,8,20,.06);
 }
 
 .state{
@@ -159,25 +163,25 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
   padding:16px;
   margin:18px 0;
 }
-
 .state h2{
   display:flex; align-items:center; gap:10px;
   font-size:1.25rem; margin:0 0 .4rem;
 }
 
+/* HIGH-CONTRAST BADGE (fixes dark-on-dark) */
 .state .badge{
-  font-size:.78rem; line-height:1;
-  background:var(--chip); color:#1f3fbf;
+  font-size:.78rem; line-height:1; white-space:nowrap;
+  background:var(--chip); color:#0b3bb8;  /* dark indigo text on light chip */
   border:1px solid var(--chip-border);
-  padding:4px 8px; border-radius:999px; white-space:nowrap;
+  padding:4px 8px; border-radius:999px;
 }
 
+/* Notes, grids, rule cards */
 .state .note{
   background:#f9fafb; border:1px solid var(--edge);
   border-radius:12px; padding:10px 12px; margin:.6rem 0;
   color:var(--ink);
 }
-
 .state .kv{
   display:grid; gap:12px; margin:.6rem 0;
   grid-template-columns:repeat(3,1fr);
@@ -186,30 +190,27 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
   border:1px solid var(--edge); border-radius:12px;
   background:#fff; padding:10px 12px;
 }
-.state .kv b{ display:inline-block; margin-bottom:2px; }
-
 .state .rule-card{
   border:1px dashed var(--edge); border-radius:12px;
   background:#fcfcfd; padding:12px; margin:.6rem 0;
 }
-.state .rules{ margin:.2rem 0 0; padding-left:18px; }
-.state .rules li{ margin:.35rem 0; }
 
-.state .mini-chart, .state .mini-viz{ display:block; margin-top:10px; }
-.state .mini-chart rect, .state .mini-viz rect{ fill:#eef2ff; }
-.state .mini-chart rect.bar, .state .mini-viz rect.band{ fill:var(--brand); }
-.state .mini-chart text, .state .mini-viz text{ fill:var(--ink); }
-
+/* Buttons (standardized across cards) */
 .btn{ display:inline-block; background:var(--brand); color:#fff;
   padding:.6rem .9rem; border-radius:12px; text-decoration:none;
   box-shadow:var(--shadow); font-weight:600; border:1px solid transparent;
 }
 .btn.ghost{ background:#fff; color:var(--ink); border-color:var(--edge); }
-a.cta{ text-decoration:none; border-bottom:1px dashed var(--brand); padding-bottom:2px; }
+.state .actions{ margin-top:10px; display:flex; gap:8px; flex-wrap:wrap; }
 
-.sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+/* Mini charts with clear min/max colors */
+.state .mini-chart, .state .mini-viz{ display:block; margin-top:10px; }
+.state .mini-chart rect.bg, .state .mini-viz rect.bg{ fill:#eef2ff; }
+.state .mini-chart rect.min, .state .mini-viz rect.min{ fill:var(--min); }
+.state .mini-chart rect.max, .state .mini-viz rect.max{ fill:var(--max); }
+.state .mini-chart text, .state .mini-viz text{ fill:var(--ink); }
 
-/* Responsive grid */
+/* Responsive */
 @media (max-width:1000px){ .state .kv{ grid-template-columns:repeat(2,1fr);} }
 @media (max-width:640px){ .state .kv{ grid-template-columns:1fr;} }
 
