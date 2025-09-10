@@ -226,3 +226,68 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
   }
 }
 
+<style id="financing-contrast-fix">
+/* ===== Financing Page: High-Contrast Rescue =====
+   Forces readable colors when the page is on a light background
+   (e.g., header/footer injects a light theme). */
+
+/* Accessible text tokens for light surfaces */
+:root{
+  --ink-fix:#0b1220;      /* primary text ~#0B1220 (very dark) */
+  --muted-fix:#334155;    /* muted text ~#334155 (slate-700) */
+  --line-fix:#e5e7eb;     /* borders ~#E5E7EB */
+  --link-fix:#1d4ed8;     /* accessible link blue */
+}
+
+/* Base text on cards/sections */
+body, .tldr, .card, .faq details, .controls .field, table, .est-output {
+  color: var(--ink-fix) !important;
+}
+
+/* Headings, labels, helpers */
+h1,h2,h3,
+.sub,.eyebrow,.muted,.fresh,
+table thead th,
+.controls label,
+.nav li a {
+  color: var(--ink-fix) !important;
+  opacity: 1 !important;
+}
+
+/* Tables */
+table thead th { color: var(--ink-fix) !important; }
+table tbody td  { color: var(--ink-fix) !important; }
+table tbody tr  { background:#fff !important; border-color:var(--line-fix) !important; }
+
+/* Inputs & selects */
+.controls input,
+.controls select,
+.controls textarea {
+  background:#fff !important;
+  color:var(--ink-fix) !important;
+  border:1px solid #cbd5e1 !important; /* slate-300 */
+}
+.controls ::placeholder { color:#475569 !important; opacity:1 !important; }
+
+/* Cards/panels */
+.tldr, .card, .faq details, .controls .field, .est-output {
+  background:#fff !important;
+  border:1px solid var(--line-fix) !important;
+}
+
+/* Progress track on light bg */
+.progress .track { background: var(--line-fix) !important; }
+
+/* Links */
+a { color: var(--link-fix) !important; text-decoration: underline; text-underline-offset: 2px; }
+
+/* Chart labels inside inline SVG (override inline <style>) */
+svg .lbl { fill: var(--ink-fix) !important; }
+
+/* Small print */
+small, .eyebrow, .fresh { color: var(--muted-fix) !important; }
+
+/* Header nav (if a light header is injected) */
+header .nav a { color: var(--ink-fix) !important; }
+header .nav a[aria-current="page"] { background: #eef2ff !important; }
+</style>
