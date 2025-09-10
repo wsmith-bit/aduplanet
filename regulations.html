@@ -137,40 +137,39 @@
 
   <main class="container" id="main">
 
-    <!-- CALIFORNIA -->
-<section class="state" id="california">
-  <h2>California <span class="badge">state preemption</span></h2>
-  <p class="note">Updated: Jan 2025 (CA HCD ADU Handbook). Always check your city’s posted ADU ordinance for any objective local standards.</p>
-  <div class="kv">
-    <div><b>Max size</b><br/>Must allow at least <b>800 sf</b> notwithstanding FAR/lot coverage. Also at least <b>850 sf (studio/1-BR)</b> or <b>1,000 sf (2+ BR)</b>.</div>
-    <div><b>Height</b><br/>Detached: <b>16 ft</b> baseline; <b>18 ft</b> within ½-mile of transit or on lots with multifamily; +2 ft allowed for matching roof pitch. Attached: up to <b>25 ft</b> or primary height, whichever is lower.</div>
-    <div><b>Setbacks</b><br/>At least <b>4 ft</b> side & rear for new detached ADUs.</div>
-    <div><b>Parking</b><br/>Max 1 space per unit/bedroom; <b>exempt</b> within ½-mile of transit, in historic districts, conversions/within primary, when permits aren’t offered, or when car-share within 1 block.</div>
-    <div><b>Owner-occupancy</b><br/><b>Prohibited</b> for ADUs (no owner-occ requirement).</div>
-    <div><b>Impact fees</b><br/><b>None</b> for ADUs <b>&lt; 750 sf</b>; otherwise proportional to ADU vs. primary size.</div>
+ <!-- CALIFORNIA -->
+<section class="state" id="california" aria-labelledby="ca-title">
+  <h2 id="ca-title">California <span class="badge">state preemption</span></h2>
+
+  <p class="note">Updated: Jan 2025 (CA HCD ADU Handbook). Always check your city’s ADU ordinance for objective local standards.</p>
+
+  <div class="kv" role="list">
+    <div role="listitem"><b>Max size</b><br/>Must allow at least <b>800 sf</b> notwithstanding FAR/lot coverage. Also at least <b>850 sf (studio/1-BR)</b> or <b>1,000 sf (2+ BR)</b>.</div>
+    <div role="listitem"><b>Height</b><br/>Detached: <b>16 ft</b> baseline; <b>18 ft</b> within ½-mile of transit or on lots with multifamily; +2 ft for matching roof pitch. Attached: up to <b>25 ft</b> or primary height (lower).</div>
+    <div role="listitem"><b>Setbacks</b><br/>At least <b>4 ft</b> side & rear for new detached ADUs.</div>
+    <div role="listitem"><b>Parking</b><br/>Max 1 space per unit/bedroom; <b>exempt</b> within ½-mile of transit, historic districts, conversions/within primary, when permits aren’t offered, or when car-share within 1 block.</div>
+    <div role="listitem"><b>Owner-occupancy</b><br/><b>Prohibited</b> for ADUs (no owner-occ requirement).</div>
+    <div role="listitem"><b>Impact fees</b><br/><b>None</b> for ADUs <b>&lt; 750 sf</b>; otherwise proportional to ADU vs. primary size.</div>
   </div>
-  <p class="note">Permit review deadlines shortened to ~60 days. Garage conversion: replacement parking cannot be required. <em>Verify: local fire, coastal, or hazard overlays may add constraints.</em></p>
+
   <svg class="mini-chart" viewBox="0 0 600 120" role="img" aria-label="California ADU allowances: size and height">
-    <desc>Bar chart showing minimum size allowances (800-1000 sf) and height up to 18-25 ft for ADUs.</desc>
-    <rect x="20" y="20" width="220" height="24" fill="#7aa2ff"></rect>
-    <text x="250" y="38" fill="#e8eeff" font-size="12">Min size: 800–1,000 sf</text>
-    <rect x="20" y="70" width="180" height="24" fill="#4ade80"></rect>
-    <text x="210" y="88" fill="#e8eeff" font-size="12">Height: 16–18 ft (25 ft attached)</text>
+    <desc>Minimum size allowances (800–1000 sf) and height up to 18–25 ft.</desc>
+    <rect x="20" y="20" width="220" height="24"></rect>
+    <rect class="bar" x="20" y="20" width="220" height="24"></rect>
+    <text x="250" y="38" font-size="12">Min size: 800–1,000 sf</text>
+    <rect x="20" y="70" width="180" height="24"></rect>
+    <rect class="bar" x="20" y="70" width="180" height="24"></rect>
+    <text x="210" y="88" font-size="12">Height: 16–18 ft (25 ft attached)</text>
   </svg>
 
-  <!-- New: CTA link to full detail page -->
   <p class="note" style="margin-top:12px">
-    <a class="cta" href="/regulations/california">
-      🔎 View full California ADU regulations & permitting guide
-    </a>
+    <a class="cta" href="/regulations/california">🔎 View full California ADU regulations &amp; permitting guide</a>
   </p>
-
-  <!-- City playbook link -->
   <p class="note" style="margin-top:12px">
-    <strong>Also see:</strong> 
-    <a href="/regulations/los-angeles">Los Angeles ADU Regulations &amp; Permits (2025)</a>
+    <strong>Also see:</strong> <a href="/regulations/los-angeles">Los Angeles ADU Regulations &amp; Permits (2025)</a>
   </p>
 </section>
+
 
   <!-- OREGON (statewide) — drop into regulations.html -->
 <section class="state" id="oregon">
@@ -218,24 +217,22 @@
   </p>
 </section>
 
-   <!-- WASHINGTON -->
-<section class="state" id="washington">
-  <h2>
+<!-- WASHINGTON -->
+<section class="state" id="washington" aria-labelledby="wa-title">
+  <h2 id="wa-title">
     <a href="/regulations/washington">Washington</a>
     <span class="badge">state preemption — RCW 36.70A.680–.681</span>
   </h2>
 
-  <p class="note">
-    State law is in effect in GMA urban growth areas. If a city/county hasn’t updated yet, the statewide standards apply.
-  </p>
+  <p class="note">State law is in effect in GMA urban growth areas. If a city/county hasn’t updated yet, the statewide standards apply.</p>
 
-  <div class="kv">
-    <div><b>How many</b><br/>At least <b>two ADUs per lot</b> (any mix of attached/detached) where single-family homes are allowed in UGAs.</div>
-    <div><b>Min size</b><br/>Local codes may not require ADUs to be smaller than <b>1,000 sf</b>.</div>
-    <div><b>Height & design parity</b><br/>ADUs can’t have stricter <em>setbacks/yard coverage/design</em> than the principal home; <b>height may not be limited below 24&nbsp;ft</b> or the principal’s height limit.</div>
-    <div><b>Parking</b><br/><b>No on-site parking</b> may be required within <b>½ mile</b> of a major transit stop; otherwise max <b>1 space/unit</b> on lots &lt; 6,000 sf and <b>2 spaces/unit</b> on lots &gt; 6,000 sf.</div>
-    <div><b>Owner-occupancy</b><br/><b>Not required</b> for the principal home or ADUs (limited STR exceptions may apply).</div>
-    <div><b>Fees & improvements</b><br/>Impact fees capped at ≤ <b>50%</b> of the principal unit; <b>no public street improvements</b> may be required as a permit condition.</div>
+  <div class="kv" role="list">
+    <div role="listitem"><b>How many</b><br/>At least <b>two ADUs per lot</b> (any mix of attached/detached) where single-family homes are allowed in UGAs.</div>
+    <div role="listitem"><b>Min size</b><br/>Local codes may not require ADUs smaller than <b>1,000 sf</b>.</div>
+    <div role="listitem"><b>Height & design parity</b><br/>ADUs can’t have stricter <em>setbacks/coverage/design</em> than the principal; <b>height may not be limited below 24&nbsp;ft</b> or the principal’s height limit.</div>
+    <div role="listitem"><b>Parking</b><br/><b>No on-site parking</b> may be required within <b>½ mile</b> of a major transit stop; otherwise max <b>1 space/unit</b> on lots &lt; 6,000 sf and <b>2 spaces/unit</b> on lots &gt; 6,000 sf.</div>
+    <div role="listitem"><b>Owner-occupancy</b><br/><b>Not required</b> for the principal home or ADUs (limited STR exceptions may apply).</div>
+    <div role="listitem"><b>Fees & improvements</b><br/>Impact fees capped at ≤ <b>50%</b> of the principal unit; <b>no public street improvements</b> may be required as a permit condition.</div>
   </div>
 
   <p style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
