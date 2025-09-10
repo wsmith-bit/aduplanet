@@ -2,238 +2,346 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>ADU Planet — Backyard Homes Guide (2025)</title>
+  <title>ADUPlanet (2025): ADU Costs, Regulations, Builders & Loans</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Plan your accessory dwelling unit (ADU) with clear costs, regulations, builders, and financing. Updated guides for 2025." />
+  <meta name="description" content="Plan your ADU with clear 2025 guidance: costs, regulations, builders, and financing options. Calculators, FAQs, and city-by-city playbooks." />
   <link rel="canonical" href="https://aduplanet.com/" />
-  <meta name="robots" content="index,follow,max-image-preview:large" />
+  <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="ADU Planet" />
-  <meta property="og:title" content="ADU Planet — Backyard Homes Guide (2025)" />
-  <meta property="og:description" content="Plan your ADU with clear costs, regulations, builders, and financing. Updated for 2025." />
+  <meta property="og:title" content="ADUPlanet (2025): ADU Costs, Regulations, Builders & Loans" />
+  <meta property="og:description" content="Plan your ADU with clear 2025 guidance: costs, regulations, builders, and financing options. Calculators, FAQs, and city-by-city playbooks." />
   <meta property="og:url" content="https://aduplanet.com/" />
   <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
-  <meta property="og:image:alt" content="Modern backyard accessory dwelling unit" />
+  <meta property="og:image:alt" content="Modern backyard ADU with wood siding and a small deck." />
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="ADU Planet — Backyard Homes Guide (2025)" />
-  <meta name="twitter:description" content="Costs, rules, builders, and financing for ADUs in 2025." />
+  <meta name="twitter:title" content="ADUPlanet (2025): ADU Costs, Regulations, Builders & Loans" />
+  <meta name="twitter:description" content="Plan your ADU with clear 2025 guidance: costs, regulations, builders, and financing options. Calculators, FAQs, and city-by-city playbooks." />
   <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
-  <meta name="twitter:image:alt" content="Modern backyard accessory dwelling unit" />
-  <meta name="twitter:url" content="https://aduplanet.com/" />
+  <meta name="twitter:image:alt" content="Modern backyard ADU with wood siding and a small deck." />
 
-  <!-- Assets -->
+  <!-- Preload hero image -->
   <link rel="preload" as="image" href="/assets/hero-adu.jpg" imagesrcset="/assets/hero-adu.jpg 1x" />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="/styles/main.css" />
-
   <style>
-    :root{
-      --ink:#0b0f19; --muted:#475569; --link:#1e40af; --line:#e2e8f0; --bg:#ffffff;
-      --accent:#0ea5e9; --accent2:#22c55e; --shadow:0 8px 30px rgba(2,6,23,.06); --r:18px;
-    }
-    html,body{margin:0;background:var(--bg);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Noto Sans";}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    a{color:var(--link);text-underline-offset:3px}
-    /* Hero */
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center;margin-top:10px}
-    .hero img{width:100%;height:auto;border-radius:var(--r);box-shadow:var(--shadow)}
-    h1{font-size:clamp(1.9rem,2.5vw + 1rem,3rem);line-height:1.1;margin:8px 0}
-    .sub{color:var(--muted);font-size:1.05rem;margin:4px 0 12px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0}
-    .btn{display:inline-block;padding:12px 16px;border-radius:14px;border:1px solid var(--line);background:#fff;box-shadow:var(--shadow);text-decoration:none;font-weight:600}
-    .btn.primary{background:linear-gradient(180deg,#38bdf8,#0ea5e9);color:#fff;border:0}
-    /* Funnel bar */
-    .progress{margin:16px 0 6px}
-    .track{height:10px;background:#eef2f7;border-radius:999px;position:relative;overflow:hidden}
-    .bar{height:100%;width:12.5%;background:linear-gradient(90deg,#38bdf8,#22c55e)}
-    .track ol{display:flex;justify-content:space-between;margin:8px 2px 0;padding:0;list-style:none;font-size:.9rem;color:#334155}
-    .track li[aria-current="step"]{font-weight:700}
-    /* TL;DR */
-    .tldr{background:#f8fafc;border:1px solid var(--line);padding:16px;border-radius:var(--r);margin:18px 0}
-    /* Pillars */
-    .pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:18px 0}
-    .tile{border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow)}
-    .tile h3{margin:0 0 4px}
-    /* Featured builder */
-    .feature{display:grid;grid-template-columns:1fr .8fr;gap:16px;align-items:center;border:1px solid var(--line);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow)}
-    .feature h3{margin:0 0 6px}
-    /* Trust + FAQ */
-    .trust{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin:18px 0}
-    figure{margin:0}
-    figcaption{font-size:.9rem;color:var(--muted);margin-top:6px}
-    .faq details{border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:#fff}
+    :root { --ink:#0b1221; --muted:#4b5563; --bg:#ffffff; --edge:#e5e7eb; --brand:#2563eb; --good:#16a34a; --shadow:0 8px 30px rgba(2,8,20,.06); }
+    html,body{background:#fff;color:var(--ink);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.5}
+    img{max-width:100%;height:auto;border-radius:14px}
+    .wrap{max-width:1160px;margin:0 auto;padding:24px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+    .hero h1{font-size:clamp(1.8rem,2.4vw,2.4rem);margin:.25rem 0}
+    .sub{color:var(--muted);font-size:1.05rem}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 8px}
+    .btn{display:inline-block;background:var(--brand);color:#fff;padding:.7rem 1rem;border-radius:12px;text-decoration:none;box-shadow:var(--shadow);font-weight:600}
+    .btn.alt{background:#f3f4f6;color:#111;border:1px solid var(--edge)}
+    .tldr{background:#f9fafb;border:1px solid var(--edge);padding:12px 14px;border-radius:12px;margin:12px 0}
+    .progress{width:100%;height:12px;background:#eef2ff;border-radius:999px;position:relative}
+    .progress .bar{position:absolute;left:0;top:0;bottom:0;width:25%;background:var(--brand);border-radius:999px}
+    .progress-label{font-size:.85rem;color:var(--muted);margin-top:6px}
+    .tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:20px 0}
+    .tile{border:1px solid var(--edge);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow)}
+    .tile h3{margin:.25rem 0 .5rem}
+    .tile p{color:var(--muted);font-size:.95rem;margin:0 0 .75rem}
+    .featured{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center;margin:22px 0}
+    .featured-card{border:1px dashed #d1d5db;border-radius:16px;padding:16px;background:#fcfcfd}
+    .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:6px 0 22px}
+    .stat{border:1px solid var(--edge);border-radius:16px;padding:16px;background:#fff;text-align:center}
+    .stat strong{display:block;font-size:1.3rem}
+    .faq details{border:1px solid var(--edge);border-radius:12px;padding:10px 12px;background:#fff}
     .faq details+details{margin-top:10px}
-    .mini{font-size:.9rem;color:var(--muted)}
-    /* Updates */
-    .updates{margin:24px 0;padding:16px;border:1px solid var(--line);border-radius:14px;background:#f8fafc}
-    @media(max-width:900px){.hero{grid-template-columns:1fr}.pillars{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}}
-    @media(max-width:600px){.pillars{grid-template-columns:1fr}}
+    .updates{border-top:2px solid var(--edge);padding-top:14px;margin-top:28px}
+    .updates ul{list-style:none;padding:0;margin:0}
+    .updates li{display:flex;justify-content:space-between;gap:12px;border:1px solid var(--edge);padding:10px 12px;border-radius:12px;background:#fff;align-items:center}
+    .updates li+li{margin-top:8px}
+    .updates time{color:var(--muted);font-size:.9rem;white-space:nowrap}
+    .meta{color:var(--muted);font-size:.85rem}
+    @media (max-width:960px){
+      .hero,.featured{grid-template-columns:1fr}
+      .tiles{grid-template-columns:repeat(2,1fr)}
+      .stats{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      .tiles{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+    }
   </style>
-
-  <!-- Schema: Organization, WebSite, WebPage, BreadcrumbList, FAQPage, Speakable, ItemList (pillars), ImageObject -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {"@type":"Organization","@id":"https://aduplanet.com/#org","name":"ADU Planet","url":"https://aduplanet.com","logo":{"@type":"ImageObject","@id":"https://aduplanet.com/#logo","url":"https://aduplanet.com/assets/logo.png","contentUrl":"https://aduplanet.com/assets/logo.png"}},
-      {"@type":"WebSite","@id":"https://aduplanet.com/#website","url":"https://aduplanet.com/","name":"ADU Planet","publisher":{"@id":"https://aduplanet.com/#org"},"inLanguage":"en"},
-      {"@type":"WebPage","@id":"https://aduplanet.com/#webpage","url":"https://aduplanet.com/","name":"ADU Planet — Backyard Homes Guide (2025)","isPartOf":{"@id":"https://aduplanet.com/#website"},"about":{"@id":"https://aduplanet.com/#org"},"dateModified":"2025-09-09","breadcrumb":{"@id":"https://aduplanet.com/#breadcrumbs"},"speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr","h1"]},"hasPart":[{"@id":"https://aduplanet.com/assets/hero-adu.jpg#image"}]},
-      {"@type":"ImageObject","@id":"https://aduplanet.com/assets/hero-adu.jpg#image","name":"Modern backyard ADU","contentUrl":"https://aduplanet.com/assets/hero-adu.jpg","caption":"Modern backyard ADU","representativeOfPage":true},
-      {"@type":"BreadcrumbList","@id":"https://aduplanet.com/#breadcrumbs","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://aduplanet.com/"}]},
-      {"@type":"ItemList","@id":"https://aduplanet.com/#pillars","name":"Pillars","itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Costs","url":"https://aduplanet.com/costs"},
-        {"@type":"ListItem","position":2,"name":"Regulations","url":"https://aduplanet.com/regulations"},
-        {"@type":"ListItem","position":3,"name":"Builders","url":"https://aduplanet.com/builders"},
-        {"@type":"ListItem","position":4,"name":"Financing","url":"https://aduplanet.com/financing"}]},
-      {"@type":"FAQPage","@id":"https://aduplanet.com/#faq","mainEntity":[
-        {"@type":"Question","name":"What’s the best order to plan an ADU?","acceptedAnswer":{"@type":"Answer","text":"Costs → Regulations → Builders → Financing. Start with a budget range, verify what’s allowed on your lot, shortlist delivery teams, then choose a loan structure."}},
-        {"@type":"Question","name":"How much does a detached ADU typically cost?","acceptedAnswer":{"@type":"Answer","text":"Ranges vary by region and size; many projects land in the low-to-mid six figures. Use our Costs page for line items, calculators, and case studies."}},
-        {"@type":"Question","name":"Do I need owner-occupancy or extra parking?","acceptedAnswer":{"@type":"Answer","text":"Rules are local. Some states removed owner-occupancy and relaxed parking near transit. Check your state/city playbook in Regulations."}},
-        {"@type":"Question","name":"Can I use prefab plans?","acceptedAnswer":{"@type":"Answer","text":"Yes. Many cities accept prefab or permit-ready plan sets. See Builders to compare prefab vs custom and to request estimates."}},
-        {"@type":"Question","name":"How long does permitting take?","acceptedAnswer":{"@type":"Answer","text":"Anywhere from a few weeks to a few months depending on your jurisdiction and submittal quality. Our checklists help you prepare cleanly."}}
-      ]}
-    ]
-  }
-  </script>
 </head>
 
-<body>
-  <!-- Cloudflare hosts inject sitewide header/footer; keep these present but empty -->
-  <header></header>
+<!-- Cloudflare edge injects shared header/footer. Keep empty per Knowledge File. -->
+<header></header>
 
-  <main id="main" class="wrap" role="main">
-    <!-- HERO -->
-    <section class="hero" aria-labelledby="home-title">
-      <div>
-        <span class="mini">Backyard homes, without the guesswork</span>
-        <h1 id="home-title">Plan your ADU with clarity</h1>
-        <p class="sub">Use our 4-step funnel—Costs → Regulations → Builders → Financing—to move from idea to permit.</p>
+<main class="wrap" id="main">
+  <section class="hero" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Plan your ADU with confidence in 2025</h1>
+      <p class="sub">Clear guidance on costs, regulations, builders, and financing—plus city-by-city playbooks to get you from idea to move-in.</p>
+      <div class="cta-row">
+        <a class="btn" href="/costs">Start with Costs</a>
+        <a class="btn alt" href="/regulations">Check Your Regulations</a>
+      </div>
+      <p class="tldr" aria-label="TLDR">TL;DR — Most homeowners start by sizing their budget, then confirm local rules, gather builder quotes, and choose a financing path. We’ve organized everything into that exact flow.</p>
 
-        <div class="cta-row">
-          <a class="btn primary" href="/costs">See Typical Costs</a>
-          <a class="btn" href="/regulations">Check Your Rules</a>
-          <a class="btn" href="/builders">Find Builders</a>
-          <a class="btn" href="/financing">Compare Financing</a>
+      <div class="progress" role="progressbar" aria-label="ADU planning progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="25">
+        <span class="bar" aria-hidden="true"></span>
+      </div>
+      <div class="progress-label">Step 1 of 4 • Costs → Regulations → Builders → Financing</div>
+
+      <details class="toc" style="margin-top:10px">
+        <summary>Quick nav</summary>
+        <nav aria-label="Homepage quick navigation">
+          <ul>
+            <li><a href="#pillars">Pillars (4)</a></li>
+            <li><a href="#featured-prefab">Featured prefab resource</a></li>
+            <li><a href="#trust">Case studies & trust</a></li>
+            <li><a href="#faq">FAQs</a></li>
+          </ul>
+        </nav>
+      </details>
+    </div>
+    <figure>
+      <img src="/assets/hero-adu.jpg" alt="Backyard ADU with wood siding and a small deck" width="1024" height="683" />
+      <figcaption class="meta">A compact, rentable backyard ADU. Image © ADUPlanet.</figcaption>
+    </figure>
+  </section>
+
+  <section id="pillars" aria-labelledby="pillars-title">
+    <h2 id="pillars-title">Choose your path</h2>
+    <div class="tiles" role="list">
+      <article class="tile" role="listitem">
+        <h3><a href="/costs">Costs</a></h3>
+        <p>2025 cost ranges, calculators, and real-world budgets by ADU type.</p>
+        <a class="btn alt" href="/costs">Open Costs</a>
+      </article>
+      <article class="tile" role="listitem">
+        <h3><a href="/regulations">Regulations</a></h3>
+        <p>State and city rules—size, setbacks, parking, owner-occ, and fees.</p>
+        <a class="btn alt" href="/regulations">Open Regulations</a>
+      </article>
+      <article class="tile" role="listitem">
+        <h3><a href="/builders">Builders</a></h3>
+        <p>Prefab vs. custom, directories, and a simple RFQ to compare quotes.</p>
+        <a class="btn alt" href="/builders">Open Builders</a>
+      </article>
+      <article class="tile" role="listitem">
+        <h3><a href="/financing">Financing</a></h3>
+        <p>HELOC, cash-out, construction loans, FHA 203k—compare payments.</p>
+        <a class="btn alt" href="/financing">Open Financing</a>
+      </article>
+    </div>
+  </section>
+
+  <section id="featured-prefab" class="featured" aria-labelledby="featured-title">
+    <div class="featured-card">
+      <h2 id="featured-title">Featured prefab resource</h2>
+      <p>Considering modular or panelized ADUs? See trusted prefab options and get matched via our RFQ.</p>
+      <div class="cta-row">
+        <a class="btn" href="/builders#prefab">Explore Prefab Builders</a>
+        <a class="btn alt" href="/estimate">Get ADU Estimates</a>
+      </div>
+      <p class="meta">Saves time; you’ll specify ZIP, ADU type, budget, and timeline so builders can respond apples-to-apples.</p>
+    </div>
+    <div>
+      <div class="grid-2">
+        <div class="stat" role="group" aria-label="Planning speed">
+          <strong>~6–10 weeks</strong>
+          <span class="meta">Typical plan-to-permit (varies by city) {{verify locally}}</span>
         </div>
-
-        <!-- Funnel progress bar -->
-        <div class="progress" role="progressbar" aria-label="ADU planning progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12">
-          <div class="track">
-            <div class="bar" aria-hidden="true"></div>
-            <ol aria-label="Planning steps">
-              <li aria-current="step">Costs</li>
-              <li>Regulations</li>
-              <li>Builders</li>
-              <li>Financing</li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- TL;DR (speakable) -->
-        <div class="tldr" aria-label="Summary">
-          <strong>TL;DR:</strong> Start with <a href="/costs">Costs</a>, confirm <a href="/regulations">Regulations</a>, shortlist <a href="/builders">Builders</a>, then lock in <a href="/financing">Financing</a>. We keep pages current and scannable.
+        <div class="stat" role="group" aria-label="Prefab install">
+          <strong>1–3 days</strong>
+          <span class="meta">On-site set for prefab modules {{verify locally}}</span>
         </div>
       </div>
+    </div>
+  </section>
 
-      <figure>
-        <img src="/assets/hero-adu.jpg" alt="Detached accessory dwelling unit behind a primary home" />
-        <figcaption class="mini">A detached ADU adds flexible space and rental potential.</figcaption>
-      </figure>
-    </section>
-
-    <!-- PILLARS -->
-    <section class="pillars" aria-label="Core pillars">
-      <a class="tile" href="/costs" aria-label="Costs"><h3>Costs</h3><p class="mini">Ranges, calculators, and case studies.</p></a>
-      <a class="tile" href="/regulations" aria-label="Regulations"><h3>Regulations</h3><p class="mini">State and city playbooks.</p></a>
-      <a class="tile" href="/builders" aria-label="Builders"><h3>Builders</h3><p class="mini">Prefab vs custom, directories, RFQ.</p></a>
-      <a class="tile" href="/financing" aria-label="Financing"><h3>Financing</h3><p class="mini">Loans compared with monthly payment tools.</p></a>
-    </section>
-
-    <!-- FEATURED PREFAB BUILDER RESOURCE -->
-    <section class="feature" aria-labelledby="feature-title">
-      <div>
-        <h3 id="feature-title">Featured prefab resource</h3>
-        <p class="mini">Compare prefab modules and permit-ready plans. See specs, typical lead times, and ballpark pricing, then request an estimate.</p>
-        <div class="cta-row">
-          <a class="btn primary" href="/builders">Explore Prefab Options</a>
-          <a class="btn" href="/estimate">RFQ — Get an Estimate</a>
-        </div>
+  <section id="trust" aria-labelledby="trust-title">
+    <h2 id="trust-title">Case studies & payback snapshots</h2>
+    <div class="stats">
+      <div class="stat" role="group" aria-label="Illustrative payback">
+        <strong>~8–12 yrs</strong>
+        <span class="meta">Illustrative payback via rent offset (market-dependent) {{verify locally}}</span>
       </div>
-      <div>
-        <ul class="mini">
-          <li>Permit-ready plan sets (where available)</li>
-          <li>Panelized vs modular vs custom</li>
-          <li>Timeline graphic & checklist</li>
-        </ul>
+      <div class="stat" role="group" aria-label="Cost bands">
+        <strong>$150k–$350k</strong>
+        <span class="meta">Typical turnkey range across ADU types (2025) {{verify locally}}</span>
       </div>
-    </section>
-
-    <!-- TRUST / MINI CASES -->
-    <section class="trust" aria-labelledby="trust-title">
-      <div>
-        <h2 id="trust-title">Why homeowners use ADU Planet</h2>
-        <ul>
-          <li><b>91% satisfaction</b> with planning clarity</li>
-          <li><b>2–6 month</b> typical permit window (jurisdiction-dependent)</li>
-          <li><b>50%+ time saved</b> on early research vs. starting cold</li>
-        </ul>
-        <p class="mini">Stats based on recent user feedback and timeline samples.</p>
+      <div class="stat" role="group" aria-label="Contingency">
+        <strong>10–15%</strong>
+        <span class="meta">Suggested contingency for site/utility surprises</span>
       </div>
-      <div>
-        <figure>
-          <figcaption class="mini"><strong>Case snapshot:</strong> ~1,000&nbsp;sf detached ADU + internal AADU near transit → no on-site parking, parity height/setbacks, impact fees reduced by policy. Results vary by city.</figcaption>
-        </figure>
-      </div>
-    </section>
+    </div>
 
-    <!-- LATEST UPDATES -->
-    <section aria-labelledby="updates-title" class="updates">
-      <h2 id="updates-title">Latest updates</h2>
-      <ul>
-        <li><a href="/regulations/washington">Washington statewide ADU rules</a> <time datetime="2025-09-09">Sept 9, 2025</time></li>
-        <li><a href="/regulations/seattle">Seattle ADU playbook</a> <time datetime="2025-09-09">Sept 9, 2025</time></li>
-      </ul>
-    </section>
+    <figure>
+      <img src="/assets/hero-adu.jpg" alt="Small detached ADU example exterior" width="1024" height="683" />
+      <figcaption class="meta">Example: 750 sf detached ADU, mid-grade finish — estimate $240k all-in; hypothetical rent $2,200/mo → net payback ~9–10 yrs before financing. {{verify locally}}</figcaption>
+    </figure>
+  </section>
 
-    <!-- FAQ -->
-    <section class="faq" aria-labelledby="faq-title">
-      <h2 id="faq-title">Homepage FAQ</h2>
+  <section id="faq" class="faq" aria-labelledby="faq-title">
+    <h2 id="faq-title">Frequently asked</h2>
+    <details>
+      <summary>What ADU size fits a typical backyard?</summary>
+      <p>Many lots can fit a 400–800 sf detached ADU, but setbacks, height, lot coverage, and utilities control the final envelope. Check your city’s setbacks and max size on the <a href="/regulations">Regulations</a> page.</p>
+    </details>
+    <details>
+      <summary>Is a garage conversion cheaper than a new detached ADU?</summary>
+      <p>Often, yes—existing foundations and utilities can lower costs. Scope still matters (seismic, slab, insulation, egress). Compare your options on <a href="/costs">Costs</a>.</p>
+    </details>
+    <details>
+      <summary>Prefab or custom: which is faster?</summary>
+      <p>Prefab can compress the on-site timeline; custom can fit tricky lots and HOA rules. See pros/cons and a builder directory on <a href="/builders">Builders</a>.</p>
+    </details>
+    <details>
+      <summary>How do people finance an ADU?</summary>
+      <p>Common paths are HELOC, cash-out refinance, construction loans, or FHA 203k. Compare speed, paperwork, and payments on <a href="/financing">Financing</a>.</p>
+    </details>
+    <details>
+      <summary>Will an ADU increase property taxes?</summary>
+      <p>Yes, the improvement value gets assessed separately in many jurisdictions. We link to official resources and suggest verifying with your county assessor. {{verify locally}}</p>
+    </details>
+    <details>
+      <summary>Can I rent out my ADU short-term?</summary>
+      <p>Short-term rental rules vary widely and often differ from long-term ADU allowances. Always confirm with your city’s municipal code or planning portal. {{verify locally}}</p>
+    </details>
+  </section>
 
-      <details>
-        <summary><strong>What’s the first step?</strong></summary>
-        <p>Establish a target budget on <a href="/costs">Costs</a>, then verify your local rules in <a href="/regulations">Regulations</a>.</p>
-      </details>
+  <!-- Latest updates: surfaced before end of main per Knowledge File -->
+  <section aria-labelledby="updates-title" class="updates">
+    <h2 id="updates-title">Latest updates</h2>
+    <ul>
+      <li>
+        <a href="/regulations/washington">Washington statewide ADU rules</a>
+        <time datetime="2025-09-09">Sept 9, 2025</time>
+      </li>
+      <li>
+        <a href="/regulations/seattle">Seattle ADU playbook</a>
+        <time datetime="2025-09-09">Sept 9, 2025</time>
+      </li>
+    </ul>
+  </section>
 
-      <details>
-        <summary><strong>Can I build two ADUs?</strong></summary>
-        <p>Some states and cities allow two ADUs per lot. Check your state/city guide under <a href="/regulations">Regulations</a>.</p>
-      </details>
+  <p class="meta">Looking for news and research? Visit the <a href="/blog/">Blog hub</a> for bite-size primers and deep dives.</p>
+</main>
 
-      <details>
-        <summary><strong>Prefab or custom?</strong></summary>
-        <p>Prefab accelerates delivery and predictability; custom maximizes fit. Our <a href="/builders">Builders</a> page compares approaches and connects you with teams.</p>
-      </details>
+<footer></footer>
 
-      <details>
-        <summary><strong>How do I finance?</strong></summary>
-        <p>Compare HELOC, cash-out refi, and construction loans on <a href="/financing">Financing</a>, including a monthly payment calculator.</p>
-      </details>
-
-      <details>
-        <summary><strong>Where do I request bids?</strong></summary>
-        <p>Use the RFQ form at <a href="/estimate">/estimate</a>. Include ZIP, ADU type, budget, stage, timeline, and email.</p>
-      </details>
-    </section>
-  </main>
-
-  <!-- Cloudflare footer injection target -->
-  <footer></footer>
-
-  <aside class="wrap mini" aria-label="page-meta">
-    <p>Last updated <time datetime="2025-09-09">September 9, 2025</time>. Pages include speakable TL;DR for voice assistants.</p>
-  </aside>
-</body>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://aduplanet.com/#org",
+      "name": "ADUPlanet",
+      "url": "https://aduplanet.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://aduplanet.com/#logo",
+        "contentUrl": "https://aduplanet.com/assets/logo.png",
+        "name": "ADUPlanet logo"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://aduplanet.com/#website",
+      "url": "https://aduplanet.com/",
+      "name": "ADUPlanet",
+      "publisher": { "@id": "https://aduplanet.com/#org" },
+      "inLanguage": "en-US"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://aduplanet.com/#webpage",
+      "url": "https://aduplanet.com/",
+      "name": "ADUPlanet — ADU costs, regulations, builders & financing (2025)",
+      "isPartOf": { "@id": "https://aduplanet.com/#website" },
+      "about": { "@id": "https://aduplanet.com/#org" },
+      "description": "Plan your ADU with clear 2025 guidance: costs, regulations, builders, and financing options. Calculators, FAQs, and city-by-city playbooks.",
+      "dateModified": "2025-09-10",
+      "breadcrumb": { "@id": "https://aduplanet.com/#breadcrumb" },
+      "hasPart": [
+        { "@id": "https://aduplanet.com/#hero-image" },
+        { "@id": "https://aduplanet.com/#case-image-1" }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://aduplanet.com/#breadcrumb",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aduplanet.com/" }
+      ]
+    },
+    {
+      "@type": "SpeakableSpecification",
+      "cssSelector": [".tldr","h1"]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What ADU size fits a typical backyard?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Many lots can fit a 400–800 sf detached ADU, but setbacks, height, lot coverage, and utilities control the final envelope. Check your city’s setbacks and max size on the Regulations page." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a garage conversion cheaper than a new detached ADU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Often, yes—existing foundations and utilities can lower costs. Scope still matters (seismic, slab, insulation, egress). Compare options on the Costs page." }
+        },
+        {
+          "@type": "Question",
+          "name": "Prefab or custom: which is faster?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Prefab can compress the on-site timeline; custom can fit tricky lots and HOA rules. See pros/cons and a builder directory on the Builders page." }
+        },
+        {
+          "@type": "Question",
+          "name": "How do people finance an ADU?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Common paths are HELOC, cash-out refinance, construction loans, or FHA 203k. Compare speed, paperwork, and payments on the Financing page." }
+        },
+        {
+          "@type": "Question",
+          "name": "Will an ADU increase property taxes?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, the improvement value gets assessed separately in many jurisdictions. Verify with your county assessor or official resources." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I rent out my ADU short-term?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Short-term rental rules vary widely and often differ from long-term ADU allowances. Always confirm with your city’s municipal code or planning portal." }
+        }
+      ]
+    },
+    {
+      "@type": "ItemList",
+      "@id": "https://aduplanet.com/#pillars",
+      "name": "ADU planning pillars",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Costs", "url": "https://aduplanet.com/costs" },
+        { "@type": "ListItem", "position": 2, "name": "Regulations", "url": "https://aduplanet.com/regulations" },
+        { "@type": "ListItem", "position": 3, "name": "Builders", "url": "https://aduplanet.com/builders" },
+        { "@type": "ListItem", "position": 4, "name": "Financing", "url": "https://aduplanet.com/financing" }
+      ]
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aduplanet.com/#hero-image",
+      "name": "Backyard ADU hero image",
+      "caption": "Modern backyard ADU with wood siding and a small deck.",
+      "contentUrl": "https://aduplanet.com/assets/hero-adu.jpg"
+    },
+    {
+      "@type": "ImageObject",
+      "@id": "https://aduplanet.com/#case-image-1",
+      "name": "Detached ADU example exterior",
+      "caption": "Illustrative detached ADU used in payback snapshot.",
+      "contentUrl": "https://aduplanet.com/assets/hero-adu.jpg"
+    }
+  ]
+}
+</script>
 </html>
