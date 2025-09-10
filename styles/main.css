@@ -214,3 +214,34 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 @media (max-width:1000px){ .state .kv{ grid-template-columns:repeat(2,1fr);} }
 @media (max-width:640px){ .state .kv{ grid-template-columns:1fr;} }
 
+/* High-contrast state badge override (wins over frameworks) */
+section.state h2 > .badge,
+.state h2 .badge,
+.state .badge {
+  background-color: #f4f7ff !important;   /* light chip */
+  color: #0b3bb8 !important;               /* dark indigo text */
+  border: 1px solid #c7d2fe !important;    /* soft indigo outline */
+  border-radius: 999px !important;
+  padding: 4px 8px !important;
+  line-height: 1 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  background-image: none !important;       /* kill gradient overrides */
+  box-shadow: none !important;             /* kill pill shadows */
+  mix-blend-mode: normal !important;       /* avoid blending weirdness */
+}
+
+/* Optional: dark-mode safeguard in case your site flips schemes */
+@media (prefers-color-scheme: dark) {
+  section.state h2 > .badge,
+  .state h2 .badge,
+  .state .badge {
+    background-color: #e6efff !important;  /* slightly darker chip for contrast */
+    color: #2037a3 !important;
+    border-color: #b8c7ff !important;
+  }
+}
+
