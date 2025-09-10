@@ -1,14 +1,14 @@
 <!doctype html>
 <html lang="en" data-theme="light" style="background:#f3f4f6!important;">
 <head>
-<meta name="twitter:url" content="https://aduplanet.com/builders" />
   <meta charset="utf-8" />
+  <title>Find the Best ADU Builder Near You (2025) | ADUPlanet</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="color-scheme" content="light" />
-  <title>Find the Best ADU Builder Near You (2025) | ADUPlanet</title>
   <meta name="description" content="Compare prefab vs custom ADU builders, explore builder types, and request 2–3 vetted quotes. Timeline, checklist, and RFQ form included." />
   <link rel="canonical" href="https://aduplanet.com/builders" />
   <meta name="robots" content="index,follow" />
+  <meta name="twitter:url" content="https://aduplanet.com/builders" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
@@ -28,25 +28,19 @@
 
   <!-- Performance -->
   <link rel="preload" as="image" href="/assets/hero-adu.jpg" />
+  <link rel="stylesheet" href="/styles/main.css" />
 
-  <!-- Minimal local styles (global /styles/main.css will be injected by middleware) -->
+  <!-- Minimal local styles (global /styles/main.css is injected by middleware) -->
   <style>
     /* === ADUPlanet Theme — LIGHT GREY (High-Contrast) === */
     :root{
-      --ink:#0b1220;           /* primary text */
-      --ink-2:#111827;         /* headings */
-      --link:#1d4ed8;          /* accessible link */
-      --bg:#f3f4f6;            /* page background (light grey) */
-      --surface:#ffffff;       /* cards, tables, inputs */
-      --line:#e5e7eb;          /* light border */
-      --line-2:#cbd5e1;        /* stronger border */
-      --mint:#6ee7b7; --blue:#2563eb; --amber:#f59e0b;
+      --ink:#0b1220; --ink-2:#111827; --link:#1d4ed8; --bg:#f3f4f6; --surface:#ffffff;
+      --line:#e5e7eb; --line-2:#cbd5e1; --mint:#6ee7b7; --blue:#2563eb; --amber:#f59e0b;
     }
     *,*::before,*::after{box-sizing:border-box}
     html,body{margin:0;padding:0;font-family:ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto}
     body.theme-light{background:var(--bg)!important;color:var(--ink)!important;color-scheme:light;text-rendering:optimizeLegibility;-webkit-font-smoothing:antialiased}
-    a{color:var(--link)}
-    a:hover{filter:brightness(0.9)}
+    a{color:var(--link)} a:hover{filter:brightness(0.9)}
     a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 
     .wrap{max-width:1200px;margin:0 auto;padding:24px}
@@ -106,30 +100,26 @@
     /* HEADER/FOOTER (edge-injected partials) */
     header,footer{background:var(--surface)!important;color:var(--ink)!important}
     header a,footer a{color:var(--ink)!important}
-    footer .fresh{font-size:14px}
 
     .pillars{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
     .pillars a{display:block;padding:14px;text-decoration:none;color:inherit}
 
-    @media (prefers-color-scheme: dark){
-      /* Force LIGHT scheme regardless of user dark mode for this page */
-      body.theme-light{background:var(--bg)!important;color:var(--ink)!important}
-    }
-      /* FINAL OVERRIDES — win against any injected dark theme */
+    @media (prefers-color-scheme: dark){ body.theme-light{background:var(--bg)!important;color:var(--ink)!important} }
     :root{color-scheme:light!important}
     html,body,html body,body.theme-light,html[data-theme="light"] body{background:var(--bg)!important;color:var(--ink)!important}
     html.dark,html.dark body{background:var(--bg)!important;color:var(--ink)!important}
   </style>
 </head>
+
 <body class="theme-light" style="background:#f3f4f6!important;">
-  <!-- Hosts for edge-injected partials (header/footer) -->
+  <!-- Cloudflare edge injects shared header/footer. Keep empty per Knowledge File. -->
   <header></header>
 
   <main>
-    <section class="wrap hero">
+    <section class="wrap hero" aria-labelledby="hero-title">
       <img src="/assets/hero-adu.jpg" alt="Modern ADU exterior with landscaped yard" style="width:100%;max-height:380px;object-fit:cover;border-radius:18px">
       <div>
-        <h1>Find the Best ADU Builder for Your Property in 2025</h1>
+        <h1 id="hero-title">Find the Best ADU Builder for Your Property in 2025</h1>
         <p class="lede">Compare prefab vs custom, explore builder types, and get matched to vetted teams in your budget and timeline.</p>
         <div class="cta-row">
           <a class="btn primary" href="/estimate" aria-label="Get 3 Builder Matches">Get 3 Builder Matches</a>
@@ -137,7 +127,7 @@
         </div>
         <div class="muted" style="margin-top:12px">Costs → Regulations → <strong>Builders</strong> → Financing</div>
         <div class="bar" role="progressbar" aria-label="ADU journey progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75"><span class="fill" aria-hidden="true"></span></div>
-        <details class="toc">
+        <details class="toc" style="margin-top:12px">
           <summary>Table of contents</summary>
           <nav aria-label="On-page">
             <ul>
@@ -153,12 +143,12 @@
       </div>
     </section>
 
-    <section class="wrap tldr" id="tldr">
+    <section class="wrap tldr" id="tldr" aria-label="TL;DR">
       <strong>TL;DR:</strong> Prefab ADUs are generally faster with more predictable pricing; custom ADUs offer design flexibility and fit tricky lots. The right choice depends on your timeline, budget, site access, and finish expectations. Answer a few questions below to shortlist builder types and request quotes.
     </section>
 
-    <section class="wrap" id="compare">
-      <h2>Prefab vs Custom — What’s right for you?</h2>
+    <section class="wrap" id="compare" aria-labelledby="compare-title">
+      <h2 id="compare-title">Prefab vs Custom — What’s right for you?</h2>
       <div class="card">
         <table aria-label="Prefab versus custom comparison grid">
           <thead>
@@ -173,20 +163,20 @@
             <tr><td>Speed</td><td>Fastest (factory + short onsite)</td><td>Moderate (permit + onsite build)</td></tr>
             <tr><td>Design flexibility</td><td>Curated options, limited changes</td><td>Maximum flexibility for unique plans</td></tr>
             <tr><td>Site disruption</td><td>Lower (short onsite window)</td><td>Higher (longer onsite work)</td></tr>
-            <tr><td>Permit complexity</td><td>Often streamlined by factory docs</td><td>Varies by city & scope</td></tr>
+            <tr><td>Permit complexity</td><td>Often streamlined by factory docs</td><td>Varies by city &amp; scope</td></tr>
             <tr><td>Inspections</td><td>Fewer onsite; factory-approved components</td><td>Full sequence of onsite inspections</td></tr>
             <tr><td>Change-order risk</td><td>Lower (fixed package specs)</td><td>Higher (custom selections evolve)</td></tr>
-            <tr><td>Tricky lots</td><td>Case-by-case (transport & crane)</td><td>Adaptable with custom foundation/framing</td></tr>
+            <tr><td>Tricky lots</td><td>Case-by-case (transport &amp; crane)</td><td>Adaptable with custom foundation/framing</td></tr>
             <tr><td>Best for</td><td>Speed + predictability</td><td>Unique design or tight sites</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <section class="wrap" id="types">
-      <h2>Builder Types Directory</h2>
-      <div class="grid cols-2">
-        <article class="card">
+    <section class="wrap" id="types" aria-labelledby="types-title">
+      <h2 id="types-title">Builder Types Directory</h2>
+      <div class="grid cols-2" role="list">
+        <article class="card" role="listitem">
           <h3>Prefab Modules</h3>
           <p><strong>What it is:</strong> Factory-built room-sized modules craned into place; fast onsite set.</p>
           <ul>
@@ -198,7 +188,7 @@
           </ul>
           <p class="muted">Pros: fast, predictable. Watch-outs: transport route, crane swing, HOA aesthetics.</p>
         </article>
-        <article class="card">
+        <article class="card" role="listitem">
           <h3>Panelized Prefab</h3>
           <p><strong>What it is:</strong> Factory-built wall/roof panels assembled onsite (hybrid).</p>
           <ul>
@@ -210,7 +200,7 @@
           </ul>
           <p class="muted">Pros: faster dry-in, adaptable designs. Watch-outs: provider ↔ installer coordination.</p>
         </article>
-        <article class="card">
+        <article class="card" role="listitem">
           <h3>Design-Build Studio</h3>
           <p><strong>What it is:</strong> One team handles design, engineering, permitting, and build.</p>
           <ul>
@@ -222,7 +212,7 @@
           </ul>
           <p class="muted">Pros: one contract, smoother handoffs. Watch-outs: change orders impact schedule.</p>
         </article>
-        <article class="card">
+        <article class="card" role="listitem">
           <h3>General Contractor + Architect</h3>
           <p><strong>What it is:</strong> Separate architect for design; independent GC builds.</p>
           <ul>
@@ -232,42 +222,42 @@
             <li><strong>Includes:</strong> Bespoke design; competitive bid potential.</li>
             <li><strong>Excludes:</strong> Coordination is on owner (unless CM/PM engaged).</li>
           </ul>
-          <p class="muted">Pros: tailored design; competitive GC selection. Watch-outs: coordination effort & bid variance.</p>
+          <p class="muted">Pros: tailored design; competitive GC selection. Watch-outs: coordination effort &amp; bid variance.</p>
         </article>
       </div>
     </section>
 
-    <section class="wrap" id="choose">
-      <h2>How to Choose a Builder</h2>
+    <section class="wrap" id="choose" aria-labelledby="choose-title">
+      <h2 id="choose-title">How to Choose a Builder</h2>
       <ul class="checklist">
         <li><strong>Timeline:</strong> Need keys in &lt;9 months? Prefer prefab/module/panelized.</li>
         <li><strong>Lot access:</strong> 12–16 ft wide clear path + crane pad available? Prefab modules OK; else panelized/custom.</li>
-        <li><strong>Design must-haves:</strong> Non‑standard or HOA styling → custom/design‑build.</li>
-        <li><strong>Budget style:</strong> Prefer fixed packages? Prefab. Comfortable with allowances? Custom/design‑build.</li>
-        <li><strong>Risk tolerance:</strong> Minimize change orders? Prefab/design‑build.</li>
-        <li><strong>Utilities & soils:</strong> Unknowns call for contingencies; custom handles surprises better.</li>
-        <li><strong>References:</strong> Ask for 2 recent builds within 25 miles; verify permits & passed inspections.</li>
+        <li><strong>Design must-haves:</strong> Non-standard or HOA styling → custom/design-build.</li>
+        <li><strong>Budget style:</strong> Prefer fixed packages? Prefab. Comfortable with allowances? Custom/design-build.</li>
+        <li><strong>Risk tolerance:</strong> Minimize change orders? Prefab/design-build.</li>
+        <li><strong>Utilities &amp; soils:</strong> Unknowns call for contingencies; custom handles surprises better.</li>
+        <li><strong>References:</strong> Ask for 2 recent builds within 25 miles; verify permits &amp; passed inspections.</li>
         <li><strong>Contracts:</strong> Milestones, draw schedule, lien releases, and stated warranty.</li>
-        <li><strong>Insurance & license:</strong> Confirm active license, workers’ comp, liability limits.</li>
+        <li><strong>Insurance &amp; license:</strong> Confirm active license, workers’ comp, liability limits.</li>
         <li><strong>Apples-to-apples bids:</strong> Normalize spec levels, crane/foundation/utility line items.</li>
       </ul>
       <p class="muted">Red flags: Unwilling to pull permits, vague allowances, missing schedule, large deposits upfront without plan.</p>
     </section>
 
-    <section class="wrap" id="timeline">
-      <h2>Typical ADU Project Timeline</h2>
+    <section class="wrap" id="timeline" aria-labelledby="timeline-title">
+      <h2 id="timeline-title">Typical ADU Project Timeline</h2>
       <div class="timeline">
         <div class="step"><strong>1) Feasibility (1–3 weeks)</strong><br>Site review, setbacks/utilities check, rough budget. <em>Deliverable:</em> Feasibility memo + concept plan.</div>
-        <div class="step"><strong>2) Design & Scope (3–8 weeks)</strong><br>Plans, selections, engineered foundation. <em>Deliverable:</em> 80% permit set + scope matrix.</div>
+        <div class="step"><strong>2) Design &amp; Scope (3–8 weeks)</strong><br>Plans, selections, engineered foundation. <em>Deliverable:</em> 80% permit set + scope matrix.</div>
         <div class="step"><strong>3) Permitting (4–12+ weeks)</strong><br>Submittal, plan check, revisions. <em>Deliverable:</em> Approved permit; fee receipts.</div>
-        <div class="step"><strong>4) Pre‑construction (1–2 weeks)</strong><br>Mobilization, purchase orders, schedule baseline, utilities locate. <em>Deliverable:</em> Final budget + construction schedule.</div>
+        <div class="step"><strong>4) Pre-construction (1–2 weeks)</strong><br>Mobilization, purchase orders, schedule baseline, utilities locate. <em>Deliverable:</em> Final budget + construction schedule.</div>
         <div class="step"><strong>5) Build (12–20+ weeks)</strong><br>Foundation → structure → MEP rough → insulation → drywall → finishes → final. <em>Deliverable:</em> Passed inspections, punchlist.</div>
-        <div class="step"><strong>6) Closeout (1–2 weeks)</strong><br>Final inspection, CO, O&amp;M manuals, warranty packet. <em>Deliverable:</em> Lien releases, as‑builts, photos.</div>
+        <div class="step"><strong>6) Closeout (1–2 weeks)</strong><br>Final inspection, CO, O&amp;M manuals, warranty packet. <em>Deliverable:</em> Lien releases, as-builts, photos.</div>
       </div>
     </section>
 
-    <section class="wrap" id="rfq">
-      <h2>Get 2–3 Vetted ADU Builder Quotes</h2>
+    <section class="wrap" id="rfq" aria-labelledby="rfq-title">
+      <h2 id="rfq-title">Get 2–3 Vetted ADU Builder Quotes</h2>
       <form class="rfq" action="/estimate" method="post" aria-label="ADU builder request for quotes" onsubmit="window.gtag&&gtag('event','rfq_submit');">
         <div class="grid cols-2">
           <div>
@@ -332,7 +322,7 @@
           </div>
           <div class="col-span-2">
             <label for="notes">Notes <span class="muted">(optional)</span></label>
-            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your site, access, must‑haves, or finish level."></textarea>
+            <textarea id="notes" name="notes" rows="4" placeholder="Tell us about your site, access, must-haves, or finish level."></textarea>
           </div>
           <div style="display:none">
             <label for="company">Company (leave blank)</label>
@@ -344,51 +334,41 @@
       </form>
     </section>
 
-    <section class="wrap" id="trust">
-      <h2>Why homeowners trust ADUPlanet</h2>
+    <section class="wrap" id="trust" aria-labelledby="trust-title">
+      <h2 id="trust-title">Why homeowners trust ADUPlanet</h2>
       <div class="stats">
-        <div class="stat"><strong style="font-size:28px">92%</strong><br>Homeowner satisfaction (24‑mo rolling)</div>
+        <div class="stat"><strong style="font-size:28px">92%</strong><br>Homeowner satisfaction (24-mo rolling)</div>
         <div class="stat"><strong style="font-size:28px">7–12 yrs</strong><br>Typical payback via rental income</div>
         <div class="stat"><strong style="font-size:28px">2–3 bids</strong><br>Most matches receive within 10 days</div>
       </div>
       <div class="grid cols-2" style="margin-top:12px">
         <figure class="card">
-          <img src="/assets/case-detached.jpg" alt="750 sf detached ADU with light wood siding" style="width:100%;border-radius:12px"/>
-          <figcaption>San Diego, CA — 750 sf detached (panelized prefab). Permit‑to‑keys: 7.5 months. Rent: $2,350/mo.</figcaption>
+          <img src="/assets/case-detached.jpg" alt="750 sf detached ADU with light wood siding" loading="lazy" style="width:100%;border-radius:12px"/>
+          <figcaption>San Diego, CA — 750 sf detached (panelized prefab). Permit-to-keys: 7.5 months. Rent: $2,350/mo.</figcaption>
         </figure>
         <figure class="card">
-          <img src="/assets/case-garage.jpg" alt="Converted garage ADU with new windows and entry" style="width:100%;border-radius:12px"/>
-          <figcaption>Portland, OR — 420 sf garage conversion (design‑build). Seismic upgrades. Completed in 5 months.</figcaption>
+          <img src="/assets/case-garage.jpg" alt="Converted garage ADU with new windows and entry" loading="lazy" style="width:100%;border-radius:12px"/>
+          <figcaption>Portland, OR — 420 sf garage conversion (design-build). Seismic upgrades. Completed in 5 months.</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="wrap faq" id="faq">
-      <h2>Builders — Frequently asked questions</h2>
-      <details><summary>Are prefab ADUs cheaper than custom?</summary><div>Usually, prefab offers more predictable mid‑range pricing due to factory efficiency; custom can be cheaper or pricier depending on design and site complexity.</div></details>
-      <details><summary>How long does an ADU build take?</summary><div>About 5–8 months for prefab and 8–14+ months for custom, depending on permitting and site conditions.</div></details>
-      <details><summary>Do builders handle permits?</summary><div>Prefab and design‑build firms often manage submittals; independent GCs may rely on your architect—confirm in scope.</div></details>
-      <details><summary>Will a builder help with utilities and trenching?</summary><div>Yes, but confirm inclusions: lateral distances, panel upgrade, sewer tie‑in, and any utility fees.</div></details>
-      <details><summary>What warranties should I expect?</summary><div>Commonly: 1‑year workmanship, manufacturer warranties on appliances/roof/windows; some prefab firms offer extended structural coverage.</div></details>
-      <details><summary>Can I finance builder payments?</summary><div>Yes—HELOC, cash‑out refi, or construction loans; draw schedules align with milestones. See <a href="/financing">Financing</a> for comparisons.</div></details>
-      <details><summary>How do I compare bids fairly?</summary><div>Normalize specs: foundation type, insulation, windows, HVAC, finishes, crane/freight, and contingency. Ask for a scope matrix.</div></details>
-    </section>
-
-    <section class="wrap">
-      <h2>Keep your project moving</h2>
+    <section class="wrap" aria-labelledby="keep-moving-title">
+      <h2 id="keep-moving-title">Keep your project moving</h2>
       <div class="pillars">
         <a href="/financing" aria-label="Go to Financing">Next: Financing →</a>
         <a href="/costs" aria-label="Go to Costs">Need costs first?</a>
         <a href="/regulations" aria-label="Go to Regulations">Check your local rules</a>
       </div>
     </section>
+
+    <!-- Visible freshness inside main to keep footer empty for edge injection -->
+    <p class="wrap muted">Updated <time datetime="2025-09-10">September 10, 2025</time>.</p>
   </main>
 
-  <footer>
-    <div class="wrap fresh">Updated <time datetime="2025-08-27">August 27, 2025</time>. Links: <a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/estimate">Find Builders</a></div>
-  </footer>
+  <footer></footer>
 
-  <!-- JSON-LD Schema (@graph) -->
+  <!-- Single JSON-LD graph (Organization, WebSite, WebPage, BreadcrumbList, Speakable, FAQPage, ItemList, ImageObjects, HowTo, Service) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -400,7 +380,7 @@
         "url": "https://aduplanet.com/",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://aduplanet.com/assets/logo.png",
+          "@id": "https://aduplanet.com/#logo",
           "contentUrl": "https://aduplanet.com/assets/logo.png",
           "name": "ADUPlanet logo"
         }
@@ -411,6 +391,7 @@
         "url": "https://aduplanet.com/",
         "name": "ADUPlanet",
         "publisher": {"@id": "https://aduplanet.com/#org"},
+        "inLanguage": "en-US",
         "potentialAction": {
           "@type": "SearchAction",
           "target": "https://aduplanet.com/search?q={query}",
@@ -423,38 +404,71 @@
         "url": "https://aduplanet.com/builders",
         "isPartOf": {"@id": "https://aduplanet.com/#website"},
         "name": "Find the Best ADU Builder Near You (2025)",
-        "dateModified": "2025-08-27",
+        "description": "Compare prefab vs custom ADU builders, explore builder types, and request 2–3 vetted quotes. Timeline, checklist, and RFQ form included.",
+        "dateModified": "2025-09-10",
         "breadcrumb": {"@id": "https://aduplanet.com/builders#breadcrumb"},
-        "speakable": {"@type":"SpeakableSpecification","cssSelector":[".tldr","h1"]},
         "hasPart": [
-          {"@type":"ItemList","@id":"https://aduplanet.com/builders#builder-types","name":"Builder Types","itemListElement":[
-            {"@type":"ListItem","position":1,"name":"Prefab Modules"},
-            {"@type":"ListItem","position":2,"name":"Panelized Prefab"},
-            {"@type":"ListItem","position":3,"name":"Design-Build Studio"},
-            {"@type":"ListItem","position":4,"name":"General Contractor"}
-          ]}
+          { "@id": "https://aduplanet.com/builders#builder-types" }
         ]
       },
       {
         "@type": "BreadcrumbList",
         "@id": "https://aduplanet.com/builders#breadcrumb",
         "itemListElement": [
-          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://aduplanet.com/"},
-          {"@type": "ListItem", "position": 2, "name": "Builders", "item": "https://aduplanet.com/builders"}
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aduplanet.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Builders", "item": "https://aduplanet.com/builders" }
         ]
+      },
+      {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [".tldr","h1"]
       },
       {
         "@type":"FAQPage",
         "@id":"https://aduplanet.com/builders#faqs",
         "mainEntity":[
-          {"@type":"Question","name":"Are prefab ADUs cheaper than custom?","acceptedAnswer":{"@type":"Answer","text":"Prefab often provides more predictable mid‑range pricing due to factory efficiency; custom can be cheaper or pricier depending on design and site complexity."}},
+          {"@type":"Question","name":"Are prefab ADUs cheaper than custom?","acceptedAnswer":{"@type":"Answer","text":"Prefab often provides more predictable mid-range pricing due to factory efficiency; custom can be cheaper or pricier depending on design and site complexity."}},
           {"@type":"Question","name":"How long does an ADU build take?","acceptedAnswer":{"@type":"Answer","text":"About 5–8 months for prefab and 8–14+ months for custom, depending on permitting and site conditions."}},
-          {"@type":"Question","name":"Do builders handle permits?","acceptedAnswer":{"@type":"Answer","text":"Prefab/design‑build firms often manage submittals; independent GCs may rely on your architect—confirm in scope."}},
-          {"@type":"Question","name":"Will a builder help with utilities and trenching?","acceptedAnswer":{"@type":"Answer","text":"Yes, but confirm inclusions: lateral distances, panel upgrade, sewer tie‑in, and any utility fees."}},
-          {"@type":"Question","name":"What warranties should I expect?","acceptedAnswer":{"@type":"Answer","text":"Commonly: 1‑year workmanship, manufacturer warranties on appliances/roof/windows; some prefab firms offer extended structural coverage."}},
-          {"@type":"Question","name":"Can I finance builder payments?","acceptedAnswer":{"@type":"Answer","text":"Yes—HELOC, cash‑out refi, or construction loans; draw schedules align with milestones."}},
+          {"@type":"Question","name":"Do builders handle permits?","acceptedAnswer":{"@type":"Answer","text":"Prefab and design-build firms often manage submittals; independent GCs may rely on your architect—confirm in scope."}},
+          {"@type":"Question","name":"Will a builder help with utilities and trenching?","acceptedAnswer":{"@type":"Answer","text":"Yes, but confirm inclusions: lateral distances, panel upgrade, sewer tie-in, and any utility fees."}},
+          {"@type":"Question","name":"What warranties should I expect?","acceptedAnswer":{"@type":"Answer","text":"Commonly: 1-year workmanship, manufacturer warranties on appliances/roof/windows; some prefab firms offer extended structural coverage."}},
+          {"@type":"Question","name":"Can I finance builder payments?","acceptedAnswer":{"@type":"Answer","text":"Yes—HELOC, cash-out refi, or construction loans; draw schedules align with milestones."}},
           {"@type":"Question","name":"How do I compare bids fairly?","acceptedAnswer":{"@type":"Answer","text":"Normalize specs: foundation type, insulation, windows, HVAC, finishes, crane/freight, and contingency. Ask for a scope matrix."}}
         ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://aduplanet.com/builders#builder-types",
+        "name": "Builder Types",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"Prefab Modules"},
+          {"@type":"ListItem","position":2,"name":"Panelized Prefab"},
+          {"@type":"ListItem","position":3,"name":"Design-Build Studio"},
+          {"@type":"ListItem","position":4,"name":"General Contractor + Architect"}
+        ]
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://aduplanet.com/builders#howto-rfq",
+        "name": "How to request ADU builder quotes (RFQ)",
+        "description": "Use ADUPlanet’s RFQ to get 2–3 vetted ADU builder quotes tailored to your budget and timeline.",
+        "step": [
+          {"@type":"HowToStep","name":"Enter your ZIP","text":"Provide your five-digit ZIP code to match local builders.","url":"https://aduplanet.com/estimate"},
+          {"@type":"HowToStep","name":"Select ADU type & size","text":"Choose detached, attached, garage conversion, prefab module, or panelized, and your target square footage.","url":"https://aduplanet.com/estimate"},
+          {"@type":"HowToStep","name":"Set budget, stage, timeline","text":"Pick your budget band, current project stage, and target timeline window.","url":"https://aduplanet.com/estimate"},
+          {"@type":"HowToStep","name":"Contact details","text":"Add email (required) and phone (optional) so matched builders can follow up.","url":"https://aduplanet.com/estimate"},
+          {"@type":"HowToStep","name":"Submit & compare","text":"Receive 2–3 quotes, normalize scope (foundation, utilities, finishes, crane/freight) and compare apples-to-apples.","url":"https://aduplanet.com/builders#choose"}
+        ]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://aduplanet.com/#builder-matching",
+        "name": "ADU builder matching",
+        "serviceType": "Construction Service",
+        "description": "Match with vetted ADU builders for prefab or custom projects using our RFQ tool.",
+        "provider": { "@id": "https://aduplanet.com/#org" },
+        "areaServed": { "@type": "Place", "name": "United States" },
+        "url": "https://aduplanet.com/builders"
       },
       {
         "@type": "ImageObject",
@@ -475,7 +489,7 @@
         "@id": "https://aduplanet.com/assets/case-garage.jpg#image",
         "name": "Garage conversion case study",
         "contentUrl": "https://aduplanet.com/assets/case-garage.jpg",
-        "caption": "Portland — 420 sf garage conversion, design‑build"
+        "caption": "Portland — 420 sf garage conversion, design-build"
       }
     ]
   }
