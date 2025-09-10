@@ -169,7 +169,7 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 }
 
 /* HIGH-CONTRAST BADGE (fixes dark-on-dark) */
-.state .badge{
+.state .state h2 .state-badge{
   font-size:.78rem; line-height:1; white-space:nowrap;
   background:var(--chip); color:#0b3bb8;  /* dark indigo text on light chip */
   border:1px solid var(--chip-border);
@@ -215,9 +215,9 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 @media (max-width:640px){ .state .kv{ grid-template-columns:1fr;} }
 
 /* High-contrast state badge override (wins over frameworks) */
-section.state h2 > .badge,
-.state h2 .badge,
-.state .badge {
+section.state h2 > .state h2 .state-badge,
+.state h2 .state h2 .state-badge,
+.state .state h2 .state-badge {
   background-color: #f4f7ff !important;   /* light chip */
   color: #0b3bb8 !important;               /* dark indigo text */
   border: 1px solid #c7d2fe !important;    /* soft indigo outline */
@@ -236,9 +236,9 @@ section.state h2 > .badge,
 
 /* Optional: dark-mode safeguard in case your site flips schemes */
 @media (prefers-color-scheme: dark) {
-  section.state h2 > .badge,
-  .state h2 .badge,
-  .state .badge {
+  section.state h2 > .state h2 .state-badge,
+  .state h2 .state h2 .state-badge,
+  .state .state h2 .state-badge {
     background-color: #e6efff !important;  /* slightly darker chip for contrast */
     color: #2037a3 !important;
     border-color: #b8c7ff !important;
