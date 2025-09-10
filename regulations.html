@@ -137,7 +137,7 @@
 
   <main class="container" id="main">
 
- <!-- CALIFORNIA -->
+<!-- CALIFORNIA -->
 <section class="state" id="california" aria-labelledby="ca-title">
   <h2 id="ca-title">California <span class="badge">state preemption</span></h2>
 
@@ -152,70 +152,64 @@
     <div role="listitem"><b>Impact fees</b><br/><b>None</b> for ADUs <b>&lt; 750 sf</b>; otherwise proportional to ADU vs. primary size.</div>
   </div>
 
+  <!-- Colored min/max bars -->
   <svg class="mini-chart" viewBox="0 0 600 120" role="img" aria-label="California ADU allowances: size and height">
     <desc>Minimum size allowances (800–1000 sf) and height up to 18–25 ft.</desc>
-    <rect x="20" y="20" width="220" height="24"></rect>
-    <rect class="bar" x="20" y="20" width="220" height="24"></rect>
-    <text x="250" y="38" font-size="12">Min size: 800–1,000 sf</text>
-    <rect x="20" y="70" width="180" height="24"></rect>
-    <rect class="bar" x="20" y="70" width="180" height="24"></rect>
-    <text x="210" y="88" font-size="12">Height: 16–18 ft (25 ft attached)</text>
+    <!-- rails -->
+    <rect class="bg"  x="20" y="20" width="260" height="24" rx="6" ry="6"></rect>
+    <rect class="bg"  x="20" y="70" width="220" height="24" rx="6" ry="6"></rect>
+    <!-- bars -->
+    <rect class="min" x="20"  y="20" width="180" height="24" rx="6" ry="6"></rect>
+    <rect class="max" x="200" y="20" width="80"  height="24" rx="6" ry="6"></rect>
+    <text x="290" y="38" font-size="12">Min/Max size: 800–1,000 sf</text>
+
+    <rect class="min" x="20"  y="70" width="110" height="24" rx="6" ry="6"></rect>
+    <rect class="max" x="130" y="70" width="90"  height="24" rx="6" ry="6"></rect>
+    <text x="250" y="88" font-size="12">Height: 16–18 ft (25 ft attached)</text>
   </svg>
 
-  <p class="note" style="margin-top:12px">
-    <a class="cta" href="/regulations/california">🔎 View full California ADU regulations &amp; permitting guide</a>
-  </p>
-  <p class="note" style="margin-top:12px">
-    <strong>Also see:</strong> <a href="/regulations/los-angeles">Los Angeles ADU Regulations &amp; Permits (2025)</a>
-  </p>
+  <div class="actions">
+    <a class="btn" href="/regulations/california">Read the full CA guide →</a>
+    <a class="btn ghost" href="/regulations/los-angeles">Los Angeles playbook →</a>
+  </div>
 </section>
 
 
-  <!-- OREGON (statewide) — drop into regulations.html -->
-<section class="state" id="oregon">
-  <h2>Oregon <span class="badge">state rules</span></h2>
-  <p class="note">Updated: September 2, 2025. Oregon law (ORS 197.312(5), as updated by HB 2001) requires <strong>cities ≥ 2,500</strong> and <strong>counties ≥ 15,000</strong> <em>within urban growth boundaries (UGBs)</em> to allow at least one ADU per detached single‑family dwelling, subject to clear, objective siting/design rules. Local codes may <em>not</em> require owner‑occupancy or additional off‑street parking for ADUs, with limited exceptions for vacation rentals.</p>
+<!-- OREGON -->
+<section class="state" id="oregon" aria-labelledby="or-title">
+  <h2 id="or-title">Oregon <span class="badge">state rules</span></h2>
 
-  <div class="kv">
-    <div><b>Max size</b><br/>Set locally; common patterns around <b>800–900 sf</b> or <b>75–85%</b> of the primary home. See your city’s portal.</div>
-    <div><b>Height</b><br/>Set locally; often <b>~20–25 ft</b> under accessory‑building standards. Confirm per zone/overlay.</div>
-    <div><b>Setbacks</b><br/>Set locally; rear/side commonly <b>~4–5 ft</b> depending on zoning. Check your parcel.</div>
-    <div><b>Parking</b><br/><em>Not allowed</em> as a condition of ADU approval (limited exceptions for vacation rentals). <a href="https://www.oregon.gov/lcd/UP/Documents/HB_2001_HB_2003_Frequently_Asked_Questions.pdf" rel="noopener">HB 2001 FAQ</a></div>
-    <div><b>Owner‑occupancy</b><br/><em>Not allowed</em> as a local requirement for ADUs (limited exceptions for vacation rentals). <a href="https://www.oregon.gov/lcd/UP/Documents/HB_2001_HB_2003_Frequently_Asked_Questions.pdf" rel="noopener">HB 2001 FAQ</a></div>
-    <div><b>Impact fees</b><br/>Some cities <b>waive/reduce SDCs</b>; e.g., Portland’s ADU SDC Waiver requires a 10‑year covenant (no STRs during the term). <a href="https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver" rel="noopener">Portland SDC Waiver</a></div>
+  <p class="note">Updated: September 2, 2025. ORS 197.312(5) (HB 2001) requires <strong>cities ≥ 2,500</strong> and <strong>counties ≥ 15,000</strong> within UGBs to allow at least one ADU per detached single-family dwelling, with clear, objective rules. Local codes may <em>not</em> require owner-occ or additional off-street parking for ADUs (limited STR exceptions).</p>
+
+  <div class="kv" role="list">
+    <div role="listitem"><b>Max size</b><br/>Set locally; common ~<b>800–900 sf</b> or <b>75–85%</b> of the primary home.</div>
+    <div role="listitem"><b>Height</b><br/>Set locally; often <b>~20–25 ft</b> under accessory-building standards.</div>
+    <div role="listitem"><b>Setbacks</b><br/>Set locally; rear/side commonly <b>~4–5 ft</b>.</div>
+    <div role="listitem"><b>Parking</b><br/><em>Not allowed</em> as a condition of ADU approval (limited STR exceptions). <a href="https://www.oregon.gov/lcd/UP/Documents/HB_2001_HB_2003_Frequently_Asked_Questions.pdf" rel="noopener">HB 2001 FAQ</a></div>
+    <div role="listitem"><b>Owner-occupancy</b><br/><em>Not allowed</em> (limited STR exceptions). <a href="https://www.oregon.gov/lcd/UP/Documents/HB_2001_HB_2003_Frequently_Asked_Questions.pdf" rel="noopener">HB 2001 FAQ</a></div>
+    <div role="listitem"><b>Impact fees</b><br/>Some cities <b>waive/reduce SDCs</b>; e.g., Portland’s waiver needs a 10-year covenant (no STRs). <a href="https://www.portland.gov/ppd/residential-permitting/adu-sdc-waiver" rel="noopener">Portland SDC Waiver</a></div>
   </div>
 
-  <p class="note">Statewide legal basis: <a href="https://www.oregon.gov/lcd/Publications/ADU_Guidance_updatedSept2019.pdf" rel="noopener">DLCD ADU Guidance</a> • <a href="https://oregon.public.law/statutes/ors_197a.425" rel="noopener">ORS 197.312(5)</a> • <a href="https://www.orcities.org/resources/communications/bulletin/court-guidance-adus" rel="noopener">LOC summary of Kamps‑Hughes v. Eugene</a> • Building code: <a href="https://www.oregon.gov/bcd/codes-stand/pages/residential-structures.aspx" rel="noopener">ORSC</a>.</p>
+  <!-- Colored min/max bars (illustrative) -->
+  <svg class="mini-chart" viewBox="0 0 600 120" role="img" aria-label="Oregon ADU allowances (illustrative)">
+    <desc>Common local ranges; verify on your city page.</desc>
+    <rect class="bg"  x="20" y="20" width="240" height="24" rx="6" ry="6"></rect>
+    <rect class="min" x="20" y="20" width="150" height="24" rx="6" ry="6"></rect>
+    <rect class="max" x="170" y="20" width="70" height="24" rx="6" ry="6"></rect>
+    <text x="270" y="38" font-size="12">Max size: ~800–900 sf</text>
 
-  <svg class="mini-chart" viewBox="0 0 600 120" role="img" aria-label="Oregon ADU allowances: size and height (illustrative)">
-    <desc>Illustrative ranges only. Many Oregon cities use maximum ADU size around 800–900 square feet or 75–85% of the main house, and heights around 20–25 feet. Verify on your city page.</desc>
-    <rect x="20" y="20" width="200" height="24"></rect>
-    <text x="230" y="38" font-size="12">Max size: ~800–900 sf</text>
-    <rect x="20" y="70" width="160" height="24"></rect>
-    <text x="200" y="88" font-size="12">Height: ~20–25 ft</text>
+    <rect class="bg"  x="20" y="70" width="200" height="24" rx="6" ry="6"></rect>
+    <rect class="min" x="20" y="70" width="100" height="24" rx="6" ry="6"></rect>
+    <rect class="max" x="130" y="70" width="50" height="24" rx="6" ry="6"></rect>
+    <text x="230" y="88" font-size="12">Height: ~20–25 ft</text>
   </svg>
 
-  <!-- CTA link to full Oregon detail page -->
-  <p class="note" style="margin-top:12px">
-    <a class="cta" href="/regulations/oregon">
-      🔎 View full Oregon ADU regulations &amp; permitting guide
-    </a>
-  </p>
-
-  <!-- PORTLAND PLAYBOOK LINK -->
-  <p class="note" style="margin-top:12px">
-    <strong>Also see:</strong>
-    <a href="/regulations/portland">Portland ADU Regulations &amp; Permits (2025)</a>
-  </p>
+  <div class="actions">
+    <a class="btn" href="/regulations/oregon">Read the full OR guide →</a>
+    <a class="btn ghost" href="/regulations/portland">Portland playbook →</a>
+  </div>
 </section>
 
-
-  <!-- PORTLAND PLAYBOOK LINK -->
-  <p class="note" style="margin-top:12px">
-    <strong>Also see:</strong>
-    <a href="/regulations/portland">Portland ADU Regulations &amp; Permits (2025)</a>
-  </p>
-</section>
 
 <!-- WASHINGTON -->
 <section class="state" id="washington" aria-labelledby="wa-title">
@@ -235,26 +229,64 @@
     <div role="listitem"><b>Fees & improvements</b><br/>Impact fees capped at ≤ <b>50%</b> of the principal unit; <b>no public street improvements</b> may be required as a permit condition.</div>
   </div>
 
-  <p style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+  <!-- Optional visual for parity -->
+  <svg class="mini-chart" viewBox="0 0 600 120" role="img" aria-label="Washington ADU allowances (illustrative)">
+    <desc>Statutory minimum size and two-ADU allowance in UGAs.</desc>
+    <rect class="bg"  x="20" y="20" width="280" height="24" rx="6" ry="6"></rect>
+    <rect class="min" x="20" y="20" width="200" height="24" rx="6" ry="6"></rect>
+    <text x="310" y="38" font-size="12">Min ADU size not below 1,000 sf</text>
+
+    <rect class="bg"  x="20" y="70" width="120" height="24" rx="6" ry="6"></rect>
+    <rect class="max" x="20" y="70" width="120" height="24" rx="6" ry="6"></rect>
+    <text x="160" y="88" font-size="12">At least two ADUs per lot</text>
+  </svg>
+
+  <div class="actions">
     <a class="btn" href="/regulations/washington">Read the full WA guide →</a>
-    <a class="btn ghost" href="/regulations/seattle">Seattle city playbook →</a>
-  </p>
+    <a class="btn ghost" href="/regulations/seattle">Seattle playbook →</a>
+  </div>
 </section>
 
 
+<!-- COLORADO -->
+<section class="state" id="colorado" aria-labelledby="co-title">
+  <h2 id="co-title">Colorado <span class="badge">statewide baseline (effective Jun 30, 2025)</span></h2>
 
-    <!-- COLORADO -->
-    <section class="state" id="colorado">
-      <h2>Colorado <span class="badge">new statewide baseline (2025)</span></h2>
-      <p class="note">HB24‑1152 requires many metro jurisdictions to allow one ADU by‑right with administrative approval by June 30, 2025, and limits certain local restrictions.</p>
-      <div class="kv">
-        <div><b>Where it applies</b><br/>“Subject jurisdictions” (specified cities/counties in MPOs and large CDPs).</div>
-        <div><b>Allowance</b><br/>One ADU accessory to a single‑unit detached dwelling by‑right via ministerial/administrative review.</div>
-        <div><b>Local limits</b><br/>Bill restricts various local prohibitions and encourages pre‑approved plans and fee reductions via grants.</div>
-        <div><b>Timeline</b><br/>Effective and signed May 13, 2024; compliance and reporting in 2025.</div>
-      </div>
-      <p class="note"><em>Verify:</em> Outside “subject jurisdictions,” rules remain local. Fire/wildland overlays and HOAs may add standards.</p>
-    </section>
+  <p class="note">
+    <strong>HB24-1152</strong> requires many metro-area jurisdictions (“subject jurisdictions”) to allow <em>one ADU</em> by-right via an <em>administrative (ministerial) review</em> where single-unit homes are allowed. Separately, <strong>HB24-1007</strong> bans family-based occupancy caps statewide (effective Jul 1, 2024). {{verify locally}}
+  </p>
+
+  <div class="kv" role="list">
+    <div role="listitem"><b>Where it applies</b><br/>“Subject jurisdictions”: municipalities (pop ≥1,000) in an MPO; and county areas that are both in an MPO and inside a CDP of ≥40,000. {{verify locally}}</div>
+    <div role="listitem"><b>Allowance</b><br/>One ADU accessory to a single-unit detached home, <em>by administrative approval</em> (no hearing), in zones that allow single-unit homes.</div>
+    <div role="listitem"><b>Parking & owner-occ</b><br/>No new off-street space in most cases; designation of an existing space may be required. Owner-occupancy requirements are prohibited with narrow exceptions. {{verify locally}}</div>
+    <div role="listitem"><b>Timeline</b><br/>Signed May 13, 2024; local compliance/reporting in 2025; by-right requirement begins <time datetime="2025-06-30">June 30, 2025</time>.</div>
+    <div role="listitem"><b>Setbacks</b><br/>Side ≤ primary’s side; rear ≤ max(other accessory rear, <b>5 ft</b>). {{verify locally}}</div>
+    <div role="listitem"><b>Size band</b><br/>Locals must allow a band that includes <b>500–750 sf</b>; many allow up to 800–1000+ sf or tie to main-home size. {{verify locally}}</div>
+  </div>
+
+  <!-- Size allowance band (colored) -->
+  <figure class="mini-viz" aria-label="Colorado ADU size allowance band">
+    <svg viewBox="0 0 420 120" role="img">
+      <title>Required local allowance band: 500–750 sf</title>
+      <rect class="bg"  x="10" y="30" width="400" height="20" rx="10" ry="10"></rect>
+      <rect class="min" x="90" y="30" width="110" height="20" rx="10" ry="10"></rect>
+      <rect class="max" x="200" y="30" width="90"  height="20" rx="10" ry="10"></rect>
+      <text x="20" y="25" font-size="12">300</text>
+      <text x="85" y="25" font-size="12">500</text>
+      <text x="285" y="25" font-size="12">750</text>
+      <text x="390" y="25" font-size="12">1000</text>
+      <text x="200" y="85" text-anchor="middle" font-size="13">State-required band: 500–750 sf</text>
+    </svg>
+  </figure>
+
+  <p class="note"><em>Heads up:</em> Outside “subject jurisdictions,” rules remain local. Fire/wildland overlays, historic districts, and covenants can add standards. {{verify locally}}</p>
+
+  <div class="actions">
+    <a class="btn" href="/regulations/colorado">Read the full CO guide →</a>
+    <a class="btn ghost" href="/estimate">Get ADU estimates →</a>
+  </div>
+</section>
 
     <!-- TEXAS -->
     <section class="state" id="texas">
