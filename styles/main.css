@@ -144,3 +144,72 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 .updates{margin:24px 0;padding:16px;border:1px solid #e2e8f0;border-radius:14px;background:#f8fafc}
 .updates h2{margin:0 0 8px}
 .updates ul{margin:0;padding-left:18px}
+
+/* === State Card System ==================================================== */
+:root{
+  --ink:#0b1221; --muted:#4b5563; --edge:#e5e7eb; --brand:#2563eb; --bg:#fff;
+  --chip:#eef2ff; --chip-border:#dbe1fe; --shadow:0 8px 30px rgba(2,8,20,.06);
+}
+
+.state{
+  border:1px solid var(--edge);
+  border-radius:16px;
+  background:#fff;
+  box-shadow:var(--shadow);
+  padding:16px;
+  margin:18px 0;
+}
+
+.state h2{
+  display:flex; align-items:center; gap:10px;
+  font-size:1.25rem; margin:0 0 .4rem;
+}
+
+.state .badge{
+  font-size:.78rem; line-height:1;
+  background:var(--chip); color:#1f3fbf;
+  border:1px solid var(--chip-border);
+  padding:4px 8px; border-radius:999px; white-space:nowrap;
+}
+
+.state .note{
+  background:#f9fafb; border:1px solid var(--edge);
+  border-radius:12px; padding:10px 12px; margin:.6rem 0;
+  color:var(--ink);
+}
+
+.state .kv{
+  display:grid; gap:12px; margin:.6rem 0;
+  grid-template-columns:repeat(3,1fr);
+}
+.state .kv>div{
+  border:1px solid var(--edge); border-radius:12px;
+  background:#fff; padding:10px 12px;
+}
+.state .kv b{ display:inline-block; margin-bottom:2px; }
+
+.state .rule-card{
+  border:1px dashed var(--edge); border-radius:12px;
+  background:#fcfcfd; padding:12px; margin:.6rem 0;
+}
+.state .rules{ margin:.2rem 0 0; padding-left:18px; }
+.state .rules li{ margin:.35rem 0; }
+
+.state .mini-chart, .state .mini-viz{ display:block; margin-top:10px; }
+.state .mini-chart rect, .state .mini-viz rect{ fill:#eef2ff; }
+.state .mini-chart rect.bar, .state .mini-viz rect.band{ fill:var(--brand); }
+.state .mini-chart text, .state .mini-viz text{ fill:var(--ink); }
+
+.btn{ display:inline-block; background:var(--brand); color:#fff;
+  padding:.6rem .9rem; border-radius:12px; text-decoration:none;
+  box-shadow:var(--shadow); font-weight:600; border:1px solid transparent;
+}
+.btn.ghost{ background:#fff; color:var(--ink); border-color:var(--edge); }
+a.cta{ text-decoration:none; border-bottom:1px dashed var(--brand); padding-bottom:2px; }
+
+.sr-only{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); border:0; }
+
+/* Responsive grid */
+@media (max-width:1000px){ .state .kv{ grid-template-columns:repeat(2,1fr);} }
+@media (max-width:640px){ .state .kv{ grid-template-columns:1fr;} }
+
