@@ -148,10 +148,10 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 /* === State Card Consistency & Contrast ================================== */
 :root{
   --ink:#0b1221; --muted:#4b5563; --edge:#e5e7eb; --brand:#2563eb; --bg:#fff;
-  --chip:#f4f7ff;          /* lighter for contrast */
-  --chip-border:#c7d2fe;   /* soft indigo border */
-  --min:#2563eb;           /* "min" bar color (blue) */
-  --max:#16a34a;           /* "max" bar color (green) */
+  --chip:#f4f7ff;            /* lighter for contrast */
+  --chip-border:#c7d2fe;     /* soft indigo border */
+  --min:#2563eb;             /* "min" bar color (blue) */
+  --max:#16a34a;             /* "max" bar color (green) */
   --shadow:0 8px 30px rgba(2,8,20,.06);
 }
 
@@ -168,19 +168,23 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
   font-size:1.25rem; margin:0 0 .4rem;
 }
 
-/* HIGH-CONTRAST BADGE (fixes dark-on-dark) */
-.state .state h2 .state-badge{
+/* HIGH-CONTRAST BADGE (fixes dark-on-dark)
+   Targets both legacy .badge and new .state-badge */
+.state h2 .badge,
+.state h2 .state-badge{
   font-size:.78rem; line-height:1; white-space:nowrap;
-  background:var(--chip); color:#0b3bb8;  /* dark indigo text on light chip */
+  background:var(--chip); color:#0b3bb8;
   border:1px solid var(--chip-border);
   padding:4px 8px; border-radius:999px;
+  display:inline-flex; align-items:center; gap:6px;
+  font-weight:600; text-transform:none;
+  background-image:none; box-shadow:none; mix-blend-mode:normal;
 }
 
 /* Notes, grids, rule cards */
 .state .note{
   background:#f9fafb; border:1px solid var(--edge);
-  border-radius:12px; padding:10px 12px; margin:.6rem 0;
-  color:var(--ink);
+  border-radius:12px; padding:10px 12px; margin:.6rem 0; color:var(--ink);
 }
 .state .kv{
   display:grid; gap:12px; margin:.6rem 0;
@@ -195,7 +199,7 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
   background:#fcfcfd; padding:12px; margin:.6rem 0;
 }
 
-/* Buttons (standardized across cards) */
+/* Buttons */
 .btn{ display:inline-block; background:var(--brand); color:#fff;
   padding:.6rem .9rem; border-radius:12px; text-decoration:none;
   box-shadow:var(--shadow); font-weight:600; border:1px solid transparent;
@@ -214,34 +218,11 @@ body.force-light :focus-visible{ outline:3px solid #1e40af !important; outline-o
 @media (max-width:1000px){ .state .kv{ grid-template-columns:repeat(2,1fr);} }
 @media (max-width:640px){ .state .kv{ grid-template-columns:1fr;} }
 
-/* High-contrast state badge override (wins over frameworks) */
-section.state h2 > .state h2 .state-badge,
-.state h2 .state h2 .state-badge,
-.state .state h2 .state-badge {
-  background-color: #f4f7ff !important;   /* light chip */
-  color: #0b3bb8 !important;               /* dark indigo text */
-  border: 1px solid #c7d2fe !important;    /* soft indigo outline */
-  border-radius: 999px !important;
-  padding: 4px 8px !important;
-  line-height: 1 !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 6px !important;
-  font-weight: 600 !important;
-  text-transform: none !important;
-  background-image: none !important;       /* kill gradient overrides */
-  box-shadow: none !important;             /* kill pill shadows */
-  mix-blend-mode: normal !important;       /* avoid blending weirdness */
-}
-
-/* Optional: dark-mode safeguard in case your site flips schemes */
+/* Optional: dark-mode safeguard */
 @media (prefers-color-scheme: dark) {
-  section.state h2 > .state h2 .state-badge,
-  .state h2 .state h2 .state-badge,
-  .state .state h2 .state-badge {
-    background-color: #e6efff !important;  /* slightly darker chip for contrast */
-    color: #2037a3 !important;
-    border-color: #b8c7ff !important;
+  .state h2 .badge,
+  .state h2 .state-badge{
+    background:#e6efff; color:#2037a3; border-color:#b8c7ff;
   }
 }
 
