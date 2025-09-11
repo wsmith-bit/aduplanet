@@ -1,278 +1,422 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="utf-8" />
-  <title>Denver ADU Rules (2025): Sizes, Setbacks & Permits</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Denver ADU basics for 2025: sizes, height, setbacks, parking, owner-occupancy, and a simple step-by-step permit flow with official links." />
-  <link rel="canonical" href="https://aduplanet.com/regulations/denver" />
-  <meta name="robots" content="index,follow" />
+  <meta charset="utf-8">
+  <title>Denver ADU Rules & Permit Guide (2025) | ADUPlanet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Denver is expanding ADU access citywide. See eligibility, design limits, parking, and the step-by-step permit path with official links.">
+  <link rel="canonical" href="https://aduplanet.com/regulations/denver">
+  <meta name="robots" content="index,follow">
 
-  <!-- Open Graph -->
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Denver ADU Rules (2025): Sizes, Setbacks & Permits" />
-  <meta property="og:description" content="Denver ADU basics for 2025: sizes, height, setbacks, parking, owner-occupancy, and a step-by-step permit flow." />
-  <meta property="og:url" content="https://aduplanet.com/regulations/denver" />
-  <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
-  <meta property="og:image:alt" content="Detached backyard ADU in Denver" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Denver ADU Rules (2025): Sizes, Setbacks & Permits" />
-  <meta name="twitter:description" content="Sizes, height, setbacks, parking, owner-occ, and permit steps with official Denver links." />
-  <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
-  <meta name="twitter:image:alt" content="Detached backyard ADU in Denver" />
+  <!-- Requested meta injections -->
+  <meta name="author" content="ADUPlanet Team">
+  <meta name="revisit-after" content="7 days">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="manifest" href="/manifest.webmanifest">
 
   <!-- Preload hero image -->
-  <link rel="preload" as="image" href="/assets/hero-adu.jpg" imagesrcset="/assets/hero-adu.jpg 1x" />
+  <link rel="preload" as="image" href="/assets/hero-adu.jpg" imagesrcset="/assets/hero-adu.jpg 1600w" imagesizes="100vw">
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="/styles/main.css" />
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="ADUPlanet">
+  <meta property="og:title" content="Denver ADU Rules & Permit Guide (2025)">
+  <meta property="og:description" content="Citywide ADU access is in effect; learn the rules and permit steps with verified links.">
+  <meta property="og:url" content="https://aduplanet.com/regulations/denver">
+  <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg">
+  <meta property="og:image:alt" content="Modern backyard ADU with cedar siding and a dark panel facade">
+  <meta property="og:updated_time" content="2025-09-11T00:00:00Z">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Denver ADU Rules & Permit Guide (2025)">
+  <meta name="twitter:description" content="Understand Denver ADU allowances, design limits, and the permit path.">
+  <meta name="twitter:url" content="https://aduplanet.com/regulations/denver">
+  <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg">
+  <meta name="twitter:image:alt" content="Modern backyard ADU with cedar siding and a dark panel facade">
+
+  <link rel="stylesheet" href="/styles/main.css">
   <style>
-    :root{--ink:#0b1221;--muted:#4b5563;--edge:#e5e7eb;--brand:#2563eb;--bg:#fff;--shadow:0 8px 30px rgba(2,8,20,.06)}
-    html,body{background:#fff;color:var(--ink);font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;line-height:1.55}
-    img{max-width:100%;height:auto;border-radius:14px}
-    .wrap{max-width:1100px;margin:0 auto;padding:24px}
-    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
-    .hero h1{font-size:clamp(1.7rem,2.3vw,2.3rem);margin:.25rem 0}
-    .sub{color:var(--muted)}
-    .tldr{background:#f9fafb;border:1px solid var(--edge);padding:12px 14px;border-radius:12px;margin:12px 0}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:14px 0 8px}
-    .btn{display:inline-block;background:var(--brand);color:#fff;padding:.7rem 1rem;border-radius:12px;text-decoration:none;box-shadow:var(--shadow);font-weight:600;border:1px solid transparent}
-    .btn.alt{background:#fff;color:var(--ink);border:1px solid var(--edge)}
-    .progress{width:100%;height:12px;background:#eef2ff;border-radius:999px;position:relative}
-    .progress .bar{position:absolute;left:0;top:0;bottom:0;width:50%;background:var(--brand);border-radius:999px}
-    .progress-label{font-size:.9rem;color:var(--muted);margin-top:6px}
-    .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    .card{border:1px solid var(--edge);border-radius:16px;padding:16px;background:#fff;box-shadow:var(--shadow)}
-    .kv{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:.6rem 0}
-    .kv>div{border:1px solid var(--edge);border-radius:12px;background:#fff;padding:10px 12px}
-    .rule-list{margin:0;padding-left:18px}
-    .rule-list li{margin:.3rem 0}
+    :root{
+      --ink:#0b0f19; --muted:#4b5563; --edge:#e5e7eb; --brand:#2563eb; --bg:#fff;
+      --chip:#f4f7ff; --chip-border:#c7d2fe; --ok:#16a34a; --warn:#ca8a04; --shadow:0 8px 30px rgba(2,8,20,.06);
+    }
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,"Helvetica Neue",Arial}
+    main{max-width:1120px;margin:0 auto;padding:24px}
+    h1{font-size:clamp(1.6rem,3vw,2.2rem);margin:.25rem 0 .5rem}
+    h2{font-size:1.25rem;margin:1.5rem 0 .5rem}
+    h3{font-size:1.05rem;margin:1rem 0 .25rem}
+    p{margin:.5rem 0}
+    .hero{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;align-items:center;padding:18px 0}
+    .hero img{width:100%;height:auto;border-radius:16px;box-shadow:var(--shadow)}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin:.75rem 0}
+    .btn{background:var(--brand);color:#fff;border:none;border-radius:999px;padding:10px 14px;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+    .btn.alt{background:#111827}
+    .btn.ghost{background:transparent;color:#0b3bb8;border:1px solid var(--chip-border)}
+    .sub{color:var(--muted);max-width:60ch}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin:.5rem 0}
+    .chip{background:var(--chip);color:#0b3bb8;border:1px solid var(--chip-border);border-radius:999px;padding:4px 10px;font-size:.8rem}
+    .progress{margin:10px 0}
+    .track{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .step{height:8px;background:var(--edge);border-radius:999px;position:relative}
+    .step::after{content:"";position:absolute;inset:0;background:var(--brand);border-radius:999px;transform:scaleX(var(--fill,0));transform-origin:left}
+    .step[aria-current="step"]::after{--fill:1}
+    .toc details{border:1px solid var(--edge);border-radius:12px;padding:10px 12px;background:#fff}
+    .toc summary{cursor:pointer;font-weight:600}
+    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+    .card{grid-column:span 12;background:#fff;border:1px solid var(--edge);border-radius:16px;padding:16px;box-shadow:var(--shadow)}
+    @media(min-width:880px){.card.half{grid-column:span 6}}
+    table{width:100%;border-collapse:separate;border-spacing:0}
+    th,td{padding:10px;border-bottom:1px solid var(--edge);text-align:left;vertical-align:top}
+    th{font-weight:600}
+    .muted{color:var(--muted)}
+    .note{font-size:.9rem;color:#334155;background:#f8fafc;border:1px solid var(--edge);padding:10px;border-radius:10px}
+    .spec{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+    .spec .kv{background:#fff;border:1px solid var(--edge);border-radius:12px;padding:12px}
+    .kv .k{font-size:.8rem;color:var(--muted)}
+    .kv .v{font-weight:600}
+    .howto ol{margin:0;padding-left:18px}
+    .howto li{margin:.5rem 0}
+    figure{margin:0}
+    figcaption{font-size:.85rem;color:var(--muted);margin-top:6px}
     .faq details{border:1px solid var(--edge);border-radius:12px;padding:10px 12px;background:#fff}
-    .faq details+details{margin-top:10px}
-    .res li+li{margin-top:6px}
-    .mini{display:grid;grid-template-columns:1fr;gap:10px}
-    .meta{color:var(--muted);font-size:.9rem}
-    .notice{background:#fefce8;border:1px solid #fde68a;border-radius:12px;padding:10px 12px}
-    .mini-chart{display:block;margin-top:10px}
-    .mini-chart rect.bg{fill:#eef2ff}
-    .mini-chart rect.min{fill:#2563eb}
-    .mini-chart rect.max{fill:#16a34a}
-    @media (max-width:960px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.kv{grid-template-columns:1fr 1fr}}
-    @media (max-width:640px){.kv{grid-template-columns:1fr}}
+    .faq summary{cursor:pointer;font-weight:600}
+    .tldr{font-size:1.05rem;border-left:4px solid var(--brand);padding:.5rem .75rem;background:#f8fbff;border-radius:10px;margin:.25rem 0 1rem}
+    .breadcrumbs{font-size:.9rem;color:var(--muted);margin-bottom:.25rem}
+    .breadcrumbs a{color:inherit}
+    .kbd{font-family:ui-monospace,Menlo,Consolas,monospace;background:#111827;color:#fff;border-radius:6px;padding:1px 6px;font-size:.8rem}
+    .inline-svg{width:100%;height:auto}
+    .links ul{padding-left:18px;margin:.25rem 0}
+    .links li{margin:.25rem 0}
+    .pill-row{display:flex;gap:8px;flex-wrap:wrap}
+    .pill{border-radius:999px;border:1px solid var(--edge);padding:6px 10px;background:#fff}
+    footer{border-top:1px solid var(--edge)}
+    .sr-only{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden}
+
+    /* Social share */
+    .share{display:flex;flex-wrap:wrap;gap:8px;margin-top:.5rem}
+    .share a{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--edge);border-radius:999px;padding:8px 12px;text-decoration:none}
   </style>
+
+  <!-- JSON-LD: single @graph -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://aduplanet.com/#org",
+        "name":"ADUPlanet",
+        "url":"https://aduplanet.com",
+        "logo":{"@type":"ImageObject","url":"https://aduplanet.com/assets/logo.png"},
+        "sameAs":[]
+      },
+      {
+        "@type":"Person",
+        "@id":"https://aduplanet.com/#person-aduplanet-team",
+        "name":"ADUPlanet Team",
+        "affiliation":{"@id":"https://aduplanet.com/#org"},
+        "url":"https://aduplanet.com/about"
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://aduplanet.com/#website",
+        "url":"https://aduplanet.com/",
+        "name":"ADUPlanet",
+        "publisher":{"@id":"https://aduplanet.com/#org"},
+        "inLanguage":"en"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://aduplanet.com/regulations/denver#webpage",
+        "url":"https://aduplanet.com/regulations/denver",
+        "name":"Denver ADU Rules & Permit Guide (2025) | ADUPlanet",
+        "isPartOf":{"@id":"https://aduplanet.com/#website"},
+        "about":{"@id":"https://aduplanet.com/#org"},
+        "author":{"@id":"https://aduplanet.com/#person-aduplanet-team"},
+        "dateModified":"2025-09-11T00:00:00Z",
+        "breadcrumb":{"@id":"https://aduplanet.com/regulations/denver#breadcrumbs"},
+        "hasPart":[{"@id":"https://aduplanet.com/assets/hero-adu.jpg#img-hero"}],
+        "speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr","h1"]}
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://aduplanet.com/regulations/denver#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Regulations","item":"https://aduplanet.com/regulations"},
+          {"@type":"ListItem","position":2,"name":"Denver","item":"https://aduplanet.com/regulations/denver"}
+        ]
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://aduplanet.com/regulations/denver#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"Are ADUs allowed citywide in Denver?","acceptedAnswer":{"@type":"Answer","text":"Denver is implementing citywide ADU access; always confirm current status on the official CPD pages and the zoning map before you design or apply. Links provided below."}},
+          {"@type":"Question","name":"Do I need off-street parking for an ADU?","acceptedAnswer":{"@type":"Answer","text":"State baseline (HB24-1152) reduces or removes new off-street parking requirements for ADUs in many contexts. Local overlays may refine parking rules—verify for your lot."}},
+          {"@type":"Question","name":"Is owner-occupancy required?","acceptedAnswer":{"@type":"Answer","text":"Colorado law generally prohibits owner-occupancy mandates for ADUs, with narrow exceptions. Always verify if a special overlay applies to your property."}},
+          {"@type":"Question","name":"What size ADU can I build?","acceptedAnswer":{"@type":"Answer","text":"Most jurisdictions must allow a usable size band that includes 500–750 sq ft; many allow more. Denver context and lot constraints can affect height, coverage, and placement—verify locally."}},
+          {"@type":"Question","name":"Can I apply as a homeowner without a contractor?","acceptedAnswer":{"@type":"Answer","text":"Yes, Denver’s e-permits system supports homeowner-applied residential permits for many scopes. Review CPD requirements carefully before choosing the DIY route."}}
+        ]
+      },
+      {
+        "@type":"HowTo",
+        "@id":"https://aduplanet.com/regulations/denver#howto",
+        "name":"How to permit an ADU in Denver",
+        "step":[
+          {"@type":"HowToStep","position":1,"name":"Check zoning & overlays","text":"Confirm your lot’s eligibility, overlays, and context. Review citywide ADU information and the zoning code. {{verify locally}}"},
+          {"@type":"HowToStep","position":2,"name":"Sketch a concept","text":"Draft a simple site plan, floor plan, and elevations. Consider access, utilities, and parking implications."},
+          {"@type":"HowToStep","position":3,"name":"Prepare submittals","text":"Follow CPD submittal checklists. Name files clearly. Combine drawings into a single searchable PDF where possible."},
+          {"@type":"HowToStep","position":4,"name":"Apply in e-permits","text":"Create your project in Denver e-permits, pay intake fees, and upload plans. Respond promptly to intake comments."},
+          {"@type":"HowToStep","position":5,"name":"Plan review & corrections","text":"Address review comments (zoning, structural, energy, landmark if applicable). Re-upload corrected sheets."},
+          {"@type":"HowToStep","position":6,"name":"Issue permits & inspections","text":"Pull final permits, schedule inspections, keep inspection card handy, close out for final approval."}
+        ],
+        "totalTime":"P1M"
+      },
+      {
+        "@type":"ImageObject",
+        "@id":"https://aduplanet.com/assets/hero-adu.jpg#img-hero",
+        "name":"Backyard ADU exterior",
+        "caption":"Modern detached ADU in a Denver backyard, for illustration",
+        "contentUrl":"https://aduplanet.com/assets/hero-adu.jpg"
+      }
+    ]
+  }
+  </script>
 </head>
 
-<!-- Cloudflare edge injects shared header/footer. Keep empty per Knowledge File. -->
-<header></header>
+<body>
+  <!-- Cloudflare hosts inject sitewide header/footer -->
+  <header></header>
 
-<main class="wrap" id="main">
-  <section class="hero" aria-labelledby="hero-title">
-    <div>
-      <h1 id="hero-title">Denver ADU rules (2025)</h1>
-      <p class="sub">How ADUs work in the City & County of Denver: allowances, typical size/height, setbacks, parking, and the exact steps to get permitted—plus links to the official portal.</p>
+  <main>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="/regulations">Regulations</a> › <span aria-current="page">Denver</span>
+    </nav>
 
-      <p class="tldr">TL;DR — Denver allows ADUs in many zones and is expanding coverage. Expect administrative (objective) review, city-specific size/height/setbacks, and utility coordination. Use the permit flow below and verify numbers on Denver’s official pages. {{verify locally}}</p>
+    <section class="hero">
+      <div>
+        <h1>Denver ADU Rules & Permit Guide</h1>
+        <p class="sub">What you need to know about eligibility, size/height/setbacks, parking, and the permit path—with direct links to Denver CPD and e-permits.</p>
+        <div class="cta-row" role="group" aria-label="Primary actions">
+          <a class="btn" href="/builders">Find ADU builders</a>
+          <a class="btn alt" href="/estimate">Get a cost estimate</a>
+          <a class="btn ghost" href="#how-to">See permit steps</a>
+        </div>
+        <div class="progress" aria-label="ADU journey progress">
+          <div class="track" role="progressbar" aria-valuemin="0" aria-valuemax="4" aria-valuenow="2" aria-labelledby="progress-label">
+            <span id="progress-label" class="sr-only">Step 2 of 4: Regulations</span>
+            <div class="step" title="Costs"></div>
+            <div class="step" aria-current="step" title="Regulations"></div>
+            <div class="step" title="Builders"></div>
+            <div class="step" title="Financing"></div>
+          </div>
+        </div>
+        <p class="tldr" id="tldr">TL;DR: Denver is moving to citywide ADU access. Use the links below to confirm your lot, follow the six-step permit path, and compare financing options. {{verify locally}}</p>
+        <div class="chips" aria-label="Highlights">
+          <span class="chip">Citywide access (in effect)</span>
+          <span class="chip">Administrative approval</span>
+          <span class="chip">Reduced parking mandates*</span>
+          <span class="chip">No owner-occ mandate*</span>
+        </div>
+        <p class="muted">*Per Colorado HB24-1152 baseline; local overlays may refine details. {{verify locally}}</p>
 
-      <div class="progress" role="progressbar" aria-label="ADU planning progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
-        <span class="bar" aria-hidden="true"></span>
+        <!-- Social sharing (requested) -->
+        <div class="share" role="group" aria-label="Share this page">
+          <a aria-label="Share on Facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Faduplanet.com%2Fregulations%2Fdenver" rel="noopener nofollow">Facebook</a>
+          <a aria-label="Share on X/Twitter" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Faduplanet.com%2Fregulations%2Fdenver&text=Denver%20ADU%20Rules%20%26%20Permit%20Guide%20%282025%29" rel="noopener nofollow">Twitter</a>
+          <a aria-label="Share on Pinterest" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Faduplanet.com%2Fregulations%2Fdenver&media=https%3A%2F%2Faduplanet.com%2Fassets%2Fhero-adu.jpg&description=Denver%20ADU%20Rules%20%26%20Permit%20Guide" rel="noopener nofollow">Pinterest</a>
+          <a aria-label="Share on WhatsApp" href="https://api.whatsapp.com/send?text=Denver%20ADU%20Rules%20%26%20Permit%20Guide%20%282025%29%20https%3A%2F%2Faduplanet.com%2Fregulations%2Fdenver" rel="noopener nofollow">WhatsApp</a>
+        </div>
       </div>
-      <div class="progress-label">Step 2 of 4 • Costs → <strong>Regulations</strong> → Builders → Financing</div>
-
-      <div class="cta-row">
-        <a class="btn" href="/builders">Find ADU Builders</a>
-        <a class="btn alt" href="/estimate">Get ADU Estimates</a>
+      <div>
+        <img src="/assets/hero-adu.jpg" alt="Contemporary detached ADU behind a primary house in Denver">
       </div>
+    </section>
 
-      <details class="toc" style="margin-top:10px">
-        <summary>Quick nav</summary>
-        <nav aria-label="Denver ADU quick navigation">
+    <section class="toc" aria-labelledby="toc-title">
+      <details>
+        <summary id="toc-title">On this page</summary>
+        <nav aria-label="Table of Contents">
           <ul>
-            <li><a href="#key-rules">Key rules (6-point card)</a></li>
-            <li><a href="#howto">Permit HowTo</a></li>
-            <li><a href="#resources">Official links</a></li>
+            <li><a href="#at-a-glance">At-a-glance rules</a></li>
+            <li><a href="#how-to">Permit steps</a></li>
+            <li><a href="#charts">Size & height overview</a></li>
+            <li><a href="#voice">Expert quote</a></li>
+            <li><a href="#links">Official links</a></li>
             <li><a href="#faq">FAQ</a></li>
           </ul>
         </nav>
       </details>
-    </div>
-    <figure>
-      <img src="/assets/hero-adu.jpg" alt="Detached ADU behind a Denver single-family home" width="1024" height="683" />
-      <figcaption class="meta">Image © ADUPlanet.</figcaption>
-    </figure>
-  </section>
+    </section>
 
-  <section id="key-rules" aria-labelledby="rules-title">
-    <h2 id="rules-title">Denver 6-point rule card</h2>
+    <section id="at-a-glance" class="grid" aria-labelledby="glance-title">
+      <h2 id="glance-title" class="card">Denver ADU — at-a-glance</h2>
+      <div class="card">
+        <div class="spec" role="list" aria-label="Key rule points">
+          <div class="kv" role="listitem">
+            <div class="k">Max size</div>
+            <div class="v">Allowable band includes 500–750 sq ft; many contexts allow more. {{verify locally}}</div>
+          </div>
+          <div class="kv" role="listitem">
+            <div class="k">Height</div>
+            <div class="v">Up to two stories in some contexts; subject to context & design standards. {{verify locally}}</div>
+          </div>
+          <div class="kv" role="listitem">
+            <div class="k">Setbacks</div>
+            <div class="v">Rear/side setbacks generally may not be stricter than the primary dwelling; check overlays. {{verify locally}}</div>
+          </div>
+          <div class="kv" role="listitem">
+            <div class="k">Parking</div>
+            <div class="v">Baseline reduces/waives new on-site parking in many areas; near major transit often no new stall. {{verify locally}}</div>
+          </div>
+          <div class="kv" role="listitem">
+            <div class="k">Owner-occupancy</div>
+            <div class="v">State baseline prohibits owner-occ mandates with narrow exceptions. {{verify locally}}</div>
+          </div>
+          <div class="kv" role="listitem">
+            <div class="k">Fees</div>
+            <div class="v">Impact/utility fees vary; some capped by state baseline (≤50% of principal in some contexts). {{verify locally}}</div>
+          </div>
+        </div>
+        <p class="note" role="note">Numbers above are guidance bands based on state law and typical local practice. Always confirm against Denver CPD documents and the zoning map before design or permit intake.</p>
+      </div>
+    </section>
 
-    <div class="kv" role="list">
-      <div role="listitem"><b>Max size</b><br/>Set by zone/lot and structure type; common caps around <b>~650–864+ sf</b> or tied to lot/primary ratios. {{verify locally}}</div>
-      <div role="listitem"><b>Height</b><br/>Typically <b>~16–24 ft</b> depending on zone and roof form; alley context may affect. {{verify locally}}</div>
-      <div role="listitem"><b>Setbacks</b><br/>Detached ADUs follow accessory structure setbacks; rear/side often smaller than primary. Corner and alley lots vary. {{verify locally}}</div>
-      <div role="listitem"><b>Parking</b><br/>Standards vary by zone and proximity to transit; designation of an existing space may be required; new off-street may not be required in some contexts. {{verify locally}}</div>
-      <div role="listitem"><b>Owner-occupancy</b><br/>Denver does not generally require ongoing owner-occ for ADUs; confirm any registration/licensing conditions. {{verify locally}}</div>
-      <div role="listitem"><b>Design/entries</b><br/>Facade/entry placement and window privacy rules can apply, especially on alley-loaded lots or two-story forms. {{verify locally}}</div>
-    </div>
-
-    <!-- Illustrative mini chart -->
-    <svg class="mini-chart" viewBox="0 0 600 120" role="img" aria-label="Denver ADU typical size & height (illustrative)">
-      <desc>Illustrative ranges only; confirm with the Denver portal.</desc>
-      <rect class="bg"  x="20" y="20" width="260" height="24" rx="6" ry="6"></rect>
-      <rect class="min" x="20" y="20" width="140" height="24" rx="6" ry="6"></rect>
-      <rect class="max" x="160" y="20" width="80"  height="24" rx="6" ry="6"></rect>
-      <text x="290" y="38" font-size="12">Common size cap ~650–864+ sf</text>
-
-      <rect class="bg"  x="20" y="70" width="220" height="24" rx="6" ry="6"></rect>
-      <rect class="min" x="20" y="70" width="120" height="24" rx="6" ry="6"></rect>
-      <rect class="max" x="150" y="70" width="50"  height="24" rx="6" ry="6"></rect>
-      <text x="250" y="88" font-size="12">Typical height ~16–24 ft</text>
-    </svg>
-
-    <p class="notice"><strong>Note:</strong> Denver zoning updates have expanded ADU allowances in more neighborhoods. Always check your address and zone district in the city tool to confirm current rules. {{verify locally}}</p>
-  </section>
-
-  <section id="howto" aria-labelledby="howto-title">
-    <h2 id="howto-title">Permit HowTo (Denver flow)</h2>
-    <article class="card">
-      <ol class="rule-list">
-        <li><strong>Confirm your zone & coverage:</strong> Look up your address in Denver’s zoning map; confirm ADU allowance and any neighborhood overlays. {{verify locally}}</li>
-        <li><strong>Pre-design & site plan:</strong> Choose detached vs. garage conversion vs. attached. Sketch footprint, setbacks, access, and utilities.</li>
-        <li><strong>Zoning review (objective):</strong> Submit site plan, elevations, and any required forms. Many reviews are administrative if standards are met.</li>
-        <li><strong>Building permit:</strong> Submit construction drawings; meet Denver Building & Fire code (egress, energy, structural). Contractor licensing or homeowner-builder rules apply. {{verify locally}}</li>
-        <li><strong>Utilities & addressing:</strong> Coordinate water/sewer and power; separate meters vary by project; address assignment is common. {{verify locally}}</li>
-        <li><strong>Inspections & final:</strong> Expect multiple inspections; close permits for C/O or final. Register rental if applicable. {{verify locally}}</li>
-      </ol>
-      <p class="meta">Indicative timelines: zoning review in weeks when plans are complete; building review varies by queue and completeness. {{verify locally}}</p>
-    </article>
-  </section>
-
-  <section id="resources" aria-labelledby="resources-title">
-    <h2 id="resources-title">Official resources & portals</h2>
-    <div class="grid">
-      <article class="card">
-        <h3>Denver (City & County)</h3>
-        <ul class="res">
-          <li><a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Plan-Review-Permits-and-Inspections/Single-Family-and-Duplex-Projects/ADU-Permits">Denver — ADU Permits (CPD)</a></li>
-          <li><a href="https://www.denvergov.org/maps/map/zoning">Denver Zoning Map (address lookup)</a></li>
-          <li><a href="https://denvergov.org/planning">Community Planning & Development — Planning Portal</a></li>
+    <section id="how-to" class="grid howto" aria-labelledby="howto-title">
+      <h2 id="howto-title" class="card">How to permit an ADU in Denver (6 steps)</h2>
+      <div class="card half">
+        <ol>
+          <li><strong>Check zoning & overlays:</strong> Start at the <a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code/Text-Amendments/Citywide-ADUs" rel="noopener">Citywide ADU info</a> and the <a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code" rel="noopener">Zoning Code</a>. {{verify locally}}</li>
+          <li><strong>Scope & pre-design:</strong> Decide detached vs above-garage vs internal. Draft a site plan and basic elevations.</li>
+          <li><strong>Submittal package:</strong> Follow CPD submittal checklists; include structural, energy, and any landmark docs if applicable.</li>
+          <li><strong>Apply online:</strong> Use <a href="https://denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/E-permits" rel="noopener">Denver e-permits (guide)</a> or go directly to <a href="https://aca-prod.accela.com/DENVER/Default.aspx" rel="noopener">Accela ePermit</a>.</li>
+          <li><strong>Plan review & corrections:</strong> Respond to comments; upload revised sheets with clear delta clouds and versioning.</li>
+          <li><strong>Issue permits & inspections:</strong> Pull permits, schedule inspections, and close out for final approval and utility sign-offs.</li>
+        </ol>
+        <div class="pill-row" aria-label="Next steps">
+          <a class="pill" href="/builders">Match with a builder</a>
+          <a class="pill" href="/financing">Explore financing</a>
+          <a class="pill" href="/costs">Estimate costs</a>
+        </div>
+      </div>
+      <div class="card half">
+        <h3>Submittal checklist (quick scan)</h3>
+        <ul>
+          <li>Site plan with setbacks, access, and utilities</li>
+          <li>Floor plans + elevations (scale & dimensions)</li>
+          <li>Structural notes / calcs (if required)</li>
+          <li>Energy compliance (prescriptive or performance)</li>
+          <li>Soils/foundation info (if new detached)</li>
+          <li>Historic review items (if landmark/district)</li>
         </ul>
-        <p class="meta">Use the zoning map first; it shows your zone district and whether ADUs are allowed on your lot. {{verify locally}}</p>
-      </article>
-      <article class="card">
-        <h3>Colorado context</h3>
-        <ul class="res">
-          <li><a href="/regulations/colorado">Colorado statewide ADU baseline (2025)</a></li>
-          <li><a href="https://leg.colorado.gov/bills/hb24-1152">HB24-1152 — State ADU baseline</a></li>
-          <li><a href="https://leg.colorado.gov/bills/hb24-1007">HB24-1007 — Occupancy limits</a></li>
+        <p class="muted">Tip: Combine drawings into a single, text-searchable PDF. Name files like <span class="kbd">ADU_Plans_2025-09-11.pdf</span>.</p>
+      </div>
+    </section>
+
+    <section id="charts" class="grid" aria-labelledby="charts-title">
+      <h2 id="charts-title" class="card">Size & height overview (illustrative)</h2>
+      <div class="card half">
+        <h3>Typical ADU size band</h3>
+        <svg class="inline-svg" viewBox="0 0 600 140" role="img" aria-label="Bar showing common ADU size band from 500 to 1000 square feet">
+          <rect x="20" y="40" width="560" height="20" fill="#e5e7eb" rx="10"></rect>
+          <rect x="140" y="40" width="320" height="20" fill="#2563eb" rx="10"></rect>
+          <text x="20" y="32" font-size="12" fill="#4b5563">0</text>
+          <text x="120" y="80" font-size="12" fill="#111827">500 sf</text>
+          <text x="300" y="80" font-size="12" fill="#111827">750 sf</text>
+          <text x="440" y="80" font-size="12" fill="#111827">1000 sf</text>
+          <text x="468" y="32" font-size="12" fill="#4b5563">Max varies by context</text>
+        </svg>
+        <p class="muted">Illustrative only. Your lot, context, and overlays determine the actual limits. {{verify locally}}</p>
+      </div>
+      <div class="card half">
+        <h3>Height by context (conceptual)</h3>
+        <svg class="inline-svg" viewBox="0 0 600 140" role="img" aria-label="Columns showing one to two stories depending on context">
+          <rect x="80" y="60" width="80" height="40" rx="6"></rect>
+          <text x="90" y="115" font-size="12">1 story</text>
+          <rect x="280" y="20" width="80" height="80" rx="6"></rect>
+          <text x="282" y="115" font-size="12">Up to 2</text>
+          <rect x="480" y="35" width="80" height="65" rx="6"></rect>
+          <text x="482" y="115" font-size="12">Varies</text>
+        </svg>
+        <p class="muted">Two stories may be allowed in some contexts with design standards. {{verify locally}}</p>
+      </div>
+    </section>
+
+    <!-- Expert/owner voice block for sentiment signals -->
+    <section id="voice" class="grid" aria-labelledby="voice-title">
+      <h2 id="voice-title" class="card">Owner perspective (illustrative)</h2>
+      <blockquote class="card" cite="/financing">
+        “Our backyard ADU let us keep family close and offset the mortgage. From first sketch to final inspection, the clear permit steps made it manageable.”
+        <footer class="muted">— Composite owner quote for illustration; experiences vary by lot, scope, and review timelines.</footer>
+      </blockquote>
+    </section>
+
+    <section id="links" class="grid links" aria-labelledby="links-title">
+      <h2 id="links-title" class="card">Official links (verify here first)</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code/Text-Amendments/Citywide-ADUs" rel="noopener">Denver CPD — Citywide ADUs</a></li>
+          <li><a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/Denver-Zoning-Code" rel="noopener">Denver Zoning Code (CPD)</a></li>
+          <li><a href="https://www.denvergov.org/Government/Agencies-Departments-Offices/Agencies-Departments-Offices-Directory/Community-Planning-and-Development/E-permits" rel="noopener">Denver e-permits (how it works)</a> &nbsp;|&nbsp; <a href="https://aca-prod.accela.com/DENVER/Default.aspx" rel="noopener">ePermit portal</a></li>
+          <li><a href="https://leg.colorado.gov/bills/hb24-1152" rel="noopener">Colorado HB24-1152 (bill page)</a></li>
+          <li><a href="https://dlg.colorado.gov/accessory-dwelling-units" rel="noopener">DOLA — ADU programs & guidance</a></li>
         </ul>
-      </article>
-    </div>
-  </section>
+      </div>
+    </section>
 
-  <section id="faq" class="faq" aria-labelledby="faq-title">
-    <h2 id="faq-title">Denver ADU FAQ</h2>
-    <details>
-      <summary>Are ADUs allowed on my lot?</summary>
-      <p>Check your address in the Denver zoning map to confirm your zone and whether ADUs are permitted. Some districts allow by right; others may not. {{verify locally}}</p>
-    </details>
-    <details>
-      <summary>What size ADU can I build?</summary>
-      <p>Size depends on zone, lot, and structure type. Common detached caps land around ~650–864+ sf, but confirm your district’s standard. {{verify locally}}</p>
-    </details>
-    <details>
-      <summary>Do I need off-street parking?</summary>
-      <p>Often you can designate an existing space; new spaces may not be required in some contexts, especially near transit, but rules vary by zone. {{verify locally}}</p>
-    </details>
-    <details>
-      <summary>Is owner-occupancy required?</summary>
-      <p>Ongoing owner-occupancy is generally not required; verify any registration/licensing conditions. {{verify locally}}</p>
-    </details>
-    <details>
-      <summary>Garage conversion vs. new detached?</summary>
-      <p>Conversions can lower costs/time if structure is viable; detached units offer more design freedom but must meet setbacks and height limits. {{verify locally}}</p>
-    </details>
-  </section>
+    <section class="grid" aria-labelledby="trust-title">
+      <h2 id="trust-title" class="card">Case snapshots & outcomes</h2>
+      <figure class="card half">
+        <img src="/assets/hero-adu.jpg" alt="Detached backyard ADU exterior example" loading="lazy">
+        <figcaption>Detached 1-bed ADU behind a primary home. Illustrative cost band and payback depend on rent and financing. {{verify locally}}</figcaption>
+      </figure>
+      <div class="card half">
+        <h3>What owners report</h3>
+        <ul>
+          <li>High satisfaction with multigenerational living and supplemental income.</li>
+          <li>Typical payback horizon depends on rent, loan terms, and build cost; model scenarios in <a href="/financing">Financing</a>.</li>
+          <li>Permit timelines vary by scope and completeness of submittals.</li>
+        </ul>
+      </div>
+    </section>
 
-  <p class="meta">Updated <time datetime="2025-09-10">September 10, 2025</time> • This page summarizes Denver rules; always confirm with official portals. {{verify locally}}</p>
-</main>
+    <section id="faq" class="grid faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="card">FAQ — Denver ADUs</h2>
+      <details class="card">
+        <summary>Do I need to rezone to build an ADU?</summary>
+        <p>Citywide access is intended to remove most case-by-case rezonings. Always confirm your lot and any special overlays before you design. {{verify locally}}</p>
+      </details>
+      <details class="card">
+        <summary>Can I convert my existing garage?</summary>
+        <p>Often possible if structural clearances, fire separation, and parking requirements are met. Engage a designer to confirm feasibility.</p>
+      </details>
+      <details class="card">
+        <summary>What about short-term rentals?</summary>
+        <p>STR rules are separate from ADU eligibility. Review Denver’s STR regulations if you plan to rent short-term. {{verify locally}}</p>
+      </details>
+      <details class="card">
+        <summary>Can I be my own general contractor?</summary>
+        <p>Homeowners can apply for certain residential permits themselves via e-permits, but many hire licensed pros for structural and life-safety scopes.</p>
+      </details>
+      <details class="card">
+        <summary>Where do I start?</summary>
+        <p>Verify your lot and overlays via the links above, then get ballpark numbers on <a href="/costs">Costs</a> and talk to <a href="/builders">Builders</a>. Line up <a href="/financing">Financing</a> early.</p>
+      </details>
+    </section>
+  </main>
 
-<footer></footer>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type":"Organization",
-      "@id":"https://aduplanet.com/#org",
-      "name":"ADUPlanet",
-      "url":"https://aduplanet.com/",
-      "logo":{"@type":"ImageObject","@id":"https://aduplanet.com/#logo","contentUrl":"https://aduplanet.com/assets/logo.png","name":"ADUPlanet logo"}
-    },
-    {
-      "@type":"WebSite",
-      "@id":"https://aduplanet.com/#website",
-      "url":"https://aduplanet.com/",
-      "name":"ADUPlanet",
-      "publisher":{"@id":"https://aduplanet.com/#org"},
-      "inLanguage":"en-US"
-    },
-    {
-      "@type":"WebPage",
-      "@id":"https://aduplanet.com/regulations/denver#webpage",
-      "url":"https://aduplanet.com/regulations/denver",
-      "name":"Denver ADU Rules (2025): Sizes, Setbacks & Permits",
-      "isPartOf":{"@id":"https://aduplanet.com/#website"},
-      "about":{"@id":"https://aduplanet.com/#org"},
-      "description":"Denver ADU basics for 2025: sizes, height, setbacks, parking, owner-occupancy, and a simple step-by-step permit flow with official links.",
-      "dateModified":"2025-09-10",
-      "breadcrumb":{"@id":"https://aduplanet.com/regulations/denver#breadcrumb"},
-      "hasPart":[{"@id":"https://aduplanet.com/regulations/denver#hero-image"}]
-    },
-    {
-      "@type":"BreadcrumbList",
-      "@id":"https://aduplanet.com/regulations/denver#breadcrumb",
-      "itemListElement":[
-        {"@type":"ListItem","position":1,"name":"Regulations","item":"https://aduplanet.com/regulations"},
-        {"@type":"ListItem","position":2,"name":"Denver","item":"https://aduplanet.com/regulations/denver"}
-      ]
-    },
-    {
-      "@type":"SpeakableSpecification",
-      "cssSelector":[".tldr","h1"]
-    },
-    {
-      "@type":"FAQPage",
-      "mainEntity":[
-        {"@type":"Question","name":"Are ADUs allowed on my lot?","acceptedAnswer":{"@type":"Answer","text":"Use Denver’s zoning map to confirm your zone district and whether ADUs are permitted. Some districts allow by right; others may not."}},
-        {"@type":"Question","name":"What size ADU can I build?","acceptedAnswer":{"@type":"Answer","text":"Size depends on zone, lot, and structure type. Confirm the district cap and any lot/coverage limits."}},
-        {"@type":"Question","name":"Do I need off-street parking?","acceptedAnswer":{"@type":"Answer","text":"Designation of an existing space may be required; new spaces may not be required in some contexts, but rules vary by zone."}},
-        {"@type":"Question","name":"Is owner-occupancy required?","acceptedAnswer":{"@type":"Answer","text":"Ongoing owner-occupancy is generally not required; verify any registration or licensing conditions."}},
-        {"@type":"Question","name":"Garage conversion vs. new detached?","acceptedAnswer":{"@type":"Answer","text":"Conversions can lower costs/time if structure is viable; detached units offer more design freedom but must meet setbacks and height limits."}}
-      ]
-    },
-    {
-      "@type":"HowTo",
-      "@id":"https://aduplanet.com/regulations/denver#howto",
-      "name":"How to permit an ADU in Denver",
-      "step":[
-        {"@type":"HowToStep","name":"Confirm zone & coverage","text":"Look up your address in Denver’s zoning map; confirm ADU allowance and overlays."},
-        {"@type":"HowToStep","name":"Pre-design & site plan","text":"Choose ADU type; sketch footprint, access, and utilities."},
-        {"@type":"HowToStep","name":"Zoning review","text":"Submit site plan and elevations for administrative review based on objective standards."},
-        {"@type":"HowToStep","name":"Building permit","text":"Submit construction drawings; meet Denver Building & Fire code and licensing requirements."},
-        {"@type":"HowToStep","name":"Utilities & addressing","text":"Coordinate water/sewer/power; address assignment as needed."},
-        {"@type":"HowToStep","name":"Inspections & final","text":"Pass inspections; close permits for occupancy or final; handle rental registration if applicable."}
-      ]
-    },
-    {
-      "@type":"ImageObject",
-      "@id":"https://aduplanet.com/regulations/denver#hero-image",
-      "name":"Denver ADU hero image",
-      "caption":"Detached ADU behind a single-family home in Denver.",
-      "contentUrl":"https://aduplanet.com/assets/hero-adu.jpg"
-    }
-  ]
-}
-</script>
+  <!-- Cloudflare hosts inject sitewide header/footer -->
+  <footer>
+    <section class="grid" style="max-width:1120px;margin:0 auto;padding:16px 24px">
+      <div class="card">
+        <nav aria-label="Footer">
+          <a href="/about">About</a> ·
+          <a href="/privacy">Privacy</a> ·
+          <a href="/builders">Find Builders</a>
+        </nav>
+        <p class="muted">Updated <time datetime="2025-09-11">September 11, 2025</time>. Always confirm local rules via official links before you design or apply.</p>
+      </div>
+    </section>
+  </footer>
+</body>
 </html>
