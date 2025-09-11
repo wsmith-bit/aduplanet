@@ -329,3 +329,53 @@ header .nav a[aria-current="page"] { background: #eef2ff !important; }
   .toc .chip:hover{ border-color:#bcc7ff }
   .toc .chip:focus-visible{ outline:3px solid var(--focus, #111827); outline-offset:2px }
 </style>
+<!-- Place this CSS AFTER your main stylesheet -->
+<style>
+  /* --- Browse-by-state: force light card + chips (override dark theme) --- */
+  #toc.container.toc {
+    background: #fff !important;
+    border: 1px solid var(--edge, #e5e7eb) !important;
+    border-radius: 16px !important;
+    padding: 12px !important;
+    box-shadow: 0 1px 2px rgba(2,8,20,.04) !important;
+  }
+  #toc.container.toc * {
+    background-image: none !important; /* kill gradients from dark themes */
+  }
+
+  #toc details {
+    background: #fff !important;
+    border: 0 !important;            /* inner box is now the outer card */
+    padding: 0 !important;
+  }
+  #toc summary {
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--ink, #0b1221) !important;
+    padding: 4px 2px;
+  }
+
+  #toc nav[aria-label="State Table of Contents"] {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  /* Chips: light surface, brand text, solid border */
+  #toc .chip {
+    display: inline-block;
+    text-decoration: none !important;
+    background: var(--chip, #f4f7ff) !important;
+    color: var(--brand-ink, #0b3bb8) !important;
+    border: 1px solid var(--chip-border, #c7d2fe) !important;
+    border-radius: 999px;
+    padding: 10px 16px;
+    line-height: 1.1;
+    box-shadow: none !important;
+  }
+  /* Keep visited links the same color (avoid purple) */
+  #toc .chip:visited { color: var(--brand-ink, #0b3bb8) !important; }
+  #toc .chip:hover   { border-color: #a5b4fc !important; }
+  #toc .chip:focus-visible { outline: 3px solid var(--focus, #111827); outline-offset: 2px; }
+</style>
