@@ -291,3 +291,41 @@ small, .eyebrow, .fresh { color: var(--muted-fix) !important; }
 header .nav a { color: var(--ink-fix) !important; }
 header .nav a[aria-current="page"] { background: #eef2ff !important; }
 </style>
+<!-- CSS: place after /styles/main.css -->
+<style>
+  /* Browse-by-state: light variant + accessible contrast */
+  .container.toc,
+  .toc{
+    background: transparent !important; /* override any dark container theme */
+  }
+  .toc details{
+    background:#fff;
+    border:1px solid var(--edge, #e5e7eb);
+    border-radius:12px;
+    padding:10px 12px;
+    box-shadow:0 1px 2px rgba(2,8,20,.04);
+  }
+  .toc summary{
+    cursor:pointer;
+    font-weight:600;
+    color:var(--ink, #0b1221);
+  }
+  .toc nav[aria-label="State Table of Contents"]{
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-top:6px;
+  }
+  .toc .chip{
+    display:inline-block;
+    text-decoration:none;
+    background:var(--chip, #f4f7ff);
+    color:var(--brand-ink, #0b3bb8);
+    border:1px solid var(--chip-border, #c7d2fe);
+    border-radius:999px;
+    padding:6px 12px;
+    line-height:1.1;
+  }
+  .toc .chip:hover{ border-color:#bcc7ff }
+  .toc .chip:focus-visible{ outline:3px solid var(--focus, #111827); outline-offset:2px }
+</style>
