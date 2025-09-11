@@ -164,4 +164,127 @@
         <div class="spec" role="list" aria-label="Key points">
           <div class="kv" role="listitem"><div class="k">Statewide status</div><div class="v">No statewide ADU mandate (local ordinances control). {{verify locally}}</div></div>
           <div class="kv" role="listitem"><div class="k">2025 bills</div><div class="v">SB 673 (Senate-passed; died in House calendar), HB 2480 (introduced). {{verify locally}}</div></div>
-          <div class="kv" role="listitem"><div class="k">Where allowed</div><div class="v
+          <div class="kv" role="listitem"><div class="k">Where allowed</div><div class="v">Varies by city/county. Check zoning district and overlays first.</div></div>
+          <div class="kv" role="listitem"><div class="k">Parking</div><div class="v">City-specific. Some jurisdictions have no minimums; accessibility rules still apply.</div></div>
+          <div class="kv" role="listitem"><div class="k">Owner-occupancy</div><div class="v">Varies; typically set locally or by HOA covenants.</div></div>
+          <div class="kv" role="listitem"><div class="k">Process</div><div class="v">Local permit portal; electronic plan review common in larger cities.</div></div>
+        </div>
+        <p class="note" role="note">Always verify HOA/deed restrictions in addition to city code and county health approvals (septic/well where applicable). {{verify locally}}</p>
+      </div>
+    </section>
+
+    <section id="how-to" class="grid" aria-labelledby="howto-title">
+      <h2 id="howto-title" class="card">How to plan an ADU in Texas (5 steps)</h2>
+      <div class="card half">
+        <ol>
+          <li><strong>Find your rules:</strong> Search “<em>Your City</em> ADU ordinance” and zoning map; confirm district, lot size, setbacks, height, coverage. {{verify locally}}</li>
+          <li><strong>Screen constraints:</strong> Utilities, driveways, floodplain, wildfire/wind, trees, historic, septic/well.</li>
+          <li><strong>Concept design:</strong> Fit within local standards; draft site plan + floor/elevations; consider prefab vs custom.</li>
+          <li><strong>Apply online:</strong> Create account in the local permit portal; upload a single, text-searchable PDF; pay intake fees.</li>
+          <li><strong>Respond & build:</strong> Address plan review comments, pull permits, schedule inspections, obtain CO.</li>
+        </ol>
+        <div class="pill-row" aria-label="Next steps">
+          <a class="pill" href="/builders">Match with a builder</a>
+          <a class="pill" href="/financing">Explore financing</a>
+          <a class="pill" href="/costs">Estimate costs</a>
+          <a class="pill" href="/regulations/austin">Austin specifics</a>
+        </div>
+      </div>
+      <div class="card half">
+        <h3>Submittal checklist (quick scan)</h3>
+        <ul>
+          <li>Site plan (setbacks, access, utilities)</li>
+          <li>Floor plans & elevations (scaled)</li>
+          <li>Structural notes/calcs; energy compliance</li>
+          <li>Flood/septic documents if applicable</li>
+          <li>HOA approval letter if required</li>
+        </ul>
+        <p class="muted">Name files like <span class="kbd">ADU_Texas_Plans_2025-09-11.pdf</span>.</p>
+      </div>
+    </section>
+
+    <section id="charts" class="grid" aria-labelledby="charts-title">
+      <h2 id="charts-title" class="card">Size & parking overview (illustrative)</h2>
+      <div class="card half">
+        <h3>Local control</h3>
+        <svg class="inline-svg" viewBox="0 0 600 140" role="img" aria-label="Graphic illustrating local control across Texas jurisdictions"><rect x="20" y="40" width="560" height="20" fill="#e5e7eb" rx="10"></rect><rect x="60" y="40" width="140" height="20" rx="10"></rect><rect x="240" y="40" width="180" height="20" rx="10"></rect><rect x="460" y="40" width="80" height="20" rx="10"></rect><text x="60" y="32" font-size="12" fill="#4b5563">City A</text><text x="240" y="32" font-size="12" fill="#4b5563">City B</text><text x="460" y="32" font-size="12" fill="#4b5563">City C</text></svg>
+        <p class="muted">Illustrative only. Each city sets its own ADU standards. {{verify locally}}</p>
+      </div>
+      <div class="card half">
+        <h3>Parking examples</h3>
+        <svg class="inline-svg" viewBox="0 0 600 140" role="img" aria-label="Graphic showing different parking rules by city"><rect x="60" y="30" width="120" height="80" rx="10"></rect><text x="78" y="75" font-size="12">No minimum</text><rect x="260" y="30" width="120" height="80" rx="10"></rect><text x="286" y="75" font-size="12">1 stall</text><rect x="460" y="30" width="120" height="80" rx="10"></rect><text x="468" y="75" font-size="12">Contextual</text></svg>
+        <p class="muted">Parking varies by jurisdiction; accessibility rules still apply. {{verify locally}}</p>
+      </div>
+    </section>
+
+    <section id="voice" class="grid" aria-labelledby="voice-title">
+      <h2 id="voice-title" class="card">Local voice prompt</h2>
+      <div class="card voice">
+        <div class="prompt">
+          <p class="muted">Try speaking to your assistant:</p>
+          <p><strong>“Hey Siri, ask ADUPlanet — what are the ADU rules in <em>my city</em> in Texas?”</strong></p>
+          <p class="muted">Follow-ups: “Do I need parking?” “What’s the max height?” “Do HOAs block ADUs?”</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reviews" class="grid" aria-labelledby="reviews-title">
+      <h2 id="reviews-title" class="card">Community rating (pilot)</h2>
+      <div class="card">
+        <div class="rating" role="img" aria-label="Community rating module"><span aria-hidden="true">★★★★★</span> <span class="muted">Be the first to rate this guide</span></div>
+        <form action="/feedback" method="post" aria-label="Submit a review" style="margin-top:8px">
+          <input type="hidden" name="topic" value="texas-adu-guide">
+          <label class="sr-only" for="rating">Rating</label>
+          <select id="rating" name="rating" required><option value="">Rate it…</option><option>5</option><option>4</option><option>3</option><option>2</option><option>1</option></select>
+          <label class="sr-only" for="comments">Comments</label>
+          <input id="comments" name="comments" type="text" placeholder="What should we improve?" minlength="5" style="width:60%">
+          <button class="btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="links" class="grid" aria-labelledby="links-title">
+      <h2 id="links-title" class="card">Official links (verify here first)</h2>
+      <div class="card">
+        <ul>
+          <li><a href="https://capitol.texas.gov/tlodocs/89R/billtext/html/SB00673S.htm" rel="noopener">Texas SB 673 — bill text (2025)</a></li>
+          <li><a href="https://capitol.texas.gov/tlodocs/89R/billtext/html/HB02480I.htm" rel="noopener">Texas HB 2480 — introduced (2025)</a></li>
+          <li><a href="https://www.tml.org/1035/April-11-2025-Number-14" rel="noopener">Texas Municipal League — bill status recap</a></li>
+          <li><a href="https://capitol.texas.gov/billlookup/billnumber.aspx" rel="noopener">Texas Legislature Online — bill status lookup</a></li>
+          <li><a href="/regulations/austin">Austin — city playbook</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="faq" class="grid faq" aria-labelledby="faq-title">
+      <h2 id="faq-title" class="card">FAQ — Texas ADUs</h2>
+      <details class="card"><summary>Is there a statewide ADU law?</summary><p>No. As of September 11, 2025, statewide bills were considered but not enacted. Your local code controls. {{verify locally}}</p></details>
+      <details class="card"><summary>What did SB 673 propose?</summary><p>Streamlined approvals and limits on local restrictions; it passed the Senate but did not become law. {{verify locally}}</p></details>
+      <details class="card"><summary>Does my HOA matter?</summary><p>Yes. Deed restrictions and HOA covenants can supersede city allowances; review your documents.</p></details>
+      <details class="card"><summary>How do parking rules work?</summary><p>They’re city-specific. Some cities require 0–1 stall; accessible spaces may still apply. {{verify locally}}</p></details>
+      <details class="card"><summary>Where should I start?</summary><p>Scan your city’s planning page, then line up <a href="/costs">Costs</a>, <a href="/builders">Builders</a>, and <a href="/financing">Financing</a>. Use your local permit portal to apply.</p></details>
+    </section>
+
+    <section id="video" class="grid" aria-labelledby="video-title">
+      <h2 id="video-title" class="card">2-minute planning walkthrough (Texas)</h2>
+      <div class="card">
+        <video controls preload="metadata" width="100%" poster="/assets/hero-adu.jpg">
+          <source src="/assets/texas-adu-walkthrough.mp4" type="video/mp4">
+          <track kind="captions" srclang="en" label="English captions" src="/assets/texas-adu-walkthrough.vtt">
+          Sorry, your browser doesn’t support embedded videos.
+        </video>
+        <p id="video-transcript" class="muted">Transcript (abridged): Step 1 — Check local code; Step 2 — Screen constraints; Step 3 — Concept & parking; Step 4 — Apply online; Step 5 — Reviews, permits, inspections. {{verify locally}}</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <section class="grid" style="max-width:1120px;margin:0 auto;padding:16px 24px">
+      <div class="card">
+        <nav aria-label="Footer"><a href="/about">About</a> · <a href="/privacy">Privacy</a> · <a href="/builders">Find Builders</a></nav>
+        <p class="muted">Updated <time datetime="2025-09-11">September 11, 2025</time>. Always confirm local rules via official links before you design or apply.</p>
+      </div>
+    </section>
+  </footer>
+</body>
+</html>
