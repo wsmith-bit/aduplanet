@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How to Choose an ADU Builder (2025 Checklist)</title>
+  <meta name="description" content="A practical 10-point checklist to compare prefab, panelized, design-build, and GC ADU builders—what to ask, what to verify, and how to avoid change-order pain." />
+  <link rel="canonical" href="https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html" />
+  <meta name="robots" content="index,follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How to Choose an ADU Builder (2025 Checklist)" />
+  <meta property="og:description" content="Ten questions to pick the right ADU partner—without drama or surprise costs. Compare prefab, panelized, design-build, and GC." />
+  <meta property="og:url" content="https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html" />
+  <meta property="og:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
+  <meta property="og:image:alt" content="Primary home and detached ADU connected by landscaped path" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How to Choose an ADU Builder (2025 Checklist)" />
+  <meta name="twitter:description" content="Ten questions to pick the right ADU partner—without drama or surprise costs." />
+  <meta name="twitter:url" content="https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html" />
+  <meta name="twitter:image" content="https://aduplanet.com/assets/hero-adu.jpg" />
+  <meta name="twitter:image:alt" content="Primary home and detached ADU connected by landscaped path" />
+
+  <!-- Preload -->
+  <link rel="preload" as="image" href="/assets/hero-adu.jpg" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/styles/main.css" />
+  <style>
+    :root{
+      --ink:#0b1220; --muted:#5b6472; --brand:#0ea5e9; --ok:#10b981; --soft:#f6f7f9; --line:#eef0f4;
+    }
+    html,body{background:#fff;color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;line-height:1.5}
+    img{max-width:100%;height:auto;border-radius:14px}
+    .wrap{max-width:1100px;margin:auto;padding:24px}
+    .hero{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+    .hero h1{font-size:clamp(1.8rem,3.2vw,2.4rem);margin:0 0 8px}
+    .subhead{color:var(--muted);font-size:1.05rem}
+    .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:14px}
+    .btn{display:inline-flex;gap:8px;align-items:center;padding:12px 16px;border-radius:12px;border:1px solid var(--brand);text-decoration:none}
+    .btn.primary{background:var(--brand);color:#fff}
+    .btn.secondary{background:#fff;color:#0b2d6b}
+    .progress{background:var(--soft);border:1px solid var(--line);border-radius:999px;height:12px;margin-top:14px;overflow:hidden}
+    .progress__bar{height:100%;background:linear-gradient(90deg,var(--brand),#36c);width:75%}
+    .tldr{background:var(--soft);border:1px solid var(--line);padding:14px 16px;border-radius:14px;margin:20px 0;font-size:1.05rem}
+    details.toc{margin:10px 0 22px}
+    details.toc summary{cursor:pointer;color:#0b2d6b;font-weight:600}
+    .grid{display:grid;gap:18px}
+    @media(min-width:720px){.grid.cols-2{grid-template-columns:1fr 1fr}.grid.cols-3{grid-template-columns:repeat(3,1fr)}}
+    .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 1px 0 rgba(0,0,0,.03)}
+    .checklist ol{margin:0;padding-left:1.4rem}
+    .checklist li{margin:10px 0}
+    .badge{display:inline-block;background:#e8f5ff;color:#074c8c;border:1px solid #cfe9ff;border-radius:999px;font-size:.8rem;padding:.2rem .6rem;margin-left:.35rem}
+    table{width:100%;border-collapse:separate;border-spacing:0;overflow:hidden;border-radius:14px;border:1px solid var(--line)}
+    thead th{background:#f8fafc;text-align:left;padding:10px}
+    td{padding:10px;border-top:1px solid var(--line);vertical-align:top}
+    .bar{height:12px;background:#edf2ff;border-radius:999px;overflow:hidden}
+    .bar > span{display:block;height:100%;border-radius:999px;background:linear-gradient(90deg,#8ec5ff,var(--brand))}
+    .note{color:var(--muted);font-size:.95rem}
+    .trust{display:grid;gap:18px}
+    @media(min-width:800px){.trust{grid-template-columns:1fr 1fr}}
+    .faq details{border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin:10px 0}
+    .faq summary{font-weight:600;cursor:pointer}
+    footer .fresh{color:var(--muted);font-size:.95rem}
+    .nav-inline{display:flex;gap:14px;margin-top:10px}
+    .nav-inline a{color:#0b2d6b;text-decoration:none}
+    .kicker{font-weight:700;color:#0b2d6b;text-transform:uppercase;letter-spacing:.02em;margin-bottom:6px}
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@graph":[
+      {
+        "@type":"Organization",
+        "@id":"https://aduplanet.com/#org",
+        "name":"ADUPlanet",
+        "url":"https://aduplanet.com/",
+        "logo":{
+          "@type":"ImageObject",
+          "@id":"https://aduplanet.com/assets/logo.png#logo",
+          "url":"https://aduplanet.com/assets/logo.png",
+          "contentUrl":"https://aduplanet.com/assets/logo.png",
+          "name":"ADUPlanet logo",
+          "caption":"ADUPlanet logo"
+        }
+      },
+      {
+        "@type":"WebSite",
+        "@id":"https://aduplanet.com/#site",
+        "url":"https://aduplanet.com/",
+        "name":"ADUPlanet",
+        "publisher":{"@id":"https://aduplanet.com/#org"}
+      },
+      {
+        "@type":"ImageObject",
+        "@id":"https://aduplanet.com/assets/hero-adu.jpg#hero",
+        "name":"Primary home and ADU with landscaped path",
+        "contentUrl":"https://aduplanet.com/assets/hero-adu.jpg",
+        "caption":"Primary home and detached ADU connected by landscaped path"
+      },
+      {
+        "@type":"WebPage",
+        "@id":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html#webpage",
+        "url":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html",
+        "name":"How to Choose an ADU Builder (2025 Checklist)",
+        "isPartOf":{"@id":"https://aduplanet.com/#site"},
+        "breadcrumb":{"@id":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html#breadcrumbs"},
+        "primaryImageOfPage":{"@id":"https://aduplanet.com/assets/hero-adu.jpg#hero"},
+        "speakable":{"@type":"SpeakableSpecification","cssSelector":[".tldr","h1"]},
+        "dateModified":"2025-09-12"
+      },
+      {
+        "@type":"BreadcrumbList",
+        "@id":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html#breadcrumbs",
+        "itemListElement":[
+          {"@type":"ListItem","position":1,"name":"Home","item":"https://aduplanet.com/"},
+          {"@type":"ListItem","position":2,"name":"Blog","item":"https://aduplanet.com/blog/"},
+          {"@type":"ListItem","position":3,"name":"How to Choose an ADU Builder (2025 Checklist)","item":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html"}
+        ]
+      },
+      {
+        "@type":"BlogPosting",
+        "@id":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html#post",
+        "headline":"How to Choose an ADU Builder (2025 Checklist)",
+        "image":{"@id":"https://aduplanet.com/assets/hero-adu.jpg#hero"},
+        "articleSection":"Builders",
+        "wordCount":"1600",
+        "mainEntityOfPage":{"@id":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html#webpage"},
+        "publisher":{"@id":"https://aduplanet.com/#org"},
+        "datePublished":"2025-09-12",
+        "dateModified":"2025-09-12"
+      },
+      {
+        "@type":"FAQPage",
+        "@id":"https://aduplanet.com/blog/how-to-choose-an-adu-builder-checklist-2025.html#faq",
+        "mainEntity":[
+          {"@type":"Question","name":"Prefab vs custom: which is faster for ADUs?","acceptedAnswer":{"@type":"Answer","text":"Prefabricated or panelized builders can shorten shell timelines, but lead time for design, engineering, and utility coordination remains. Custom design-build or GC paths allow more site-specific solutions. Compare not just build days but end-to-end delivery, including permits and hookups."}},
+          {"@type":"Question","name":"What should be in a builder’s proposal?","acceptedAnswer":{"@type":"Answer","text":"A clear scope, plans/specs version, allowances, exclusions, schedule with milestones, draw schedule, permit responsibilities, utility trenching assumptions, warranty length, and change-order policy. Ask for an itemized budget with contingency."}},
+          {"@type":"Question","name":"How many bids are enough for an ADU?","acceptedAnswer":{"@type":"Answer","text":"Two to three comparable bids with matching scope, finishes, and utility assumptions. Force apples-to-apples by sharing the same inclusions checklist with all bidders."}},
+          {"@type":"Question","name":"Do ADU builders handle permits?","acceptedAnswer":{"@type":"Answer","text":"Many design-build and prefab firms include permit support; some GCs expect you to manage design/permits separately. Confirm permit scope in writing and link responsibilities to payment milestones. {{verify locally}}"}},
+          {"@type":"Question","name":"How do inspections and draws work?","acceptedAnswer":{"@type":"Answer","text":"Construction loans pay in stages tied to milestones (foundation, framing, rough-ins, finals). Inspectors verify work before draws. Even without a loan, staged payments protect both parties."}},
+          {"@type":"Question","name":"What about parking, setbacks, or height limits?","acceptedAnswer":{"@type":"Answer","text":"These rules vary by city and can change. Verify maximum size, height, setbacks, parking relief, and owner-occupancy with your local portal before finalizing design. {{verify locally}}"}}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+
+<body>
+  <!-- Cloudflare edge will inject site header/footer partials -->
+  <header></header>
+
+  <main>
+    <section class="wrap hero">
+      <div>
+        <p class="kicker">Builders</p>
+        <h1>How to Choose an ADU Builder (2025 Checklist)</h1>
+        <p class="subhead">Ten questions to find the right prefab, panelized, design-build, or GC partner—without drama or surprise costs.</p>
+        <div class="cta">
+          <a class="btn primary" href="/estimate" aria-label="Get matched to vetted ADU builders via estimate form">Get matched to vetted builders →</a>
+          <a class="btn secondary" href="/builders" aria-label="See builder types and directory">See builder types</a>
+        </div>
+        <div class="progress" role="progressbar" aria-label="ADU journey progress (Costs → Regulations → Builders → Financing)" aria-valuemin="0" aria-valuemax="100" aria-valuenow="75">
+          <div class="progress__bar" style="width:75%"></div>
+        </div>
+        <details class="toc">
+          <summary>Table of contents</summary>
+          <nav class="nav-inline" aria-label="On-page">
+            <a href="#checklist">10-point checklist</a>
+            <a href="#compare">Prefab vs custom: quick compare</a>
+            <a href="#signals">Signals of a solid builder</a>
+            <a href="#bids">How to run bids</a>
+            <a href="#cases">Mini case studies</a>
+            <a href="#faq">FAQ</a>
+          </nav>
+        </details>
+        <div class="tldr" id="tldr">
+          You’ll pick faster and avoid cost creep by aligning scope, allowances, and utility assumptions up front. Use this 10-point checklist with two or three builders, then lock a draw schedule and change-order rules before deposits.
+        </div>
+      </div>
+      <figure>
+        <img src="/assets/hero-adu.jpg" alt="Primary home and detached ADU connected by landscaped path" />
+        <figcaption class="note">Context matters: site access, utilities, and setbacks influence the “right” builder type.</figcaption>
+      </figure>
+    </section>
+
+    <section class="wrap" id="checklist">
+      <h2>The 10-point ADU builder checklist</h2>
+      <div class="card checklist">
+        <ol>
+          <li><strong>Scope clarity</strong> — One page that says what is in vs out <span class="badge">baseline</span></li>
+          <li><strong>Allowances</strong> — Cabinets, fixtures, appliances, flooring with realistic $/unit and brands</li>
+          <li><strong>Exclusions</strong> — Landscaping, fences, window coverings, tap fees, trenching beyond X ft</li>
+          <li><strong>Utilities</strong> — Metering plan, trench route/length, panel capacity, sewer depth <span class="badge">cost swing</span></li>
+          <li><strong>Draw schedule</strong> — Deposits tied to real milestones (foundation, framing, rough-ins, finals)</li>
+          <li><strong>Schedule realism</strong> — Gantt outline with permit lead time and inspection buffers</li>
+          <li><strong>Change-orders</strong> — Who can approve, pricing method (fixed vs T&M), markup caps</li>
+          <li><strong>Warranty & punchlist</strong> — Lengths for structure/MEP/finishes; day-zero punch process</li>
+          <li><strong>Permit support</strong> — Who submits, pays, and responds to comments; resubmittal fees {{verify locally}}</li>
+          <li><strong>References & photos</strong> — Two recent ADUs + one in-progress you can tour</li>
+        </ol>
+        <p class="note">Tip: Put this list into your RFQ email so every bidder answers the same questions.</p>
+      </div>
+    </section>
+
+    <section class="wrap" id="compare">
+      <h2>Prefab, panelized, design-build, or GC? Quick compare</h2>
+      <div class="card">
+        <table role="table" aria-label="ADU builder types comparison">
+          <thead>
+            <tr><th scope="col">Builder type</th><th scope="col">Strengths</th><th scope="col">Watch-outs</th><th scope="col">Best fit</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Prefab modules</strong></td>
+              <td>Factory quality; predictable shell timeline</td>
+              <td>Craning/site staging; utility hookups still local</td>
+              <td>Access for crane, simpler lots</td>
+            </tr>
+            <tr>
+              <td><strong>Panelized</strong></td>
+              <td>Faster dry-in than stick; flexible layouts</td>
+              <td>Coordination on site still critical</td>
+              <td>Moderate access; weather-sensitive sites</td>
+            </tr>
+            <tr>
+              <td><strong>Design-build</strong></td>
+              <td>One team, fewer handoffs</td>
+              <td>Less “bid competition” unless requested</td>
+              <td>Owners who value coordination</td>
+            </tr>
+            <tr>
+              <td><strong>General Contractor (GC)</strong></td>
+              <td>Local subs, custom details</td>
+              <td>Schedule depends on GC capacity</td>
+              <td>Complex sites, custom specs</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="note">Speed vs paperwork: prefab/panelized often reduce site days, but you still need permits, inspections, and utility sign-offs.</p>
+        <div class="bar" aria-hidden="true" style="margin-top:10px"><span style="width:68%"></span></div>
+      </div>
+    </section>
+
+    <section class="wrap" id="signals">
+      <h2>Signals of a solid builder</h2>
+      <div class="grid cols-2">
+        <div class="card">
+          <h3>Green flags</h3>
+          <ul>
+            <li>Answers the 10-point checklist without hedging</li>
+            <li>Offers site walk with utility talk (amps, sewer depth, trench path)</li>
+            <li>Draw schedule tied to inspections, not vague “mobilization”</li>
+            <li>Publishes change-order markup and response time</li>
+            <li>Provides reference projects with similar access/lot type</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Red flags</h3>
+          <ul>
+            <li>“We’ll figure utilities later”</li>
+            <li>Massive allowances with bargain placeholders</li>
+            <li>No exclusions list; schedule is just a date range</li>
+            <li>Only distant references or non-ADU work</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap" id="bids">
+      <h2>How to run apples-to-apples bids (in 20 minutes)</h2>
+      <div class="card grid cols-2">
+        <div>
+          <ol>
+            <li>Send the same plan set and the 10-point checklist to 2–3 builders.</li>
+            <li>Specify finish level (e.g., quartz counters, LVP flooring) and appliance package.</li>
+            <li>State trench length assumptions (e.g., “~60 ft to sewer cleanout”).</li>
+            <li>Request itemized pricing + contingency line (10–15%).</li>
+            <li>Ask for proposed draw schedule and estimated permit timeline.</li>
+            <li>Invite alternates (e.g., panel upgrade) priced add/alt, not buried.</li>
+          </ol>
+          <p class="note">Numbers are illustrative; verify fees, tap charges, and incentives with your city or utility. {{verify locally}}</p>
+        </div>
+        <div>
+          <div class="card">
+            <strong>Next step:</strong> lock a shortlist and book a site walk. After that, <a href="/estimate">share your ZIP and budget</a> and we’ll match you with reputable builders and lenders in your area.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap trust" id="cases">
+      <h2>Mini case studies</h2>
+      <figure class="card">
+        <img src="/assets/hero-adu.jpg" alt="Detached ADU under construction with framed walls" />
+        <figcaption><strong>750 sf detached, sloped lot.</strong> Panelized builder hit dry-in in two weeks; extra trenching added 4% to budget. Payback with rental: ~9–11 years (illustrative).</figcaption>
+      </figure>
+      <figure class="card">
+        <img src="/assets/hero-adu.jpg" alt="Garage conversion ADU with upgraded windows and siding" />
+        <figcaption><strong>420 sf garage conversion.</strong> Design-build GC handled permits; slab moisture mitigation added 2% but saved rework risk.</figcaption>
+      </figure>
+    </section>
+
+    <section class="wrap">
+      <div class="card">
+        <h2>Ready to move?</h2>
+        <p>Share your project basics (ZIP, ADU type, budget, stage, timeline, email). We’ll review and connect you with trustworthy builders and lenders for your area.</p>
+        <a class="btn primary" href="/estimate">Start your RFQ →</a>
+        <div class="note" style="margin-top:10px">Prefer to research a bit more first? Compare <a href="/financing#calculator">payment options</a> or check <a href="/regulations">local rules</a>.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <nav class="nav-inline" aria-label="Site">
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/builders">Find Builders</a>
+      </nav>
+      <p class="fresh">Updated <time datetime="2025-09-12">September 12, 2025</time>. Figures vary by jurisdiction—confirm on your official portal. {{verify locally}}</p>
+    </div>
+  </footer>
+</body>
+</html>
