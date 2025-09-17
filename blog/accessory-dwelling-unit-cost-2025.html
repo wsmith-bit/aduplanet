@@ -110,6 +110,81 @@
         "contentUrl": "https://aduplanet.com/assets/hero-adu.jpg"
       },
       {
+        "@type": "Dataset",
+        "@id": "https://aduplanet.com/#dataset-adu-cost-ranges-2025",
+        "name": "ADU Cost Ranges 2025",
+        "description": "Cost ranges by ADU type with min/max totals and notes, derived from the on-page table.",
+        "creator": { "@id": "https://aduplanet.com/#org" },
+        "inLanguage": "en-US",
+        "dateModified": "2025-09-17",
+        "variableMeasured": [
+          { "@type": "PropertyValue", "name": "type", "description": "ADU type" },
+          { "@type": "PropertyValue", "name": "min_total_usd", "description": "Minimum typical total (USD)" },
+          { "@type": "PropertyValue", "name": "max_total_usd", "description": "Maximum typical total (USD)" },
+          { "@type": "PropertyValue", "name": "notes", "description": "Contextual notes" }
+        ],
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "text/csv",
+            "contentUrl": "https://aduplanet.com/assets/adu-cost-ranges-2025.csv",
+            "name": "adu-cost-ranges-2025.csv"
+          }
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#calc-app",
+        "name": "ADU Cost Estimator",
+        "applicationCategory": "Calculator",
+        "operatingSystem": "All",
+        "isAccessibleForFree": true,
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "softwareVersion": "1.0",
+        "publisher": { "@id": "https://aduplanet.com/#org" },
+        "url": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#estimator",
+        "dateModified": "2025-09-17"
+      },
+      {
+        "@type": "HowTo",
+        "@id": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#howto-budget",
+        "name": "Budget your ADU in 5 steps",
+        "inLanguage": "en-US",
+        "supply": [ { "@type": "HowToSupply", "name": "Jurisdiction fee schedule (link)" } ],
+        "tool": [ { "@type": "HowToTool", "name": "ADU Cost Estimator" } ],
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Confirm zoning and size limits",
+            "url": "https://aduplanet.com/regulations",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": 0 }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Estimate hard construction costs",
+            "url": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#estimator",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "minValue": 165000, "maxValue": 315000 }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add site and utility allowances",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "minValue": 5000, "maxValue": 80000 }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Include soft costs (design, engineering, permits)",
+            "description": "Typically 8–18% of hard costs; verify locally.",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "minValue": 12000, "maxValue": 54000 }
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Add contingency and compare financing",
+            "url": "https://aduplanet.com/financing",
+            "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "minValue": 10000, "maxValue": 30000 }
+          }
+        ]
+      },
+      {
         "@type": "WebPage",
         "@id": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#webpage",
         "url": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html",
@@ -120,8 +195,14 @@
           "@type": "SpeakableSpecification",
           "cssSelector": [".tldr","h1"]
         },
+        "inLanguage": "en-US",
         "dateModified": "2025-09-17",
-        "hasPart": [{ "@id": "https://aduplanet.com/assets/hero-adu.jpg#hero" }]
+        "hasPart": [
+          { "@id": "https://aduplanet.com/assets/hero-adu.jpg#hero" },
+          { "@id": "https://aduplanet.com/#dataset-adu-cost-ranges-2025" },
+          { "@id": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#calc-app" },
+          { "@id": "https://aduplanet.com/blog/accessory-dwelling-unit-cost-2025.html#howto-budget" }
+        ]
       },
       {
         "@type": "BreadcrumbList",
@@ -176,6 +257,7 @@
         "image": { "@id": "https://aduplanet.com/assets/hero-adu.jpg#hero" },
         "datePublished": "2025-09-17",
         "dateModified": "2025-09-17",
+        "inLanguage": "en-US",
         "author": { "@id": "https://aduplanet.com/#org" },
         "publisher": { "@id": "https://aduplanet.com/#org" },
         "articleSection": "Costs"
@@ -252,6 +334,8 @@
             </tr>
           </tbody>
         </table>
+
+<p class="note">Download the source data (CSV): <a href="/assets/adu-cost-ranges-2025.csv" download>adu-cost-ranges-2025.csv</a></p>
 
         <div class="chart-row" aria-label="Cost range bars">
           <div>
@@ -407,5 +491,13 @@
   </main>
 
   <footer></footer>
+<!-- CSV source to save at /assets/adu-cost-ranges-2025.csv -->
+<!--
+# Columns: type,min_total_usd,max_total_usd,notes
+Garage Conversion,120000,220000,"Structure/foundation reused; seismic & fire upgrades vary."
+Attached ADU,180000,350000,"Shares a wall/roof; good for utilities + lot constraints."
+Detached ADU,220000,450000,"Highest flexibility; site work & utilities drive totals."
+Prefab / Panelized (installed),160000,320000,"Factory-built shell; still budget for foundation & hookups."
+-->
 </body>
 </html>
